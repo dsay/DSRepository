@@ -1,0 +1,22 @@
+{
+  "name": "Repository",
+  "version": "0.1.0",
+  "summary": "A short description of Repository.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/dsay/Repository",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "dsay": "dsay@ciklum.com"
+  },
+  "source": {
+    "git": "https://github.com/dsay/Repository.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Repository/Classes/**/*"
+}
