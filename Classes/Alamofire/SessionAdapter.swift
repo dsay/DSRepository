@@ -5,20 +5,22 @@ private struct Keys {
     static let basic = "Basic"
     static let token = "Token"
     static let sessionKey = "x-mysolomeo-session-key"
+    static let accept = "Accept"
+    static let contentType = "Content-Type"
 }
 
 private struct DefaultHTTPHeaders {
 
     static var main: HTTPHeaders { var header = self.default
-        header["Accept"] = "application/json"
-        header["Content-Type"] = "application/json"
+        header[Keys.accept] = "application/json"
+        header[Keys.contentType] = "application/json"
         return header
     }
 
     static private let `default` = SessionManager.defaultHTTPHeaders
 }
 
-class MainSessionManager: SessionManager {
+public class MainSessionManager: SessionManager {
 
     static func `default`(user: String, password: String) -> MainSessionManager {
         return MainSessionManager.default(BasicSessionAdapter(user: user, password: password))
@@ -39,23 +41,7 @@ class MainSessionManager: SessionManager {
     }
 }
 
-class BamboraSessionManager: SessionManager {
-    static func `default`(_ apiKey: String) -> BamboraSessionManager {
-        let manager = BamboraSessionManager(configuration: URLSessionConfiguration.default)
-        manager.adapter = BamboraSessionAdapter(apiKey: apiKey)
-        return manager
-    }
-}
-
-class TokenSessionManager: SessionManager {
-
-    static func `default`(user: String, password: String) -> TokenSessionManager {
-        let session = TokenSessionManager(configuration: URLSessionConfiguration.default)
-        return session
-    }
-}
-
-struct BasicSessionAdapter: RequestAdapter {
+public struct BasicSessionAdapter: RequestAdapter {
 
     let user: String
     let password: String
@@ -78,7 +64,7 @@ struct BasicSessionAdapter: RequestAdapter {
     }
 }
 
-struct RFTSessionAdapter: RequestAdapter {
+public struct RFTSessionAdapter: RequestAdapter {
 
     let token: String
 
@@ -92,7 +78,7 @@ struct RFTSessionAdapter: RequestAdapter {
     }
 }
 
-struct SessionKeySessionAdapter: RequestAdapter {
+public struct SessionKeySessionAdapter: RequestAdapter {
 
     let session: String
 
@@ -101,20 +87,6 @@ struct SessionKeySessionAdapter: RequestAdapter {
 
         DefaultHTTPHeaders.main.forEach { urlRequest.setValue($0.value, forHTTPHeaderField: $0.key)}
         urlRequest.setValue(session, forHTTPHeaderField: Keys.sessionKey)
-
-        return urlRequest
-    }
-}
-
-struct BamboraSessionAdapter: RequestAdapter {
-
-    let apiKey: String
-
-    func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
-        var urlRequest = urlRequest
-
-        DefaultHTTPHeaders.main.forEach { urlRequest.setValue($0.value, forHTTPHeaderField: $0.key) }
-        urlRequest.setValue("\(Keys.basic) \(apiKey)", forHTTPHeaderField: Keys.authorization)
 
         return urlRequest
     }

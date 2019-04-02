@@ -2,7 +2,7 @@ import AlamofireObjectMapper
 import ObjectMapper
 import Alamofire
 
-class AlamofireStore<Item: BaseMappable>: RemoteStore {
+public class AlamofireStore<Item: BaseMappable>: RemoteStore {
 
     var session: SessionManager
 

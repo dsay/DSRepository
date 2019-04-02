@@ -1,6 +1,6 @@
 import RealmSwift
 
-class RealmStore<Item: Object>: LocalStore {
+public class RealmStore<Item: Object>: LocalStore {
 
     let context: Realm
 

@@ -1,6 +1,6 @@
 import Alamofire
 
-class AlamofireRequestBuilder: RequestProvider, URLRequestConvertible {
+public class AlamofireRequestBuilder: RequestProvider, URLRequestConvertible {
 
     let url: String
     let path: String?
@@ -11,7 +11,7 @@ class AlamofireRequestBuilder: RequestProvider, URLRequestConvertible {
 
     func encoder() -> ParameterEncoding { fatalError() }
 
-    init(url: String = API.Configuration.current.baseURLString,
+    init(url: String = nil,
          path: String? = nil,
          keyPath: String? = nil,
          headers: [String: String]? = nil,
@@ -43,10 +43,10 @@ class AlamofireRequestBuilder: RequestProvider, URLRequestConvertible {
     }
 }
 
-class URLEncodingRequestBuilder: AlamofireRequestBuilder {
+public class URLEncodingRequestBuilder: AlamofireRequestBuilder {
     override func encoder() -> ParameterEncoding { return URLEncoding.default }
 }
 
-class JSONEncodingRequestBuilder: AlamofireRequestBuilder {
+public class JSONEncodingRequestBuilder: AlamofireRequestBuilder {
     override func encoder() -> ParameterEncoding { return JSONEncoding.default }
 }

@@ -1,6 +1,6 @@
 import Alamofire
 
-struct BaseHandler {
+public struct BaseHandler {
 
     #if DEBUG
     static let loger = DEBUGLog()
