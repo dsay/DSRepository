@@ -274,21 +274,21 @@
 		C8E751E9D9363EC5C9CCE4AE0E80C1A2 /* RLMRealmConfiguration+Sync.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = A0E0F9D1B481BCD14F1F398F485B11F5 /* RLMRealmConfiguration+Sync.h */; };
 		CD36A84C0278E53667C6D327BA0A30C1 /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4006E4A50D8449220986492C28C3F /* DateTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CE0553CAA9252FCD55C1F220D4AE85D7 /* RLMConstants.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = B0C8E518F2D7127DAC039C0F2CD19E0F /* RLMConstants.h */; };
-		CECB41BF2254BB2A00A4E9A8 /* OnDiskStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41AC2254BB2A00A4E9A8 /* OnDiskStorable.swift */; };
-		CECB41C02254BB2A00A4E9A8 /* AlamofireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41AE2254BB2A00A4E9A8 /* AlamofireStore.swift */; };
-		CECB41C12254BB2A00A4E9A8 /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41AF2254BB2A00A4E9A8 /* SessionAdapter.swift */; };
-		CECB41C22254BB2A00A4E9A8 /* AlamofireCompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41B02254BB2A00A4E9A8 /* AlamofireCompletionHandler.swift */; };
-		CECB41C32254BB2A00A4E9A8 /* AlamofireRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41B12254BB2A00A4E9A8 /* AlamofireRequestBuilder.swift */; };
-		CECB41C42254BB2A00A4E9A8 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41B22254BB2A00A4E9A8 /* Storable.swift */; };
-		CECB41C52254BB2A00A4E9A8 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41B32254BB2A00A4E9A8 /* Response.swift */; };
-		CECB41C62254BB2A00A4E9A8 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41B42254BB2A00A4E9A8 /* Repository.swift */; };
-		CECB41C72254BB2A00A4E9A8 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41B52254BB2A00A4E9A8 /* Request.swift */; };
-		CECB41C82254BB2A00A4E9A8 /* OnDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41B72254BB2A00A4E9A8 /* OnDiskCache.swift */; };
-		CECB41C92254BB2A00A4E9A8 /* OnDiskStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41B92254BB2A00A4E9A8 /* OnDiskStorePromise.swift */; };
-		CECB41CA2254BB2A00A4E9A8 /* RemoteStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41BA2254BB2A00A4E9A8 /* RemoteStorePromise.swift */; };
-		CECB41CB2254BB2A00A4E9A8 /* LocalStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41BB2254BB2A00A4E9A8 /* LocalStorePromise.swift */; };
-		CECB41CC2254BB2A00A4E9A8 /* Syncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41BC2254BB2A00A4E9A8 /* Syncable.swift */; };
-		CECB41CD2254BB2A00A4E9A8 /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41BE2254BB2A00A4E9A8 /* RealmStore.swift */; };
+		CECB41E22254BB9B00A4E9A8 /* OnDiskStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41CF2254BB9B00A4E9A8 /* OnDiskStorable.swift */; };
+		CECB41E32254BB9B00A4E9A8 /* AlamofireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41D12254BB9B00A4E9A8 /* AlamofireStore.swift */; };
+		CECB41E42254BB9B00A4E9A8 /* SessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41D22254BB9B00A4E9A8 /* SessionAdapter.swift */; };
+		CECB41E52254BB9B00A4E9A8 /* AlamofireCompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41D32254BB9B00A4E9A8 /* AlamofireCompletionHandler.swift */; };
+		CECB41E62254BB9B00A4E9A8 /* AlamofireRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41D42254BB9B00A4E9A8 /* AlamofireRequestBuilder.swift */; };
+		CECB41E72254BB9B00A4E9A8 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41D52254BB9B00A4E9A8 /* Storable.swift */; };
+		CECB41E82254BB9B00A4E9A8 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41D62254BB9B00A4E9A8 /* Response.swift */; };
+		CECB41E92254BB9B00A4E9A8 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41D72254BB9B00A4E9A8 /* Repository.swift */; };
+		CECB41EA2254BB9B00A4E9A8 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41D82254BB9B00A4E9A8 /* Request.swift */; };
+		CECB41EB2254BB9B00A4E9A8 /* OnDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41DA2254BB9B00A4E9A8 /* OnDiskCache.swift */; };
+		CECB41EC2254BB9B00A4E9A8 /* OnDiskStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41DC2254BB9B00A4E9A8 /* OnDiskStorePromise.swift */; };
+		CECB41ED2254BB9B00A4E9A8 /* RemoteStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41DD2254BB9B00A4E9A8 /* RemoteStorePromise.swift */; };
+		CECB41EE2254BB9B00A4E9A8 /* LocalStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41DE2254BB9B00A4E9A8 /* LocalStorePromise.swift */; };
+		CECB41EF2254BB9B00A4E9A8 /* Syncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41DF2254BB9B00A4E9A8 /* Syncable.swift */; };
+		CECB41F02254BB9B00A4E9A8 /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB41E12254BB9B00A4E9A8 /* RealmStore.swift */; };
 		CF5C4C7E5B41744E46018AD5DD512DCD /* RLMRealmConfiguration_Private.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = FF1507FCD3C183A4E1288C39E2A6FDA3 /* RLMRealmConfiguration_Private.h */; };
 		D04CB53C099A4A25D2286F215BB7BF44 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AB1A5C7FE82734DFAFD72FFFC65CAF /* ImageCache.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D0A28826916584B0ED2DD4F43C1146D8 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC328E2B68E82093065D755B271223E /* ResponseSerialization.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -891,21 +891,21 @@
 		CD040BCAFB9BC9E1A2F46CB80A317622 /* RealmConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RealmConfiguration.swift; path = RealmSwift/RealmConfiguration.swift; sourceTree = "<group>"; };
 		CD35BF9108857AD7F0EC4A0F95DC3B98 /* RealmSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealmSwift-umbrella.h"; sourceTree = "<group>"; };
 		CE8E41ED6FE2AD0E229546FAEADDAB92 /* Catchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Catchable.swift; path = Sources/Catchable.swift; sourceTree = "<group>"; };
-		CECB41AC2254BB2A00A4E9A8 /* OnDiskStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskStorable.swift; sourceTree = "<group>"; };
-		CECB41AE2254BB2A00A4E9A8 /* AlamofireStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireStore.swift; sourceTree = "<group>"; };
-		CECB41AF2254BB2A00A4E9A8 /* SessionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
-		CECB41B02254BB2A00A4E9A8 /* AlamofireCompletionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireCompletionHandler.swift; sourceTree = "<group>"; };
-		CECB41B12254BB2A00A4E9A8 /* AlamofireRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireRequestBuilder.swift; sourceTree = "<group>"; };
-		CECB41B22254BB2A00A4E9A8 /* Storable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
-		CECB41B32254BB2A00A4E9A8 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		CECB41B42254BB2A00A4E9A8 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		CECB41B52254BB2A00A4E9A8 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		CECB41B72254BB2A00A4E9A8 /* OnDiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskCache.swift; sourceTree = "<group>"; };
-		CECB41B92254BB2A00A4E9A8 /* OnDiskStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskStorePromise.swift; sourceTree = "<group>"; };
-		CECB41BA2254BB2A00A4E9A8 /* RemoteStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteStorePromise.swift; sourceTree = "<group>"; };
-		CECB41BB2254BB2A00A4E9A8 /* LocalStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorePromise.swift; sourceTree = "<group>"; };
-		CECB41BC2254BB2A00A4E9A8 /* Syncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Syncable.swift; sourceTree = "<group>"; };
-		CECB41BE2254BB2A00A4E9A8 /* RealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
+		CECB41CF2254BB9B00A4E9A8 /* OnDiskStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskStorable.swift; sourceTree = "<group>"; };
+		CECB41D12254BB9B00A4E9A8 /* AlamofireStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireStore.swift; sourceTree = "<group>"; };
+		CECB41D22254BB9B00A4E9A8 /* SessionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
+		CECB41D32254BB9B00A4E9A8 /* AlamofireCompletionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireCompletionHandler.swift; sourceTree = "<group>"; };
+		CECB41D42254BB9B00A4E9A8 /* AlamofireRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireRequestBuilder.swift; sourceTree = "<group>"; };
+		CECB41D52254BB9B00A4E9A8 /* Storable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
+		CECB41D62254BB9B00A4E9A8 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		CECB41D72254BB9B00A4E9A8 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CECB41D82254BB9B00A4E9A8 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		CECB41DA2254BB9B00A4E9A8 /* OnDiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskCache.swift; sourceTree = "<group>"; };
+		CECB41DC2254BB9B00A4E9A8 /* OnDiskStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskStorePromise.swift; sourceTree = "<group>"; };
+		CECB41DD2254BB9B00A4E9A8 /* RemoteStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteStorePromise.swift; sourceTree = "<group>"; };
+		CECB41DE2254BB9B00A4E9A8 /* LocalStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorePromise.swift; sourceTree = "<group>"; };
+		CECB41DF2254BB9B00A4E9A8 /* Syncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Syncable.swift; sourceTree = "<group>"; };
+		CECB41E12254BB9B00A4E9A8 /* RealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
 		CF4928C82FE95039414D605D71C10296 /* RLMCollection_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMCollection_Private.h; path = include/RLMCollection_Private.h; sourceTree = "<group>"; };
 		CF8315D23F615D380710C1C6BDFAD2D0 /* RLMSyncManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncManager.h; path = include/RLMSyncManager.h; sourceTree = "<group>"; };
 		D072555D432153920F596937C32C5716 /* RLMObservation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMObservation.mm; path = Realm/RLMObservation.mm; sourceTree = "<group>"; };
@@ -1646,56 +1646,57 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CECB41AB2254BB2A00A4E9A8 /* Classes */ = {
+		CECB41CE2254BB9B00A4E9A8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CECB41AC2254BB2A00A4E9A8 /* OnDiskStorable.swift */,
-				CECB41AD2254BB2A00A4E9A8 /* Alamofire */,
-				CECB41B22254BB2A00A4E9A8 /* Storable.swift */,
-				CECB41B32254BB2A00A4E9A8 /* Response.swift */,
-				CECB41B42254BB2A00A4E9A8 /* Repository.swift */,
-				CECB41B52254BB2A00A4E9A8 /* Request.swift */,
-				CECB41B62254BB2A00A4E9A8 /* FileManager */,
-				CECB41B82254BB2A00A4E9A8 /* Promise */,
-				CECB41BC2254BB2A00A4E9A8 /* Syncable.swift */,
-				CECB41BD2254BB2A00A4E9A8 /* Realm */,
+				CECB41CF2254BB9B00A4E9A8 /* OnDiskStorable.swift */,
+				CECB41D02254BB9B00A4E9A8 /* Alamofire */,
+				CECB41D52254BB9B00A4E9A8 /* Storable.swift */,
+				CECB41D62254BB9B00A4E9A8 /* Response.swift */,
+				CECB41D72254BB9B00A4E9A8 /* Repository.swift */,
+				CECB41D82254BB9B00A4E9A8 /* Request.swift */,
+				CECB41D92254BB9B00A4E9A8 /* FileManager */,
+				CECB41DB2254BB9B00A4E9A8 /* Promise */,
+				CECB41DF2254BB9B00A4E9A8 /* Syncable.swift */,
+				CECB41E02254BB9B00A4E9A8 /* Realm */,
 			);
-			path = Classes;
+			name = Classes;
+			path = Repository/Classes;
 			sourceTree = "<group>";
 		};
-		CECB41AD2254BB2A00A4E9A8 /* Alamofire */ = {
+		CECB41D02254BB9B00A4E9A8 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				CECB41AE2254BB2A00A4E9A8 /* AlamofireStore.swift */,
-				CECB41AF2254BB2A00A4E9A8 /* SessionAdapter.swift */,
-				CECB41B02254BB2A00A4E9A8 /* AlamofireCompletionHandler.swift */,
-				CECB41B12254BB2A00A4E9A8 /* AlamofireRequestBuilder.swift */,
+				CECB41D12254BB9B00A4E9A8 /* AlamofireStore.swift */,
+				CECB41D22254BB9B00A4E9A8 /* SessionAdapter.swift */,
+				CECB41D32254BB9B00A4E9A8 /* AlamofireCompletionHandler.swift */,
+				CECB41D42254BB9B00A4E9A8 /* AlamofireRequestBuilder.swift */,
 			);
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		CECB41B62254BB2A00A4E9A8 /* FileManager */ = {
+		CECB41D92254BB9B00A4E9A8 /* FileManager */ = {
 			isa = PBXGroup;
 			children = (
-				CECB41B72254BB2A00A4E9A8 /* OnDiskCache.swift */,
+				CECB41DA2254BB9B00A4E9A8 /* OnDiskCache.swift */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
 		};
-		CECB41B82254BB2A00A4E9A8 /* Promise */ = {
+		CECB41DB2254BB9B00A4E9A8 /* Promise */ = {
 			isa = PBXGroup;
 			children = (
-				CECB41B92254BB2A00A4E9A8 /* OnDiskStorePromise.swift */,
-				CECB41BA2254BB2A00A4E9A8 /* RemoteStorePromise.swift */,
-				CECB41BB2254BB2A00A4E9A8 /* LocalStorePromise.swift */,
+				CECB41DC2254BB9B00A4E9A8 /* OnDiskStorePromise.swift */,
+				CECB41DD2254BB9B00A4E9A8 /* RemoteStorePromise.swift */,
+				CECB41DE2254BB9B00A4E9A8 /* LocalStorePromise.swift */,
 			);
 			path = Promise;
 			sourceTree = "<group>";
 		};
-		CECB41BD2254BB2A00A4E9A8 /* Realm */ = {
+		CECB41E02254BB9B00A4E9A8 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				CECB41BE2254BB2A00A4E9A8 /* RealmStore.swift */,
+				CECB41E12254BB9B00A4E9A8 /* RealmStore.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -1743,7 +1744,7 @@
 		F247F8966731EF9A056145A07ECF4BF9 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				CECB41AB2254BB2A00A4E9A8 /* Classes */,
+				CECB41CE2254BB9B00A4E9A8 /* Classes */,
 				6B2B86BF561102387785204E8C8661DF /* Pod */,
 				3F501D6CBE152F3C5ADB2797F3D4A672 /* Support Files */,
 			);
@@ -2167,7 +2168,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2290,22 +2291,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECB41C82254BB2A00A4E9A8 /* OnDiskCache.swift in Sources */,
-				CECB41C42254BB2A00A4E9A8 /* Storable.swift in Sources */,
-				CECB41C92254BB2A00A4E9A8 /* OnDiskStorePromise.swift in Sources */,
-				CECB41CA2254BB2A00A4E9A8 /* RemoteStorePromise.swift in Sources */,
-				CECB41C32254BB2A00A4E9A8 /* AlamofireRequestBuilder.swift in Sources */,
-				CECB41C02254BB2A00A4E9A8 /* AlamofireStore.swift in Sources */,
-				CECB41CC2254BB2A00A4E9A8 /* Syncable.swift in Sources */,
-				CECB41C62254BB2A00A4E9A8 /* Repository.swift in Sources */,
-				CECB41C72254BB2A00A4E9A8 /* Request.swift in Sources */,
+				CECB41EB2254BB9B00A4E9A8 /* OnDiskCache.swift in Sources */,
+				CECB41E72254BB9B00A4E9A8 /* Storable.swift in Sources */,
+				CECB41EC2254BB9B00A4E9A8 /* OnDiskStorePromise.swift in Sources */,
+				CECB41ED2254BB9B00A4E9A8 /* RemoteStorePromise.swift in Sources */,
+				CECB41E62254BB9B00A4E9A8 /* AlamofireRequestBuilder.swift in Sources */,
+				CECB41E32254BB9B00A4E9A8 /* AlamofireStore.swift in Sources */,
+				CECB41EF2254BB9B00A4E9A8 /* Syncable.swift in Sources */,
+				CECB41E92254BB9B00A4E9A8 /* Repository.swift in Sources */,
+				CECB41EA2254BB9B00A4E9A8 /* Request.swift in Sources */,
 				F8FB540ED8BF10D3FCA2BA9009F6D388 /* Repository-dummy.m in Sources */,
-				CECB41C12254BB2A00A4E9A8 /* SessionAdapter.swift in Sources */,
-				CECB41C22254BB2A00A4E9A8 /* AlamofireCompletionHandler.swift in Sources */,
-				CECB41C52254BB2A00A4E9A8 /* Response.swift in Sources */,
-				CECB41CB2254BB2A00A4E9A8 /* LocalStorePromise.swift in Sources */,
-				CECB41CD2254BB2A00A4E9A8 /* RealmStore.swift in Sources */,
-				CECB41BF2254BB2A00A4E9A8 /* OnDiskStorable.swift in Sources */,
+				CECB41E42254BB9B00A4E9A8 /* SessionAdapter.swift in Sources */,
+				CECB41E52254BB9B00A4E9A8 /* AlamofireCompletionHandler.swift in Sources */,
+				CECB41E82254BB9B00A4E9A8 /* Response.swift in Sources */,
+				CECB41EE2254BB9B00A4E9A8 /* LocalStorePromise.swift in Sources */,
+				CECB41F02254BB9B00A4E9A8 /* RealmStore.swift in Sources */,
+				CECB41E22254BB9B00A4E9A8 /* OnDiskStorable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2909,7 +2910,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -3164,7 +3164,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
