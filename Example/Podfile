@@ -15,8 +15,8 @@ target 'Repository_Example' do
   pod 'ObjectMapper+Realm'
   pod 'ObjectMapperAdditions/Realm'
   
-#  target 'Repository_Tests' do
-#    inherit! :search_paths
-#
-#  end
+  target 'Repository_Tests' do
+    inherit! :search_paths
+
+  end
 end

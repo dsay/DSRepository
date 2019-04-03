@@ -1,16 +1,73 @@
 PODS:
-  - Repository (0.1.0)
+  - Alamofire (4.8.1)
+  - AlamofireImage (3.5.0):
+    - Alamofire (~> 4.8)
+  - AlamofireObjectMapper (5.2.0):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - ObjectMapper (3.4.2)
+  - "ObjectMapper+Realm (0.6)":
+    - ObjectMapper
+    - RealmSwift
+  - ObjectMapperAdditions/Core (5.0.0):
+    - ObjectMapper
+  - ObjectMapperAdditions/Realm (5.0.0):
+    - ObjectMapper
+    - ObjectMapperAdditions/Core
+    - RealmSwift
+  - PromiseKit/CorePromise (6.8.3)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
+  - Repository (0.1.0):
+    - AlamofireImage
+    - AlamofireObjectMapper
+    - ObjectMapper
+    - "ObjectMapper+Realm"
+    - ObjectMapperAdditions/Realm
+    - PromiseKit/CorePromise
+    - RealmSwift
 
 DEPENDENCIES:
+  - AlamofireImage
+  - AlamofireObjectMapper
+  - ObjectMapper
+  - "ObjectMapper+Realm"
+  - ObjectMapperAdditions/Realm
+  - PromiseKit/CorePromise
+  - RealmSwift
   - Repository (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - AlamofireObjectMapper
+    - ObjectMapper
+    - "ObjectMapper+Realm"
+    - ObjectMapperAdditions
+    - PromiseKit
+    - Realm
+    - RealmSwift
 
 EXTERNAL SOURCES:
   Repository:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Repository: cca03bbedf18d5397bb8ee5bb60ded4ed3d29a2e
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
+  AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  "ObjectMapper+Realm": 4cf44ed3202a73f08594e21e13eb3f8aa9b5a664
+  ObjectMapperAdditions: eca3aa0c950e4c08cf2b8e89d6b6ad6a556ba53d
+  PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  Repository: 67ff90388c1eaa689c38347782fccb4b8ccb97ad
 
-PODFILE CHECKSUM: cf386a89750d7d04763bcf30d57e4af2c462b3e0
+PODFILE CHECKSUM: 37ac159160baa3835adc532143af8681b14401d2
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.6.1
