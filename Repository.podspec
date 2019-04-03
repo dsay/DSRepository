@@ -27,5 +27,13 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  s.dependency 'RealmSwift', 'PromiseKit/CorePromise', 'AlamofireImage', 'ObjectMapper', 'AlamofireObjectMapper', 'ObjectMapper+Realm', 'ObjectMapperAdditions/Realm'
+  
+  s.dependency 'RealmSwift'
+  s.dependency 'PromiseKit/CorePromise'
+  s.dependency 'AlamofireImage'
+  s.dependency 'ObjectMapper'
+  s.dependency 'AlamofireObjectMapper'
+  s.dependency 'ObjectMapper+Realm'
+  s.dependency 'ObjectMapperAdditions/Realm'
+  
 end
