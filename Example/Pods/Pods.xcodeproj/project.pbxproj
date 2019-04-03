@@ -877,22 +877,21 @@
 		CD35BF9108857AD7F0EC4A0F95DC3B98 /* RealmSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealmSwift-umbrella.h"; sourceTree = "<group>"; };
 		CE7151DEE09804840D06ACAC317AE5BE /* ObjectMapper_Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapper_Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8E41ED6FE2AD0E229546FAEADDAB92 /* Catchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Catchable.swift; path = Sources/Catchable.swift; sourceTree = "<group>"; };
-		CECB415D2254A4AF00A4E9A8 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		CECB415F2254A4AF00A4E9A8 /* OnDiskStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskStorable.swift; sourceTree = "<group>"; };
-		CECB41612254A4AF00A4E9A8 /* AlamofireStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireStore.swift; sourceTree = "<group>"; };
-		CECB41622254A4AF00A4E9A8 /* SessionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
-		CECB41632254A4AF00A4E9A8 /* AlamofireCompletionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireCompletionHandler.swift; sourceTree = "<group>"; };
-		CECB41642254A4AF00A4E9A8 /* AlamofireRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireRequestBuilder.swift; sourceTree = "<group>"; };
-		CECB41662254A4AF00A4E9A8 /* Storable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
-		CECB41672254A4AF00A4E9A8 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		CECB41682254A4AF00A4E9A8 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		CECB41692254A4AF00A4E9A8 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		CECB416B2254A4AF00A4E9A8 /* OnDiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskCache.swift; sourceTree = "<group>"; };
-		CECB416D2254A4AF00A4E9A8 /* OnDiskStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskStorePromise.swift; sourceTree = "<group>"; };
-		CECB416E2254A4AF00A4E9A8 /* RemoteStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteStorePromise.swift; sourceTree = "<group>"; };
-		CECB416F2254A4AF00A4E9A8 /* LocalStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorePromise.swift; sourceTree = "<group>"; };
-		CECB41702254A4AF00A4E9A8 /* Syncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Syncable.swift; sourceTree = "<group>"; };
-		CECB41722254A4AF00A4E9A8 /* RealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
+		CECB41742254A52900A4E9A8 /* OnDiskStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskStorable.swift; sourceTree = "<group>"; };
+		CECB41762254A52900A4E9A8 /* AlamofireStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireStore.swift; sourceTree = "<group>"; };
+		CECB41772254A52900A4E9A8 /* SessionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
+		CECB41782254A52900A4E9A8 /* AlamofireCompletionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireCompletionHandler.swift; sourceTree = "<group>"; };
+		CECB41792254A52900A4E9A8 /* AlamofireRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireRequestBuilder.swift; sourceTree = "<group>"; };
+		CECB417B2254A52900A4E9A8 /* Storable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
+		CECB417C2254A52900A4E9A8 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		CECB417D2254A52900A4E9A8 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CECB417E2254A52900A4E9A8 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		CECB41802254A52900A4E9A8 /* OnDiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskCache.swift; sourceTree = "<group>"; };
+		CECB41822254A52900A4E9A8 /* OnDiskStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskStorePromise.swift; sourceTree = "<group>"; };
+		CECB41832254A52900A4E9A8 /* RemoteStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteStorePromise.swift; sourceTree = "<group>"; };
+		CECB41842254A52900A4E9A8 /* LocalStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorePromise.swift; sourceTree = "<group>"; };
+		CECB41852254A52900A4E9A8 /* Syncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Syncable.swift; sourceTree = "<group>"; };
+		CECB41872254A52900A4E9A8 /* RealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
 		CF4928C82FE95039414D605D71C10296 /* RLMCollection_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMCollection_Private.h; path = include/RLMCollection_Private.h; sourceTree = "<group>"; };
 		CF8315D23F615D380710C1C6BDFAD2D0 /* RLMSyncManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncManager.h; path = include/RLMSyncManager.h; sourceTree = "<group>"; };
 		D072555D432153920F596937C32C5716 /* RLMObservation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMObservation.mm; path = Realm/RLMObservation.mm; sourceTree = "<group>"; };
@@ -1149,8 +1148,7 @@
 		256E759A00DFD8F2EA9696B51271967A /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				CECB415C2254A4AF00A4E9A8 /* Assets */,
-				CECB415E2254A4AF00A4E9A8 /* Classes */,
+				CECB41732254A52900A4E9A8 /* Classes */,
 				4E00415B4042F601BC1DC0A3F68B8032 /* Pod */,
 				FF0492971DE867E1C0503258FB2CBF0E /* Support Files */,
 			);
@@ -1588,66 +1586,56 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CECB415C2254A4AF00A4E9A8 /* Assets */ = {
+		CECB41732254A52900A4E9A8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CECB415D2254A4AF00A4E9A8 /* .gitkeep */,
+				CECB41742254A52900A4E9A8 /* OnDiskStorable.swift */,
+				CECB417B2254A52900A4E9A8 /* Storable.swift */,
+				CECB417C2254A52900A4E9A8 /* Response.swift */,
+				CECB417D2254A52900A4E9A8 /* Repository.swift */,
+				CECB41852254A52900A4E9A8 /* Syncable.swift */,
+				CECB417E2254A52900A4E9A8 /* Request.swift */,
+				CECB41752254A52900A4E9A8 /* Alamofire */,
+				CECB417F2254A52900A4E9A8 /* FileManager */,
+				CECB41812254A52900A4E9A8 /* Promise */,
+				CECB41862254A52900A4E9A8 /* Realm */,
 			);
-			name = Assets;
-			path = Repository/Assets;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		CECB415E2254A4AF00A4E9A8 /* Classes */ = {
+		CECB41752254A52900A4E9A8 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				CECB415F2254A4AF00A4E9A8 /* OnDiskStorable.swift */,
-				CECB41662254A4AF00A4E9A8 /* Storable.swift */,
-				CECB41672254A4AF00A4E9A8 /* Response.swift */,
-				CECB41682254A4AF00A4E9A8 /* Repository.swift */,
-				CECB41702254A4AF00A4E9A8 /* Syncable.swift */,
-				CECB41692254A4AF00A4E9A8 /* Request.swift */,
-				CECB41602254A4AF00A4E9A8 /* Alamofire */,
-				CECB416A2254A4AF00A4E9A8 /* FileManager */,
-				CECB416C2254A4AF00A4E9A8 /* Promise */,
-				CECB41712254A4AF00A4E9A8 /* Realm */,
-			);
-			name = Classes;
-			path = Repository/Classes;
-			sourceTree = "<group>";
-		};
-		CECB41602254A4AF00A4E9A8 /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				CECB41612254A4AF00A4E9A8 /* AlamofireStore.swift */,
-				CECB41622254A4AF00A4E9A8 /* SessionAdapter.swift */,
-				CECB41632254A4AF00A4E9A8 /* AlamofireCompletionHandler.swift */,
-				CECB41642254A4AF00A4E9A8 /* AlamofireRequestBuilder.swift */,
+				CECB41762254A52900A4E9A8 /* AlamofireStore.swift */,
+				CECB41772254A52900A4E9A8 /* SessionAdapter.swift */,
+				CECB41782254A52900A4E9A8 /* AlamofireCompletionHandler.swift */,
+				CECB41792254A52900A4E9A8 /* AlamofireRequestBuilder.swift */,
 			);
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		CECB416A2254A4AF00A4E9A8 /* FileManager */ = {
+		CECB417F2254A52900A4E9A8 /* FileManager */ = {
 			isa = PBXGroup;
 			children = (
-				CECB416B2254A4AF00A4E9A8 /* OnDiskCache.swift */,
+				CECB41802254A52900A4E9A8 /* OnDiskCache.swift */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
 		};
-		CECB416C2254A4AF00A4E9A8 /* Promise */ = {
+		CECB41812254A52900A4E9A8 /* Promise */ = {
 			isa = PBXGroup;
 			children = (
-				CECB416D2254A4AF00A4E9A8 /* OnDiskStorePromise.swift */,
-				CECB416E2254A4AF00A4E9A8 /* RemoteStorePromise.swift */,
-				CECB416F2254A4AF00A4E9A8 /* LocalStorePromise.swift */,
+				CECB41822254A52900A4E9A8 /* OnDiskStorePromise.swift */,
+				CECB41832254A52900A4E9A8 /* RemoteStorePromise.swift */,
+				CECB41842254A52900A4E9A8 /* LocalStorePromise.swift */,
 			);
 			path = Promise;
 			sourceTree = "<group>";
 		};
-		CECB41712254A4AF00A4E9A8 /* Realm */ = {
+		CECB41862254A52900A4E9A8 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				CECB41722254A4AF00A4E9A8 /* RealmStore.swift */,
+				CECB41872254A52900A4E9A8 /* RealmStore.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
