@@ -18,12 +18,6 @@
 		CECB40FE22538EEE00A4E9A8 /* OnDiskStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40E522538EEE00A4E9A8 /* OnDiskStorable.swift */; };
 		CECB40FF22538EEE00A4E9A8 /* OnDiskStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40E522538EEE00A4E9A8 /* OnDiskStorable.swift */; };
 		CECB410022538EEE00A4E9A8 /* OnDiskStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40E522538EEE00A4E9A8 /* OnDiskStorable.swift */; };
-		CECB410122538EEE00A4E9A8 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CECB40E822538EEE00A4E9A8 /* .gitkeep */; };
-		CECB410222538EEE00A4E9A8 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CECB40E822538EEE00A4E9A8 /* .gitkeep */; };
-		CECB410322538EEE00A4E9A8 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CECB40E822538EEE00A4E9A8 /* .gitkeep */; };
-		CECB410422538EEE00A4E9A8 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CECB40EA22538EEE00A4E9A8 /* .gitkeep */; };
-		CECB410522538EEE00A4E9A8 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CECB40EA22538EEE00A4E9A8 /* .gitkeep */; };
-		CECB410622538EEE00A4E9A8 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CECB40EA22538EEE00A4E9A8 /* .gitkeep */; };
 		CECB410722538EEE00A4E9A8 /* AlamofireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40EC22538EEE00A4E9A8 /* AlamofireStore.swift */; };
 		CECB410822538EEE00A4E9A8 /* AlamofireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40EC22538EEE00A4E9A8 /* AlamofireStore.swift */; };
 		CECB410922538EEE00A4E9A8 /* AlamofireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40EC22538EEE00A4E9A8 /* AlamofireStore.swift */; };
@@ -48,18 +42,18 @@
 		CECB411F22538EEF00A4E9A8 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F422538EEE00A4E9A8 /* Request.swift */; };
 		CECB412022538EEF00A4E9A8 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F422538EEE00A4E9A8 /* Request.swift */; };
 		CECB412122538EEF00A4E9A8 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F422538EEE00A4E9A8 /* Request.swift */; };
-		CECB412222538EEF00A4E9A8 /* OnDiskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F622538EEE00A4E9A8 /* OnDiskStore.swift */; };
-		CECB412322538EEF00A4E9A8 /* OnDiskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F622538EEE00A4E9A8 /* OnDiskStore.swift */; };
-		CECB412422538EEF00A4E9A8 /* OnDiskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F622538EEE00A4E9A8 /* OnDiskStore.swift */; };
-		CECB412522538EEF00A4E9A8 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F822538EEE00A4E9A8 /* LocalStore.swift */; };
-		CECB412622538EEF00A4E9A8 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F822538EEE00A4E9A8 /* LocalStore.swift */; };
-		CECB412722538EEF00A4E9A8 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F822538EEE00A4E9A8 /* LocalStore.swift */; };
-		CECB412822538EEF00A4E9A8 /* RemoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F922538EEE00A4E9A8 /* RemoteStore.swift */; };
-		CECB412922538EEF00A4E9A8 /* RemoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F922538EEE00A4E9A8 /* RemoteStore.swift */; };
-		CECB412A22538EEF00A4E9A8 /* RemoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F922538EEE00A4E9A8 /* RemoteStore.swift */; };
-		CECB412B22538EEF00A4E9A8 /* OnDiskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40FA22538EEE00A4E9A8 /* OnDiskStore.swift */; };
-		CECB412C22538EEF00A4E9A8 /* OnDiskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40FA22538EEE00A4E9A8 /* OnDiskStore.swift */; };
-		CECB412D22538EEF00A4E9A8 /* OnDiskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40FA22538EEE00A4E9A8 /* OnDiskStore.swift */; };
+		CECB412222538EEF00A4E9A8 /* OnDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F622538EEE00A4E9A8 /* OnDiskCache.swift */; };
+		CECB412322538EEF00A4E9A8 /* OnDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F622538EEE00A4E9A8 /* OnDiskCache.swift */; };
+		CECB412422538EEF00A4E9A8 /* OnDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F622538EEE00A4E9A8 /* OnDiskCache.swift */; };
+		CECB412522538EEF00A4E9A8 /* LocalStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F822538EEE00A4E9A8 /* LocalStorePromise.swift */; };
+		CECB412622538EEF00A4E9A8 /* LocalStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F822538EEE00A4E9A8 /* LocalStorePromise.swift */; };
+		CECB412722538EEF00A4E9A8 /* LocalStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F822538EEE00A4E9A8 /* LocalStorePromise.swift */; };
+		CECB412822538EEF00A4E9A8 /* RemoteStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F922538EEE00A4E9A8 /* RemoteStorePromise.swift */; };
+		CECB412922538EEF00A4E9A8 /* RemoteStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F922538EEE00A4E9A8 /* RemoteStorePromise.swift */; };
+		CECB412A22538EEF00A4E9A8 /* RemoteStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40F922538EEE00A4E9A8 /* RemoteStorePromise.swift */; };
+		CECB412B22538EEF00A4E9A8 /* OnDiskStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40FA22538EEE00A4E9A8 /* OnDiskStorePromise.swift */; };
+		CECB412C22538EEF00A4E9A8 /* OnDiskStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40FA22538EEE00A4E9A8 /* OnDiskStorePromise.swift */; };
+		CECB412D22538EEF00A4E9A8 /* OnDiskStorePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40FA22538EEE00A4E9A8 /* OnDiskStorePromise.swift */; };
 		CECB412E22538EEF00A4E9A8 /* Syncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40FB22538EEE00A4E9A8 /* Syncable.swift */; };
 		CECB412F22538EEF00A4E9A8 /* Syncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40FB22538EEE00A4E9A8 /* Syncable.swift */; };
 		CECB413022538EEF00A4E9A8 /* Syncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB40FB22538EEE00A4E9A8 /* Syncable.swift */; };
@@ -114,8 +108,6 @@
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CC29E23BCA15C471DB35C38CF23B0AA2 /* Pods-Repository_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Repository_Tests.modulemap"; sourceTree = "<group>"; };
 		CECB40E522538EEE00A4E9A8 /* OnDiskStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskStorable.swift; sourceTree = "<group>"; };
-		CECB40E822538EEE00A4E9A8 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		CECB40EA22538EEE00A4E9A8 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		CECB40EC22538EEE00A4E9A8 /* AlamofireStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireStore.swift; sourceTree = "<group>"; };
 		CECB40ED22538EEE00A4E9A8 /* SessionAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAdapter.swift; sourceTree = "<group>"; };
 		CECB40EE22538EEE00A4E9A8 /* AlamofireCompletionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireCompletionHandler.swift; sourceTree = "<group>"; };
@@ -124,10 +116,10 @@
 		CECB40F222538EEE00A4E9A8 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		CECB40F322538EEE00A4E9A8 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CECB40F422538EEE00A4E9A8 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		CECB40F622538EEE00A4E9A8 /* OnDiskStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskStore.swift; sourceTree = "<group>"; };
-		CECB40F822538EEE00A4E9A8 /* LocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
-		CECB40F922538EEE00A4E9A8 /* RemoteStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteStore.swift; sourceTree = "<group>"; };
-		CECB40FA22538EEE00A4E9A8 /* OnDiskStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskStore.swift; sourceTree = "<group>"; };
+		CECB40F622538EEE00A4E9A8 /* OnDiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskCache.swift; sourceTree = "<group>"; };
+		CECB40F822538EEE00A4E9A8 /* LocalStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorePromise.swift; sourceTree = "<group>"; };
+		CECB40F922538EEE00A4E9A8 /* RemoteStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteStorePromise.swift; sourceTree = "<group>"; };
+		CECB40FA22538EEE00A4E9A8 /* OnDiskStorePromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnDiskStorePromise.swift; sourceTree = "<group>"; };
 		CECB40FB22538EEE00A4E9A8 /* Syncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Syncable.swift; sourceTree = "<group>"; };
 		CECB40FD22538EEE00A4E9A8 /* RealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
 		DEBACF4F416E1C707B3AC167F202ED8D /* Pods-Repository_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Repository_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -263,38 +255,12 @@
 				CECB40E522538EEE00A4E9A8 /* OnDiskStorable.swift */,
 				CECB40F222538EEE00A4E9A8 /* Response.swift */,
 				CECB40F422538EEE00A4E9A8 /* Request.swift */,
-				CECB40E622538EEE00A4E9A8 /* Repository */,
 				CECB40EB22538EEE00A4E9A8 /* Alamofire */,
 				CECB40F522538EEE00A4E9A8 /* FileManager */,
 				CECB40F722538EEE00A4E9A8 /* Promise */,
 				CECB40FC22538EEE00A4E9A8 /* Realm */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		CECB40E622538EEE00A4E9A8 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				CECB40E722538EEE00A4E9A8 /* Classes */,
-				CECB40E922538EEE00A4E9A8 /* Assets */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		CECB40E722538EEE00A4E9A8 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				CECB40E822538EEE00A4E9A8 /* .gitkeep */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		CECB40E922538EEE00A4E9A8 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				CECB40EA22538EEE00A4E9A8 /* .gitkeep */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		CECB40EB22538EEE00A4E9A8 /* Alamofire */ = {
@@ -311,7 +277,7 @@
 		CECB40F522538EEE00A4E9A8 /* FileManager */ = {
 			isa = PBXGroup;
 			children = (
-				CECB40F622538EEE00A4E9A8 /* OnDiskStore.swift */,
+				CECB40F622538EEE00A4E9A8 /* OnDiskCache.swift */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -319,9 +285,9 @@
 		CECB40F722538EEE00A4E9A8 /* Promise */ = {
 			isa = PBXGroup;
 			children = (
-				CECB40F822538EEE00A4E9A8 /* LocalStore.swift */,
-				CECB40F922538EEE00A4E9A8 /* RemoteStore.swift */,
-				CECB40FA22538EEE00A4E9A8 /* OnDiskStore.swift */,
+				CECB40F822538EEE00A4E9A8 /* LocalStorePromise.swift */,
+				CECB40F922538EEE00A4E9A8 /* RemoteStorePromise.swift */,
+				CECB40FA22538EEE00A4E9A8 /* OnDiskStorePromise.swift */,
 			);
 			path = Promise;
 			sourceTree = "<group>";
@@ -495,8 +461,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECB410222538EEE00A4E9A8 /* .gitkeep in Resources */,
-				CECB410522538EEE00A4E9A8 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,8 +468,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECB410122538EEE00A4E9A8 /* .gitkeep in Resources */,
-				CECB410422538EEE00A4E9A8 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,8 +475,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECB410322538EEE00A4E9A8 /* .gitkeep in Resources */,
-				CECB410622538EEE00A4E9A8 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,19 +485,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECB412D22538EEF00A4E9A8 /* OnDiskStore.swift in Sources */,
+				CECB412D22538EEF00A4E9A8 /* OnDiskStorePromise.swift in Sources */,
 				CECB411522538EEF00A4E9A8 /* Storable.swift in Sources */,
-				CECB412422538EEF00A4E9A8 /* OnDiskStore.swift in Sources */,
+				CECB412422538EEF00A4E9A8 /* OnDiskCache.swift in Sources */,
 				CECB411222538EEF00A4E9A8 /* AlamofireRequestBuilder.swift in Sources */,
 				CECB410922538EEE00A4E9A8 /* AlamofireStore.swift in Sources */,
 				CECB411E22538EEF00A4E9A8 /* Repository.swift in Sources */,
 				CECB413022538EEF00A4E9A8 /* Syncable.swift in Sources */,
-				CECB412A22538EEF00A4E9A8 /* RemoteStore.swift in Sources */,
+				CECB412A22538EEF00A4E9A8 /* RemoteStorePromise.swift in Sources */,
 				CECB412122538EEF00A4E9A8 /* Request.swift in Sources */,
 				CECB410C22538EEE00A4E9A8 /* SessionAdapter.swift in Sources */,
 				CECB410F22538EEF00A4E9A8 /* AlamofireCompletionHandler.swift in Sources */,
 				540DBCCF45E307F55AE33CE5D8AB4C7D /* Repository-dummy.m in Sources */,
-				CECB412722538EEF00A4E9A8 /* LocalStore.swift in Sources */,
+				CECB412722538EEF00A4E9A8 /* LocalStorePromise.swift in Sources */,
 				CECB411B22538EEF00A4E9A8 /* Response.swift in Sources */,
 				CECB413322538EEF00A4E9A8 /* RealmStore.swift in Sources */,
 				CECB410022538EEE00A4E9A8 /* OnDiskStorable.swift in Sources */,
@@ -548,19 +508,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECB412C22538EEF00A4E9A8 /* OnDiskStore.swift in Sources */,
+				CECB412C22538EEF00A4E9A8 /* OnDiskStorePromise.swift in Sources */,
 				CECB411422538EEF00A4E9A8 /* Storable.swift in Sources */,
-				CECB412322538EEF00A4E9A8 /* OnDiskStore.swift in Sources */,
+				CECB412322538EEF00A4E9A8 /* OnDiskCache.swift in Sources */,
 				2D78B4C642473852EE5C97B69612139A /* Pods-Repository_Tests-dummy.m in Sources */,
 				CECB411122538EEF00A4E9A8 /* AlamofireRequestBuilder.swift in Sources */,
 				CECB410822538EEE00A4E9A8 /* AlamofireStore.swift in Sources */,
 				CECB411D22538EEF00A4E9A8 /* Repository.swift in Sources */,
 				CECB412F22538EEF00A4E9A8 /* Syncable.swift in Sources */,
-				CECB412922538EEF00A4E9A8 /* RemoteStore.swift in Sources */,
+				CECB412922538EEF00A4E9A8 /* RemoteStorePromise.swift in Sources */,
 				CECB412022538EEF00A4E9A8 /* Request.swift in Sources */,
 				CECB410B22538EEE00A4E9A8 /* SessionAdapter.swift in Sources */,
 				CECB410E22538EEE00A4E9A8 /* AlamofireCompletionHandler.swift in Sources */,
-				CECB412622538EEF00A4E9A8 /* LocalStore.swift in Sources */,
+				CECB412622538EEF00A4E9A8 /* LocalStorePromise.swift in Sources */,
 				CECB411A22538EEF00A4E9A8 /* Response.swift in Sources */,
 				CECB413222538EEF00A4E9A8 /* RealmStore.swift in Sources */,
 				CECB40FF22538EEE00A4E9A8 /* OnDiskStorable.swift in Sources */,
@@ -571,19 +531,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECB412B22538EEF00A4E9A8 /* OnDiskStore.swift in Sources */,
+				CECB412B22538EEF00A4E9A8 /* OnDiskStorePromise.swift in Sources */,
 				CECB411322538EEF00A4E9A8 /* Storable.swift in Sources */,
-				CECB412222538EEF00A4E9A8 /* OnDiskStore.swift in Sources */,
+				CECB412222538EEF00A4E9A8 /* OnDiskCache.swift in Sources */,
 				0532EF4F1000D7A08ED0B8D0452A97A7 /* Pods-Repository_Example-dummy.m in Sources */,
 				CECB411022538EEF00A4E9A8 /* AlamofireRequestBuilder.swift in Sources */,
 				CECB410722538EEE00A4E9A8 /* AlamofireStore.swift in Sources */,
 				CECB411C22538EEF00A4E9A8 /* Repository.swift in Sources */,
 				CECB412E22538EEF00A4E9A8 /* Syncable.swift in Sources */,
-				CECB412822538EEF00A4E9A8 /* RemoteStore.swift in Sources */,
+				CECB412822538EEF00A4E9A8 /* RemoteStorePromise.swift in Sources */,
 				CECB411F22538EEF00A4E9A8 /* Request.swift in Sources */,
 				CECB410A22538EEE00A4E9A8 /* SessionAdapter.swift in Sources */,
 				CECB410D22538EEE00A4E9A8 /* AlamofireCompletionHandler.swift in Sources */,
-				CECB412522538EEF00A4E9A8 /* LocalStore.swift in Sources */,
+				CECB412522538EEF00A4E9A8 /* LocalStorePromise.swift in Sources */,
 				CECB411922538EEF00A4E9A8 /* Response.swift in Sources */,
 				CECB413122538EEF00A4E9A8 /* RealmStore.swift in Sources */,
 				CECB40FE22538EEE00A4E9A8 /* OnDiskStorable.swift in Sources */,
