@@ -12,6 +12,11 @@ public enum HTTPMethod: String {
     case connect = "CONNECT"
 }
 
+public enum Encoder {
+    case url
+    case json
+}
+
 public protocol RequestProvider {
 
     var url: String { get }
@@ -20,4 +25,5 @@ public protocol RequestProvider {
     var headers: [String: String]? { get }
     var method: HTTPMethod { get }
     var parameters: [String: Any]? { get }
+    var encoder: Encoder { get }
 }
