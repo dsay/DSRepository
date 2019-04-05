@@ -15,6 +15,7 @@ public enum HTTPMethod: String {
 public enum Encoder {
     case url
     case json
+    case property
 }
 
 public protocol RequestProvider {

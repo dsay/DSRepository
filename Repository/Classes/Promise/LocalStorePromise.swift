@@ -2,7 +2,7 @@ import PromiseKit
 
 public extension LocalStore {
     
-    func getItems() -> Promise<[Item]> {
+    public func getItems() -> Promise<[Item]> {
         return Promise { resolver in
             let items = getItems()
             if items.isEmpty {
@@ -13,7 +13,7 @@ public extension LocalStore {
         }
     }
     
-    func getItem() -> Promise<Item> {
+    public func getItem() -> Promise<Item> {
         return Promise { resolver in
             if let item = getItem() {
                 resolver.fulfill(item)
@@ -23,7 +23,7 @@ public extension LocalStore {
         }
     }
     
-    func get(with id: Int) -> Promise<Item> {
+    public func get(with id: Int) -> Promise<Item> {
         return Promise { resolver in
             if let item = get(with: id) {
                 resolver.fulfill(item)
@@ -33,7 +33,7 @@ public extension LocalStore {
         }
     }
     
-    func get(with id: String) -> Promise<Item> {
+    public func get(with id: String) -> Promise<Item> {
         return Promise { resolver in
             if let item = get(with: id) {
                 resolver.fulfill(item)
@@ -43,7 +43,7 @@ public extension LocalStore {
         }
     }
     
-    func get(with predicate: NSPredicate) -> Promise<[Item]> {
+    public func get(with predicate: NSPredicate) -> Promise<[Item]> {
         return Promise { resolver in
             let items = get(with: predicate)
             if items.isEmpty {
@@ -54,7 +54,7 @@ public extension LocalStore {
         }
     }
     
-    func update(_ transaction: () -> Void) -> Promise<Void> {
+    public func update(_ transaction: () -> Void) -> Promise<Void> {
         return Promise { resolver in
             do {
                 try update(transaction)
@@ -65,7 +65,7 @@ public extension LocalStore {
         }
     }
     
-    func save(_ item: Item) -> Promise<Item> {
+    public func save(_ item: Item) -> Promise<Item> {
         return Promise { resolver in
             do {
                 try save(item)
@@ -76,7 +76,7 @@ public extension LocalStore {
         }
     }
     
-    func save(_ items: [Item]) -> Promise<[Item]> {
+    public func save(_ items: [Item]) -> Promise<[Item]> {
         return Promise { resolver in
             do {
                 try save(items)
@@ -87,7 +87,7 @@ public extension LocalStore {
         }
     }
     
-    func remove(_ item: Item) -> Promise<Void> {
+    public func remove(_ item: Item) -> Promise<Void> {
         return Promise { resolver in
             do {
                 try remove(item)
@@ -98,7 +98,7 @@ public extension LocalStore {
         }
     }
     
-    func remove(_ items: [Item]) -> Promise<Void> {
+    public func remove(_ items: [Item]) -> Promise<Void> {
         return Promise { resolver in
             do {
                 try remove(items)

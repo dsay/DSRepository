@@ -3,11 +3,11 @@ import ObjectMapper
 import Alamofire
 import AlamofireImage
 
-public class AlamofireStore<Item: BaseMappable>: RemoteStore {
+open class AlamofireStore<Item: BaseMappable>: RemoteStore {
     
     var session: SessionManager
     
-    init(_ session: SessionManager) {
+    public init(_ session: SessionManager) {
         self.session = session
     }
     

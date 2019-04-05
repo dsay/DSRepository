@@ -20,21 +20,21 @@ private struct DefaultHTTPHeaders {
     static private let `default` = SessionManager.defaultHTTPHeaders
 }
 
-public class MainSessionManager: SessionManager {
+open class MainSessionManager: SessionManager {
     
-    static func `default`(user: String, password: String) -> MainSessionManager {
+    public static func `default`(user: String, password: String) -> MainSessionManager {
         return MainSessionManager.default(BasicSessionAdapter(user: user, password: password))
     }
     
-    static func `default`(token: String?) -> MainSessionManager {
+    public static func `default`(token: String?) -> MainSessionManager {
         return MainSessionManager.default(RFTSessionAdapter(token: token ?? ""))
     }
     
-    static func `default`(sessionToken: String) -> MainSessionManager {
+    public static func `default`(sessionToken: String) -> MainSessionManager {
         return MainSessionManager.default(SessionKeySessionAdapter(session: sessionToken))
     }
     
-    static func `default`(_ adapter: RequestAdapter? = nil) -> MainSessionManager {
+    public static func `default`(_ adapter: RequestAdapter? = nil) -> MainSessionManager {
         let session = MainSessionManager(configuration: URLSessionConfiguration.default)
         session.adapter = adapter
         return session

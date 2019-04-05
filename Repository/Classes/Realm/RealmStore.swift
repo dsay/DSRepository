@@ -1,10 +1,10 @@
 import RealmSwift
 
-public class RealmStore<Item: Object>: LocalStore {
+open class RealmStore<Item: Object>: LocalStore {
     
-    let context: Realm
+    public let context: Realm
     
-    init(_ context: Realm) {
+    public init(_ context: Realm) {
         self.context = context
     }
     

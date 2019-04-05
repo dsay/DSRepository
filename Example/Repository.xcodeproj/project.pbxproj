@@ -15,6 +15,14 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		CC5DD9315FD4DF2DD081B33C /* Pods_Repository_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AE355576AFCBE6769D4463 /* Pods_Repository_Example.framework */; };
+		CE32C09F22577DF600771C93 /* MainRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C09E22577DF600771C93 /* MainRequestBuilder.swift */; };
+		CE32C0A022577DF600771C93 /* MainRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C09E22577DF600771C93 /* MainRequestBuilder.swift */; };
+		CE32C0A22257822C00771C93 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0A12257822C00771C93 /* User.swift */; };
+		CE32C0A32257822C00771C93 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0A12257822C00771C93 /* User.swift */; };
+		CE32C0A5225782A700771C93 /* UserRepositoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0A4225782A700771C93 /* UserRepositoryRepository.swift */; };
+		CE32C0A6225782A700771C93 /* UserRepositoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0A4225782A700771C93 /* UserRepositoryRepository.swift */; };
+		CE32C0A82257842600771C93 /* SeviceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0A72257842600771C93 /* SeviceLocator.swift */; };
+		CE32C0A92257842600771C93 /* SeviceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0A72257842600771C93 /* SeviceLocator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +54,10 @@
 		911799B9BFF68B73528EC26D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9A2338A0871335E91D58A678 /* Repository.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Repository.podspec; path = ../Repository.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C9AE355576AFCBE6769D4463 /* Pods_Repository_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Repository_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE32C09E22577DF600771C93 /* MainRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRequestBuilder.swift; sourceTree = "<group>"; };
+		CE32C0A12257822C00771C93 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CE32C0A4225782A700771C93 /* UserRepositoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryRepository.swift; sourceTree = "<group>"; };
+		CE32C0A72257842600771C93 /* SeviceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeviceLocator.swift; sourceTree = "<group>"; };
 		F91AA33A10F5FEFAB5F8CAC9 /* Pods-Repository_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository_Example.release.xcconfig"; path = "Target Support Files/Pods-Repository_Example/Pods-Repository_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +116,10 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				CE32C09E22577DF600771C93 /* MainRequestBuilder.swift */,
+				CE32C0A4225782A700771C93 /* UserRepositoryRepository.swift */,
+				CE32C0A12257822C00771C93 /* User.swift */,
+				CE32C0A72257842600771C93 /* SeviceLocator.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -353,8 +369,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE32C0A22257822C00771C93 /* User.swift in Sources */,
+				CE32C0A5225782A700771C93 /* UserRepositoryRepository.swift in Sources */,
+				CE32C09F22577DF600771C93 /* MainRequestBuilder.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				CE32C0A82257842600771C93 /* SeviceLocator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +382,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE32C0A6225782A700771C93 /* UserRepositoryRepository.swift in Sources */,
+				CE32C0A022577DF600771C93 /* MainRequestBuilder.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				CE32C0A32257822C00771C93 /* User.swift in Sources */,
+				CE32C0A92257842600771C93 /* SeviceLocator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

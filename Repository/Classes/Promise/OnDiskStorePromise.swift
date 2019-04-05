@@ -1,8 +1,8 @@
 import PromiseKit
 
 public extension OnDiskStore {
-
-    func get(from path: String) -> Promise<Data> {
+    
+    public func get(from path: String) -> Promise<Data> {
         return Promise { resolver in
             do {
                 let data = try get(from: path)
@@ -12,8 +12,8 @@ public extension OnDiskStore {
             }
         }
     }
-
-    func remove(from path: String) -> Promise<Void> {
+    
+    public func remove(from path: String) -> Promise<Void> {
         return Promise { resolver in
             do {
                 try remove(from: path)
@@ -23,8 +23,8 @@ public extension OnDiskStore {
             }
         }
     }
-
-    func save(_ data: Data, to path: String) -> Promise<Void> {
+    
+    public func save(_ data: Data, to path: String) -> Promise<Void> {
         return Promise { resolver in
             do {
                 try save(data, to: path)
@@ -34,8 +34,8 @@ public extension OnDiskStore {
             }
         }
     }
-
-    func fileExists(from path: String) -> Promise<Void> {
+    
+    public func fileExists(from path: String) -> Promise<Void> {
         return Promise { resolver in
             if fileExists(from: path) {
                 resolver.fulfill(())

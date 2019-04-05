@@ -1,24 +1,24 @@
-//
-//  ViewController.swift
-//  Repository
-//
-//  Created by dsay on 04/02/2019.
-//  Copyright (c) 2019 dsay. All rights reserved.
-//
-
 import UIKit
-import Repository
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        updateData()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    func updateData() {
+        activityIndicator.startAnimating()
+        UserRepository.default().getAll()
+            .done { data in
+                print(data)
+            }.ensure {
+                self.activityIndicator.stopAnimating()
+            }.catch { error in
+                print(error)
+        }
     }
-
 }
 

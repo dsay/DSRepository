@@ -6,27 +6,28 @@ private extension Encoder {
         switch self {
             case .url: return URLEncoding.default
             case .json: return JSONEncoding.default
+            case .property: return PropertyListEncoding.default
         }
     }
 }
 
-public class AlamofireRequestBuilder: RequestProvider, URLRequestConvertible {
+open class AlamofireRequestBuilder: RequestProvider, URLRequestConvertible {
     
+    public let method: HTTPMethod
     public let url: String
     public let path: String?
-    public var keyPath: String?
     public let headers: [String: String]?
-    public let method: HTTPMethod
     public let parameters: [String: Any]?
     public let encoder: Encoder
-    
-    init(url: String = "",
-         path: String? = nil,
-         keyPath: String? = nil,
-         headers: [String: String]? = nil,
-         method: HTTPMethod = .get,
-         parameters: [String: Any]? = nil,
-         encoder: Encoder = .url)
+    public var keyPath: String?
+
+    public init(method: HTTPMethod = .get,
+                url: String = "",
+                path: String? = nil,
+                headers: [String: String]? = nil,
+                parameters: [String: Any]? = nil,
+                encoder: Encoder = .url,
+                keyPath: String? = nil)
     {
         self.url = url
         self.path = path
