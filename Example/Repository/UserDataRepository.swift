@@ -4,10 +4,9 @@ import Repository
 import PromiseKit
 
 struct UserRepository: Repository, Syncable, Storable {
-    typealias Item = User
     
-    let remote: AlamofireStore<Item>
-    let local: RealmStore<Item>
+    let remote: AlamofireStore<User>
+    let local: RealmStore<User>
     
     static func `default`() -> UserRepository {
         return UserRepository(remote: AlamofireStore(ServiceLocator.shared.getService()),

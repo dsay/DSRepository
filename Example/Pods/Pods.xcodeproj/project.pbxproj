@@ -864,7 +864,7 @@
 		A9D9A80A5CC2C8F23D789B81DAC02C91 /* RLMResults.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMResults.h; path = include/RLMResults.h; sourceTree = "<group>"; };
 		AA6F20998E1A4D5B44D87E560B937B5F /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		AABCD1912CCF4D23DA3129CA1590EFC2 /* AlamofireRequestBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlamofireRequestBuilder.swift; sourceTree = "<group>"; };
-		AC76055D795CE7BB8222147916AF4E63 /* Repository.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Repository.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AC76055D795CE7BB8222147916AF4E63 /* SwiftRepository.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SwiftRepository.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		AC83741F1BB3DE8758FDC15683EDA513 /* RLMAccessor.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMAccessor.mm; path = Realm/RLMAccessor.mm; sourceTree = "<group>"; };
 		ACCF5237401AF04FED4D5AE157D330C7 /* Pods-Repository_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Repository_Tests-dummy.m"; sourceTree = "<group>"; };
 		AF95F80D6342B014DF89EC1C83BBDFA5 /* results.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = results.cpp; path = Realm/ObjectStore/src/results.cpp; sourceTree = "<group>"; };
@@ -1173,7 +1173,7 @@
 			children = (
 				78C2C5A2E71BE764C8BBB544271790BD /* LICENSE */,
 				7186E791475373C560EF0520B460C49A /* README.md */,
-				AC76055D795CE7BB8222147916AF4E63 /* Repository.podspec */,
+				AC76055D795CE7BB8222147916AF4E63 /* SwiftRepository.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";

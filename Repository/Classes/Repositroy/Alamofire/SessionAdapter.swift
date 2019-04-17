@@ -18,6 +18,17 @@ private struct DefaultHTTPHeaders {
     }
     
     static private let `default` = SessionManager.defaultHTTPHeaders
+    
+    static func adapt(_ urlRequest: URLRequest) -> URLRequest {
+        var urlRequest = urlRequest
+
+        main.forEach {
+            if let headers = urlRequest.allHTTPHeaderFields, headers[$0.key] == nil {
+                urlRequest.setValue($0.value, forHTTPHeaderField: $0.key)
+            }
+        }
+        return urlRequest
+    }
 }
 
 open class MainSessionManager: SessionManager {
@@ -26,8 +37,8 @@ open class MainSessionManager: SessionManager {
         return MainSessionManager.default(BasicSessionAdapter(user: user, password: password))
     }
     
-    public static func `default`(token: String?) -> MainSessionManager {
-        return MainSessionManager.default(RFTSessionAdapter(token: token ?? ""))
+    public static func `default`(token: String) -> MainSessionManager {
+        return MainSessionManager.default(RFTSessionAdapter(token: token))
     }
     
     public static func `default`(sessionToken: String) -> MainSessionManager {
@@ -47,17 +58,12 @@ public struct BasicSessionAdapter: RequestAdapter {
     let password: String
     
     public func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
-        var urlRequest = urlRequest
-        
+        var urlRequest = DefaultHTTPHeaders.adapt(urlRequest)
+
         guard let data = "\(user):\(password)".data(using: .utf8) else { return urlRequest }
         
         let credential = data.base64EncodedString(options: [])
         
-        DefaultHTTPHeaders.main.forEach {
-            if let headers = urlRequest.allHTTPHeaderFields, headers[$0.key] == nil {
-                urlRequest.setValue($0.value, forHTTPHeaderField: $0.key)
-            }
-        }
         urlRequest.setValue("\(Keys.basic) \(credential)", forHTTPHeaderField: Keys.authorization)
         
         return urlRequest
@@ -69,11 +75,8 @@ public struct RFTSessionAdapter: RequestAdapter {
     let token: String
     
     public func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
-        var urlRequest = urlRequest
-        
-        DefaultHTTPHeaders.main.forEach { urlRequest.setValue($0.value, forHTTPHeaderField: $0.key) }
+        var urlRequest = DefaultHTTPHeaders.adapt(urlRequest)
         urlRequest.setValue("\(Keys.token) \(token)", forHTTPHeaderField: Keys.authorization)
-        
         return urlRequest
     }
 }
@@ -83,11 +86,8 @@ public struct SessionKeySessionAdapter: RequestAdapter {
     let session: String
     
     public func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
-        var urlRequest = urlRequest
-        
-        DefaultHTTPHeaders.main.forEach { urlRequest.setValue($0.value, forHTTPHeaderField: $0.key)}
+        var urlRequest = DefaultHTTPHeaders.adapt(urlRequest)
         urlRequest.setValue(session, forHTTPHeaderField: Keys.sessionKey)
-        
         return urlRequest
     }
 }

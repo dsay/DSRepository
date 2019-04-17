@@ -26,7 +26,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-pod 'Repository', :git => 'https://github.com/dsay/Repository.git', :tag => '0.1.0'
+pod 'Repository', :git => 'https://github.com/dsay/Repository.git', :tag => '0.1.1'
 end
 ```
 

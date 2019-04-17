@@ -25,6 +25,7 @@
 		CE32C0F6225B2DDA00771C93 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0F4225B2DDA00771C93 /* ServiceLocator.swift */; };
 		CE32C0FB225B2E2D00771C93 /* UserDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0FA225B2E2D00771C93 /* UserDataRepository.swift */; };
 		CE32C0FC225B2E2D00771C93 /* UserDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0FA225B2E2D00771C93 /* UserDataRepository.swift */; };
+		CEF8D20322671206005FF0C3 /* SwiftRepository.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CEF8D20222671206005FF0C3 /* SwiftRepository.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +60,9 @@
 		CE32C0F1225B2D3700771C93 /* MainRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRequestBuilder.swift; sourceTree = "<group>"; };
 		CE32C0F4225B2DDA00771C93 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		CE32C0FA225B2E2D00771C93 /* UserDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataRepository.swift; sourceTree = "<group>"; };
+		CEF8D20222671206005FF0C3 /* SwiftRepository.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SwiftRepository.podspec; path = ../SwiftRepository.podspec; sourceTree = "<group>"; };
 		D656C755FA24150895250225 /* Pods-Repository_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository_Tests.release.xcconfig"; path = "Target Support Files/Pods-Repository_Tests/Pods-Repository_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DFBCF955F948302FF074A379 /* Pods-Repository_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository_Example.release.xcconfig"; path = "Target Support Files/Pods-Repository_Example/Pods-Repository_Example.release.xcconfig"; sourceTree = "<group>"; };
-		ECD888293D9620CB5FC6B0CB /* Repository.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Repository.podspec; path = ../Repository.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +153,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				ECD888293D9620CB5FC6B0CB /* Repository.podspec */,
+				CEF8D20222671206005FF0C3 /* SwiftRepository.podspec */,
 				8FB6C3308C7D297119B8214C /* README.md */,
 				C5B47578E681944CA0A9496C /* LICENSE */,
 			);
@@ -266,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF8D20322671206005FF0C3 /* SwiftRepository.podspec in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,

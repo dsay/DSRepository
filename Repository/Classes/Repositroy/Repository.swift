@@ -6,7 +6,6 @@ public enum RepositoryError: Error {
 }
 
 public protocol Repository {
-    associatedtype Item
 
     static func `default`() -> Self
 }

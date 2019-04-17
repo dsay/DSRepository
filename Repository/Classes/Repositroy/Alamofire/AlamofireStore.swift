@@ -4,7 +4,7 @@ import Alamofire
 import AlamofireImage
 
 open class AlamofireStore<Item: BaseMappable>: RemoteStore {
-    
+ 
     var session: SessionManager
     
     public init(_ session: SessionManager) {
@@ -19,14 +19,14 @@ open class AlamofireStore<Item: BaseMappable>: RemoteStore {
         }
     }
     
-    public func send(request: RequestProvider, completionHandler: @escaping (Response<[Item]>) -> Void) {
-        send(request: request).responseArray(keyPath: request.keyPath) { (response: DataResponse<[Item]>) -> Void in
+    public func send(request: RequestProvider, keyPath: String?, completionHandler: @escaping (Response<[Item]>) -> Void) {
+        send(request: request).responseArray(keyPath: keyPath) { (response: DataResponse<[Item]>) -> Void in
             completionHandler(BaseHandler.handle(response))
         }
     }
     
-    public func send(request: RequestProvider, completionHandler: @escaping (Response<Item>) -> Void) {
-        send(request: request).responseObject(keyPath: request.keyPath) { (response: DataResponse<Item>) -> Void in
+    public func send(request: RequestProvider, keyPath: String?, completionHandler: @escaping (Response<Item>) -> Void) {
+        send(request: request).responseObject(keyPath: keyPath) { (response: DataResponse<Item>) -> Void in
             completionHandler(BaseHandler.handle(response))
         }
     }
@@ -45,6 +45,12 @@ open class AlamofireStore<Item: BaseMappable>: RemoteStore {
     
     public func send(request: RequestProvider, completionHandler: @escaping (Response<Data>) -> Void) {
         send(request: request).responseData { (response: DataResponse<Data>) -> Void in
+            completionHandler(BaseHandler.handle(response))
+        }
+    }
+    
+    public func send(request: RequestProvider, completionHandler: @escaping (Response<Any>) -> Void) {
+        send(request: request).responseJSON { (response: DataResponse<Any>) -> Void in
             completionHandler(BaseHandler.handle(response))
         }
     }

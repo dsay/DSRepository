@@ -3,6 +3,9 @@ import UIKit
 open class OnDiskCache: OnDiskStore {
     let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     
+    public init() {
+    }
+    
     public func get(from path: String) throws -> Data {
         let fileURL = documentsDirectory.appendingPathComponent(path)
         return try Data(contentsOf: fileURL)
