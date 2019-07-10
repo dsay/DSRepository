@@ -2,7 +2,7 @@ import Foundation
 
 public enum Response<Value> {
     case success(Value)
-    case error(RequestError)
+    case error(Error)
 
     var isSuccess: Bool {
         switch self {
@@ -22,26 +22,12 @@ public enum Response<Value> {
         }
     }
 
-    var error: RequestError? {
+    var error: Error? {
         switch self {
         case .error(let value):
             return value
         default:
             return nil
-        }
-    }
-}
-
-public enum RequestError: Error {
-    case notAuthorized(Int, String)
-    case error(Int, String)
-
-    var localizedDescription: String {
-        switch self {
-        case .notAuthorized(_, let value):
-            return value
-        case .error(_, let value):
-            return value
         }
     }
 }

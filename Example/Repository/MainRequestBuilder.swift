@@ -1,4 +1,4 @@
-import Repository
+import SwiftRepository
 
 class MainRequestBuilder: AlamofireRequestBuilder {
     

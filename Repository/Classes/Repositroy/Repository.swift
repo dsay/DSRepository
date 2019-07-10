@@ -7,5 +7,4 @@ public enum RepositoryError: Error {
 
 public protocol Repository {
 
-    static func `default`() -> Self
 }

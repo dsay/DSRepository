@@ -23,8 +23,8 @@
 		CE32C0F3225B2D3700771C93 /* MainRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0F1225B2D3700771C93 /* MainRequestBuilder.swift */; };
 		CE32C0F5225B2DDA00771C93 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0F4225B2DDA00771C93 /* ServiceLocator.swift */; };
 		CE32C0F6225B2DDA00771C93 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0F4225B2DDA00771C93 /* ServiceLocator.swift */; };
-		CE32C0FB225B2E2D00771C93 /* UserDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0FA225B2E2D00771C93 /* UserDataRepository.swift */; };
-		CE32C0FC225B2E2D00771C93 /* UserDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0FA225B2E2D00771C93 /* UserDataRepository.swift */; };
+		CE32C0FB225B2E2D00771C93 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0FA225B2E2D00771C93 /* UserRepository.swift */; };
+		CE32C0FC225B2E2D00771C93 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0FA225B2E2D00771C93 /* UserRepository.swift */; };
 		CEF8D20322671206005FF0C3 /* SwiftRepository.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CEF8D20222671206005FF0C3 /* SwiftRepository.podspec */; };
 /* End PBXBuildFile section */
 
@@ -59,8 +59,8 @@
 		CE32C0EE225B2D1A00771C93 /* User+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Request.swift"; sourceTree = "<group>"; };
 		CE32C0F1225B2D3700771C93 /* MainRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRequestBuilder.swift; sourceTree = "<group>"; };
 		CE32C0F4225B2DDA00771C93 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
-		CE32C0FA225B2E2D00771C93 /* UserDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataRepository.swift; sourceTree = "<group>"; };
-		CEF8D20222671206005FF0C3 /* SwiftRepository.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SwiftRepository.podspec; path = ../SwiftRepository.podspec; sourceTree = "<group>"; };
+		CE32C0FA225B2E2D00771C93 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		CEF8D20222671206005FF0C3 /* SwiftRepository.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SwiftRepository.podspec; path = ../SwiftRepository.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D656C755FA24150895250225 /* Pods-Repository_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository_Tests.release.xcconfig"; path = "Target Support Files/Pods-Repository_Tests/Pods-Repository_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DFBCF955F948302FF074A379 /* Pods-Repository_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository_Example.release.xcconfig"; path = "Target Support Files/Pods-Repository_Example/Pods-Repository_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +115,7 @@
 				CE32C0EE225B2D1A00771C93 /* User+Request.swift */,
 				CE32C0F1225B2D3700771C93 /* MainRequestBuilder.swift */,
 				CE32C0F4225B2DDA00771C93 /* ServiceLocator.swift */,
-				CE32C0FA225B2E2D00771C93 /* UserDataRepository.swift */,
+				CE32C0FA225B2E2D00771C93 /* UserRepository.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -302,7 +302,7 @@
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Repository/Repository.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRepository/SwiftRepository.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -317,7 +317,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Repository.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRepository.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -375,7 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE32C0FB225B2E2D00771C93 /* UserDataRepository.swift in Sources */,
+				CE32C0FB225B2E2D00771C93 /* UserRepository.swift in Sources */,
 				CE32C0F5225B2DDA00771C93 /* ServiceLocator.swift in Sources */,
 				CE32C0EF225B2D1A00771C93 /* User+Request.swift in Sources */,
 				CE32C0F2225B2D3700771C93 /* MainRequestBuilder.swift in Sources */,
@@ -391,7 +391,7 @@
 			files = (
 				CE32C0F3225B2D3700771C93 /* MainRequestBuilder.swift in Sources */,
 				CE32C0F6225B2DDA00771C93 /* ServiceLocator.swift in Sources */,
-				CE32C0FC225B2E2D00771C93 /* UserDataRepository.swift in Sources */,
+				CE32C0FC225B2E2D00771C93 /* UserRepository.swift in Sources */,
 				CE32C0F0225B2D1A00771C93 /* User+Request.swift in Sources */,
 				CE32C0ED225B2CFD00771C93 /* User.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,

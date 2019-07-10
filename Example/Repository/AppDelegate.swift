@@ -1,5 +1,5 @@
 import UIKit
-import Repository
+import SwiftRepository
 import RealmSwift
 import Alamofire
 

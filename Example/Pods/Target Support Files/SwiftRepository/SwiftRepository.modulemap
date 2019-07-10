@@ -1,0 +1,6 @@
+framework module SwiftRepository {
+  umbrella header "SwiftRepository-umbrella.h"
+
+  export *
+  module * { export * }
+}

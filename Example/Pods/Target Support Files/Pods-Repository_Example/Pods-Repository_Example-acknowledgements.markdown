@@ -661,7 +661,7 @@ Prohibited Jurisdiction, or otherwise in violation of any such restrictions or
 regulations.
 
 
-## Repository
+## SwiftRepository
 
 Copyright (c) 2019 Dima Sai
 

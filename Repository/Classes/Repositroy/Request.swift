@@ -26,4 +26,17 @@ public protocol RequestProvider {
     var headers: [String: String]? { get }
     var parameters: [String: Any]? { get }
     var encoder: Encoder { get }
+    
+    func urlPath() -> String
+}
+
+public extension RequestProvider {
+    
+    func urlPath() -> String {
+        if let path = path {
+            return url + path
+        } else {
+            return url
+        }
+    }
 }

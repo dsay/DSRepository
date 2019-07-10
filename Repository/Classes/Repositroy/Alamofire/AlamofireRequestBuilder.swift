@@ -39,11 +39,7 @@ open class AlamofireRequestBuilder: RequestProvider, URLRequestConvertible {
     }
     
     func asURL() throws -> URL {
-        if let path = path {
-            return try (url + path).asURL()
-        } else {
-            return try url.asURL()
-        }
+        return try urlPath().asURL()
     }
     
     public func asURLRequest() throws -> URLRequest {

@@ -1,4 +1,8 @@
 import UIKit
+import SwiftRepository
+import AlamofireObjectMapper
+import ObjectMapper
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -10,7 +14,7 @@ class ViewController: UIViewController {
     }
     
     func updateData() {
-        activityIndicator.startAnimating()
+        activityIndicator.startAnimating()        
         UserRepository.default().getAll()
             .done { data in
                 print(data)

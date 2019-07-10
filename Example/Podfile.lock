@@ -21,7 +21,7 @@ PODS:
   - Realm/Headers (3.13.1)
   - RealmSwift (3.13.1):
     - Realm (= 3.13.1)
-  - Repository (0.1.0):
+  - SwiftRepository (0.1.1):
     - AlamofireImage
     - AlamofireObjectMapper
     - ObjectMapper
@@ -38,7 +38,7 @@ DEPENDENCIES:
   - ObjectMapperAdditions/Realm
   - PromiseKit/CorePromise
   - RealmSwift
-  - Repository (from `../`)
+  - SwiftRepository (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -53,7 +53,7 @@ SPEC REPOS:
     - RealmSwift
 
 EXTERNAL SOURCES:
-  Repository:
+  SwiftRepository:
     :path: "../"
 
 SPEC CHECKSUMS:
@@ -66,8 +66,8 @@ SPEC CHECKSUMS:
   PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
-  Repository: 6fa9a9197c965da564f38ecc31b2d23537cef09f
+  SwiftRepository: 904b5051f196f7e6748ea318b5d046c901d77aab
 
-PODFILE CHECKSUM: 424335e3f8c1ba77013ca677e9b80f6d100e3882
+PODFILE CHECKSUM: 86dcf4fff3572f9e4fac221b7460a7ff0df0de75
 
 COCOAPODS: 1.6.1
