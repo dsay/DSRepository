@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.homepage         = 'https://github.com/dsay/Repository'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'Dima Sai' => 'dmitriy.sai2013@gmail.com' }
-    s.source           = { :git => 'https://github.com/dsay/Repository.git', :tag => s.version.to_s }
+    s.source           = { :git => 'git@github.com:dsay/Repository.git', :tag => s.version.to_s }
     
     s.ios.deployment_target = '10.0'
     
