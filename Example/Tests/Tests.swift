@@ -1,5 +1,5 @@
 import XCTest
-import Repository
+import SwiftRepository
 
 class Tests: XCTestCase {
     

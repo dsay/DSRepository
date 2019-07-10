@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double RepositoryVersionNumber;
-FOUNDATION_EXPORT const unsigned char RepositoryVersionString[];
+FOUNDATION_EXPORT double SwiftRepositoryVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwiftRepositoryVersionString[];
 
