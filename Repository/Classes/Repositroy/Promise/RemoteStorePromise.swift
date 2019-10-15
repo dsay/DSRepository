@@ -83,3 +83,32 @@ public extension RemoteObjectsStore {
         }
     }
 }
+
+public extension UploadObjectsStore {
+    
+    public func uploadRequest(request: RequestProvider, keyPath: String? = nil) -> Promise<[Item]> {
+        return Promise { resolver in
+            upload(request: request, keyPath: keyPath, responseArray: { (response: Response<[Item]>) -> Void  in
+                switch response {
+                case .success(let value):
+                    resolver.fulfill(value)
+                case .error(let error):
+                    resolver.reject(error)
+                }
+            })
+        }
+    }
+    
+    public func uploadRequest(request: RequestProvider, keyPath: String? = nil) -> Promise<Item> {
+        return Promise { resolver in
+            upload(request: request, keyPath: keyPath, responseObject: { (response: Response<Item>) -> Void  in
+                switch response {
+                case .success(let value):
+                    resolver.fulfill(value)
+                case .error(let error):
+                    resolver.reject(error)
+                }
+            })
+        }
+    }
+}

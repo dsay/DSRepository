@@ -23,15 +23,15 @@ private extension Encoder {
 
 open class AlamofireStore: RemoteStore {
  
-    var handler: BaseHandler
-    var session: SessionManager
+    public var handler: BaseHandler
+    public var session: SessionManager
     
     public init(_ session: SessionManager, _ handler: BaseHandler = BaseHandler()) {
         self.session = session
         self.handler = handler
     }
     
-    fileprivate func send(request: RequestProvider) -> DataRequest {
+    public func send(request: RequestProvider) -> DataRequest {
         if let url = request as? URLRequestConvertible {
             return session.request(url).validate()
         } else {
@@ -42,6 +42,29 @@ open class AlamofireStore: RemoteStore {
                                    headers: request.headers).validate()
         }
     }
+    
+    public func upload(request: RequestProvider, completion:  @escaping (DataRequest) -> Void) {
+        if let parameters = request.parameters as? [String: Data] {
+            session.upload(multipartFormData: {
+                for (key, value) in parameters {
+                    $0.append(value, withName: key)
+                }
+            }, to: request.urlPath(),
+               method: request.method.get(),
+               headers: request.headers
+            ) { encodingResult in
+                switch encodingResult {
+                case .success(let upload, _, _):
+                  completion(upload)
+                case .failure(let encodingError):
+                    fatalError(encodingError.localizedDescription)
+                }
+            }
+        } else {
+           fatalError(" Support only format [String: Data] !!!")
+        }
+    }
+    
     
     public func send(request: RequestProvider, responseString: @escaping (Response<String>) -> Void) {
         send(request: request).responseString { (response: DataResponse<String>) -> Void in
@@ -81,4 +104,23 @@ open class ObjectsStore<Item: BaseMappable>: AlamofireStore, RemoteObjectsStore 
             responseArray(self.handler.handle(response))
         }
     }
+}
+
+open class UploadObjectsStore<Item: BaseMappable>: AlamofireStore {
+    
+    public func upload(request: RequestProvider, keyPath: String? = nil, responseObject: @escaping (Response<Item>) -> Void) {
+        upload(request: request,completion: { uploadRequest in
+            uploadRequest.responseObject(keyPath: keyPath) { (response: DataResponse<Item>) -> Void in
+                responseObject(self.handler.handle(response))
+            }
+        })
+    }
+    
+    public func upload(request: RequestProvider, keyPath: String? = nil, responseArray: @escaping (Response<[Item]>) -> Void) {
+         upload(request: request,completion: { uploadRequest in
+             uploadRequest.responseArray(keyPath: keyPath) { (response: DataResponse<[Item]>) -> Void in
+                 responseArray(self.handler.handle(response))
+             }
+         })
+     }
 }
