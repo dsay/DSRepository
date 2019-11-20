@@ -1,5 +1,11 @@
 import UIKit
 
+public enum UpdatePolicy: Int {
+    case error = 0
+    case modified = 1
+    case all = 2
+}
+
 public protocol Storable {
     associatedtype Local: LocalStore
     
@@ -7,6 +13,7 @@ public protocol Storable {
 }
 
 public protocol LocalStore {
+    
     associatedtype Item
     
     func getItems() -> [Item]
@@ -17,8 +24,8 @@ public protocol LocalStore {
     
     func update(_ transaction: () -> Void) throws
     
-    func save(_ item: Item) throws
-    func save(_ items: [Item]) throws
+    func save(_ item: Item, policy: UpdatePolicy) throws
+    func save(_ items: [Item], policy: UpdatePolicy) throws
     
     func remove(_ item: Item) throws
     func remove(_ items: [Item]) throws

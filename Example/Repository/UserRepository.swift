@@ -9,7 +9,7 @@ struct UserRepository: Repository, Syncable, Storable {
     let local: RealmStore<User>
     
     static func `default`() -> UserRepository {
-        return UserRepository(remote: ObjectsStore(ServiceLocator.shared.getService()),
+        return UserRepository(remote: ObjectsStore(ServiceLocator.shared.getService(), BaseHandler(DEBUGLog())),
                               local: RealmStore(ServiceLocator.shared.getService()))
     }
     

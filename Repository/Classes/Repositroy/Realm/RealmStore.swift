@@ -40,20 +40,20 @@ open class RealmStore<Item: Object>: LocalStore {
         }
     }
     
-    public func save(_ item: Item) throws {
+    public func save(_ item: Item, policy: UpdatePolicy = .all) throws {
         do {
             try context.write {
-                context.add(item, update: true)
+                context.add(item, update: Realm.UpdatePolicy(rawValue: policy.hashValue) ?? .error)
             }
         } catch {
             throw error
         }
     }
     
-    public func save(_ items: [Item]) throws {
+    public func save(_ items: [Item], policy: UpdatePolicy = .all) throws {
         do {
             try context.write {
-                context.add(items, update: true)
+                context.add(items, update: Realm.UpdatePolicy(rawValue: policy.hashValue) ?? .error)
             }
         } catch {
             throw error

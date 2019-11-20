@@ -12,24 +12,10 @@ target 'Repository_Example' do
   pod 'AlamofireImage'
   pod 'ObjectMapper'
   pod 'AlamofireObjectMapper'
-  pod 'ObjectMapper+Realm'
   pod 'ObjectMapperAdditions/Realm'
   
   target 'Repository_Tests' do
     inherit! :search_paths
 
-    
-  end
-end
-
-
-# force the sub specs in the array below to use swift version 4.2
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    if ['ObjectMapper+Realm'].include? target.name
-      target.build_configurations.each do |config|
-        config.build_settings['SWIFT_VERSION'] = '4.2'
-      end
-    end
   end
 end
