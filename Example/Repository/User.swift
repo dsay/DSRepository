@@ -2,8 +2,9 @@ import ObjectMapper
 import RealmSwift
 import ObjectMapperAdditions
 import ObjectMapper_Realm
+import SwiftRepository
 
-class User: Object, Mappable {
+class User: Object, KeycheinStoreItem {
     
     @objc dynamic var id: String = ""
     @objc dynamic var firstName: String = ""

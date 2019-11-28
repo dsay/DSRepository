@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     }
     
     func updateData() {
+        
         activityIndicator.startAnimating()        
         UserRepository.default().getAll()
             .done { data in
@@ -23,5 +24,41 @@ class ViewController: UIViewController {
             }.catch { error in
                 print(error)
         }
+    }
+}
+
+
+class SomePrivateStore: PrivateStore {
+
+    func getData(_ key: String) -> Data? {
+        fatalError()
+    }
+
+    @discardableResult
+    func set(_ value: Data, forKey key: String) -> Bool{
+        fatalError()
+    }
+
+    func get(_ key: String) -> String?{
+        fatalError()
+    }
+
+    @discardableResult
+    func set(_ value: String, forKey key: String) -> Bool{
+        fatalError()
+    }
+
+    func get(_ key: String) -> Bool{
+        fatalError()
+    }
+
+    @discardableResult
+    func set(_ value: Bool, forKey key: String) -> Bool{
+        fatalError()
+    }
+
+    @discardableResult
+    func delete(_ key: String) -> Bool{
+        fatalError()
     }
 }
