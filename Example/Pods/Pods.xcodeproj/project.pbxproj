@@ -289,9 +289,9 @@
 		CD8DDB0D7F80D0328C373F7A39272F65 /* CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D5EA9CA97063AB765A3220DE0843E0 /* CustomStringConvertible.swift */; };
 		CDC7F0F37B7B92C450CCAE74F33CB3C5 /* RLMSchema.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = F2104DC46260633DAB1C6B429980B476 /* RLMSchema.h */; };
 		CDCEFEA08F8CA6B572B82CB97345B756 /* network_reachability_observer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C04BFBA7A78E643E4AF5617DE94BED7C /* network_reachability_observer.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"4.0.0\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CE326C3D23901C5500F3CC90 /* KeycheinStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE326C3C23901C5500F3CC90 /* KeycheinStore.swift */; };
-		CE326C3F23901CC500F3CC90 /* PrivateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE326C3E23901CC500F3CC90 /* PrivateStore.swift */; };
-		CE326C41239046ED00F3CC90 /* KeycheinStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE326C40239046ED00F3CC90 /* KeycheinStoreItem.swift */; };
+		CE326C46239102B400F3CC90 /* KeycheinStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE326C43239102B400F3CC90 /* KeycheinStoreItem.swift */; };
+		CE326C47239102B400F3CC90 /* KeycheinStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE326C44239102B400F3CC90 /* KeycheinStore.swift */; };
+		CE326C48239102B400F3CC90 /* PrivateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE326C45239102B400F3CC90 /* PrivateStore.swift */; };
 		CE408330EE72F47055C8DBAE9C411FD6 /* RLMRealmConfiguration+Sync.h in Headers */ = {isa = PBXBuildFile; fileRef = 945AB67A45ED86B6487E0B9CAA1070DD /* RLMRealmConfiguration+Sync.h */; };
 		CE9E2CDF238536D000C4BAA6 /* RealmListTransformator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E2CDE238536D000C4BAA6 /* RealmListTransformator.swift */; };
 		CE9E2CE123853C4D00C4BAA6 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E2CE023853C4D00C4BAA6 /* Log.swift */; };
@@ -894,9 +894,9 @@
 		CDAD00DB5E22586116429E42818C79AC /* results_notifier.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = results_notifier.cpp; path = Realm/ObjectStore/src/impl/results_notifier.cpp; sourceTree = "<group>"; };
 		CDAE34A912CEC06A52102F32FD1FE154 /* RLMObjectStore.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMObjectStore.mm; path = Realm/RLMObjectStore.mm; sourceTree = "<group>"; };
 		CDBC47490C447AB7A1DB3181BA0A5579 /* SwiftRepository-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftRepository-umbrella.h"; sourceTree = "<group>"; };
-		CE326C3C23901C5500F3CC90 /* KeycheinStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeycheinStore.swift; sourceTree = "<group>"; };
-		CE326C3E23901CC500F3CC90 /* PrivateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateStore.swift; sourceTree = "<group>"; };
-		CE326C40239046ED00F3CC90 /* KeycheinStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeycheinStoreItem.swift; sourceTree = "<group>"; };
+		CE326C43239102B400F3CC90 /* KeycheinStoreItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeycheinStoreItem.swift; sourceTree = "<group>"; };
+		CE326C44239102B400F3CC90 /* KeycheinStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeycheinStore.swift; sourceTree = "<group>"; };
+		CE326C45239102B400F3CC90 /* PrivateStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateStore.swift; sourceTree = "<group>"; };
 		CE6B831D5C6F4A2092D52B19EC827A4F /* ISO8601JustDateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO8601JustDateTransform.swift; path = ObjectMapperAdditions/Classes/Core/ISO8601JustDateTransform.swift; sourceTree = "<group>"; };
 		CE9E2CDE238536D000C4BAA6 /* RealmListTransformator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmListTransformator.swift; sourceTree = "<group>"; };
 		CE9E2CE023853C4D00C4BAA6 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -1167,7 +1167,7 @@
 				C358722807DD34ABDE004E9DC8384373 /* Response.swift */,
 				6537F0F224C5E041BCE2002B4220D724 /* Storable.swift */,
 				C8E663296E667E48EA7A02750D969EBE /* Syncable.swift */,
-				CE326C3B23901C3300F3CC90 /* Keychaine */,
+				CE326C42239102B400F3CC90 /* Keychaine */,
 				EAABF80320F284B838CA7C7AFCFCD84F /* Alamofire */,
 				79D05443C778D48525ABD44D8BEDD080 /* FileManager */,
 				B4E26AB646F5CB67267790DBE8CF9215 /* Pod */,
@@ -1717,14 +1717,15 @@
 			path = AlamofireImage;
 			sourceTree = "<group>";
 		};
-		CE326C3B23901C3300F3CC90 /* Keychaine */ = {
+		CE326C42239102B400F3CC90 /* Keychaine */ = {
 			isa = PBXGroup;
 			children = (
-				CE326C3E23901CC500F3CC90 /* PrivateStore.swift */,
-				CE326C40239046ED00F3CC90 /* KeycheinStoreItem.swift */,
-				CE326C3C23901C5500F3CC90 /* KeycheinStore.swift */,
+				CE326C43239102B400F3CC90 /* KeycheinStoreItem.swift */,
+				CE326C44239102B400F3CC90 /* KeycheinStore.swift */,
+				CE326C45239102B400F3CC90 /* PrivateStore.swift */,
 			);
-			path = Keychaine;
+			name = Keychaine;
+			path = Repository/Classes/Repositroy/Keychaine;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -2394,12 +2395,14 @@
 				CE9E2CE123853C4D00C4BAA6 /* Log.swift in Sources */,
 				DC5D776A35F78A16D7F9316D954760F9 /* AlamofireRequestBuilder.swift in Sources */,
 				86B56C37C80113D9D328D4F69C34A3E3 /* AlamofireStore.swift in Sources */,
-				CE326C3F23901CC500F3CC90 /* PrivateStore.swift in Sources */,
 				8EC63B8721EAB46C023B5BC925EDC4AF /* LocalStorePromise.swift in Sources */,
 				AE70B084C6EB5C516D07177F10CD350C /* OnDiskCache.swift in Sources */,
+				CE326C46239102B400F3CC90 /* KeycheinStoreItem.swift in Sources */,
 				2A6FAB0CCB5D6D88D5BA761A6F4F712A /* OnDiskStorable.swift in Sources */,
 				59C5B45708E576CA6ADA299EF01D9F08 /* OnDiskStorePromise.swift in Sources */,
+				CE326C47239102B400F3CC90 /* KeycheinStore.swift in Sources */,
 				A225FF7AABE4AA24BADE37F343D5B1C6 /* RealmStore.swift in Sources */,
+				CE326C48239102B400F3CC90 /* PrivateStore.swift in Sources */,
 				C215C5BEAD4C8952D4DF0E76596DE382 /* RemoteStorePromise.swift in Sources */,
 				0B6F83CAC555D1B7012EEAAB6A0130BB /* Repository.swift in Sources */,
 				AEEAE4F85064EDCAB38CAFDFBF19ADAA /* Request.swift in Sources */,
@@ -2407,8 +2410,6 @@
 				CD018F671A0254B2092C7947C27B1297 /* SessionAdapter.swift in Sources */,
 				685B66A9F12ED52E93A373827D022F5B /* Storable.swift in Sources */,
 				669A36B2FDF2D962C41F2BBDAFFC001C /* SwiftRepository-dummy.m in Sources */,
-				CE326C3D23901C5500F3CC90 /* KeycheinStore.swift in Sources */,
-				CE326C41239046ED00F3CC90 /* KeycheinStoreItem.swift in Sources */,
 				E98CA3220ED6D7210B3322F50980791B /* Syncable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
