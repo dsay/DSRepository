@@ -65,10 +65,10 @@ public extension LocalStore {
         }
     }
     
-    public func save(_ item: Item) -> Promise<Item> {
+    public func save(_ item: Item, policy: UpdatePolicy = .all) -> Promise<Item> {
         return Promise { resolver in
             do {
-                try save(item)
+                try save(item, policy: policy)
                 resolver.fulfill(item)
             } catch {
                 resolver.reject(error)
@@ -76,10 +76,10 @@ public extension LocalStore {
         }
     }
     
-    public func save(_ items: [Item]) -> Promise<[Item]> {
+    public func save(_ items: [Item], policy: UpdatePolicy = .all) -> Promise<[Item]> {
         return Promise { resolver in
             do {
-                try save(items)
+                try save(items, policy: policy)
                 resolver.fulfill(items)
             } catch {
                 resolver.reject(error)
