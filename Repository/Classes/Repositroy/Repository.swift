@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 public enum RepositoryError: LocalizedError {
     case objectNotFound

@@ -1,6 +1,6 @@
 import PromiseKit
 
-public extension LocalStore {
+public extension DataBaseStore {
     
     public func getItems() -> Promise<[Item]> {
         return Promise { resolver in

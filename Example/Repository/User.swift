@@ -4,7 +4,7 @@ import ObjectMapperAdditions
 import ObjectMapper_Realm
 import SwiftRepository
 
-class User: Object, KeycheinStoreItem {
+class User: Object, BaseMappable {
     
     @objc dynamic var id: String = ""
     @objc dynamic var firstName: String = ""

@@ -1,6 +1,6 @@
 import RealmSwift
 
-open class RealmStore<Item: Object>: LocalStore {
+open class RealmStore<Item: Object>: DataBaseStore {
     
     public let context: Realm
     

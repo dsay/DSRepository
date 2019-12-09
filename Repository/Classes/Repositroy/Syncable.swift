@@ -1,6 +1,7 @@
 import UIKit
 
 public protocol Syncable {
+    
     associatedtype Remote: RemoteStore
     
     var remote: Remote { get }

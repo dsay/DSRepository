@@ -3,13 +3,14 @@ import RealmSwift
 import SwiftRepository
 import PromiseKit
 
-struct UserRepository: Repository, Syncable, Storable {
+struct UserRepository: Repository, Syncable, Storable {    
     
     let remote: ObjectsStore<User>
     let local: RealmStore<User>
     
     static func `default`() -> UserRepository {
-        return UserRepository(remote: ObjectsStore(ServiceLocator.shared.getService(), BaseHandler(DEBUGLog())),
+        return UserRepository(remote: ObjectsStore(session: ServiceLocator.shared.getService(),
+                                                   handler: BaseHandler(DEBUGLog())),
                               local: RealmStore(ServiceLocator.shared.getService()))
     }
     

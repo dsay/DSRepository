@@ -26,7 +26,7 @@ open class AlamofireStore: RemoteStore {
     public var handler: BaseHandler
     public var session: SessionManager
     
-    public init(_ session: SessionManager, _ handler: BaseHandler) {
+    public init(session: SessionManager, handler: BaseHandler) {
         self.session = session
         self.handler = handler
     }
