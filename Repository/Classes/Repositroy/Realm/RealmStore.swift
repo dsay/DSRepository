@@ -43,7 +43,7 @@ open class RealmStore<Item: Object>: DataBaseStore {
     public func save(_ item: Item, policy: UpdatePolicy = .all) throws {
         do {
             try context.write {
-                context.add(item, update: Realm.UpdatePolicy(rawValue: policy.hashValue) ?? .error)
+                context.add(item, update: Realm.UpdatePolicy(rawValue: policy.rawValue) ?? .error)
             }
         } catch {
             throw error
@@ -53,7 +53,7 @@ open class RealmStore<Item: Object>: DataBaseStore {
     public func save(_ items: [Item], policy: UpdatePolicy = .all) throws {
         do {
             try context.write {
-                context.add(items, update: Realm.UpdatePolicy(rawValue: policy.hashValue) ?? .error)
+                context.add(items, update: Realm.UpdatePolicy(rawValue: policy.rawValue) ?? .error)
             }
         } catch {
             throw error

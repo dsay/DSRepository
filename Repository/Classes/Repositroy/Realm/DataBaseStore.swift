@@ -1,8 +1,8 @@
 import Foundation
 
 public enum UpdatePolicy: Int {
-    case error = 0
-    case modified = 1
+    case error = 1
+    case modified = 3
     case all = 2
 }
 
