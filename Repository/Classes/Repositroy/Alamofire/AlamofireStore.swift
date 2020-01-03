@@ -3,24 +3,6 @@ import ObjectMapper
 import Alamofire
 import AlamofireImage
 
-private extension HTTPMethod {
-
-    func get() -> Alamofire.HTTPMethod {
-        return Alamofire.HTTPMethod(rawValue: self.rawValue) ?? .get
-    }
-}
-
-private extension Encoder {
-    
-    func get() -> ParameterEncoding {
-        switch self {
-        case .url: return URLEncoding.default
-        case .json: return JSONEncoding.default
-        case .property: return PropertyListEncoding.default
-        }
-    }
-}
-
 open class AlamofireStore: RemoteStore {
  
     public var handler: BaseHandler
@@ -32,39 +14,42 @@ open class AlamofireStore: RemoteStore {
     }
     
     public func send(request: RequestProvider) -> DataRequest {
-        if let url = request as? URLRequestConvertible {
-            return session.request(url).validate()
-        } else {
-            return session.request(request.urlPath(),
-                                   method: request.method.get(),
-                                   parameters: request.parameters,
-                                   encoding: request.encoder.get(),
-                                   headers: request.headers).validate()
+        guard let urlRequest = try? request.asURLRequest() else {
+            fatalError("Not correct URLRequest format !!!")
         }
+        
+        return session.request(urlRequest).validate()
     }
     
-    public func upload(request: RequestProvider, completion:  @escaping (DataRequest) -> Void) {
-        if let parameters = request.parameters as? [String: Data] {
-            session.upload(multipartFormData: {
-                for (key, value) in parameters {
-                    $0.append(value, withName: key)
-                }
-            }, to: request.urlPath(),
-               method: request.method.get(),
-               headers: request.headers
-            ) { encodingResult in
-                switch encodingResult {
-                case .success(let upload, _, _):
-                  completion(upload)
-                case .failure(let encodingError):
-                    fatalError(encodingError.localizedDescription)
-                }
+    public func upload(request: RequestProvider, completion: @escaping (DataRequest) -> Void) {
+        guard let parameters = request.body as? [String: Data] else {
+            fatalError("Uploading method support only body format: [String: Data] !!!")
+        }
+        
+        guard let url = try? request.asURL() else {
+            fatalError("Not correct URL format !!!")
+        }
+        
+        guard let method = Alamofire.HTTPMethod(rawValue: request.method.rawValue) else {
+            fatalError("Not correct HTTP Method !!!")
+        }
+        
+        session.upload(multipartFormData: {
+            for (key, value) in parameters {
+                $0.append(value, withName: key)
             }
-        } else {
-           fatalError(" Support only format [String: Data] !!!")
+        }, to: url,
+           method: method,
+           headers: request.headers
+        ) { encodingResult in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                completion(upload)
+            case .failure(let encodingError):
+                fatalError(encodingError.localizedDescription)
+            }
         }
     }
-    
     
     public func send(request: RequestProvider, responseString: @escaping (Response<String>) -> Void) {
         send(request: request).responseString { (response: DataResponse<String>) -> Void in

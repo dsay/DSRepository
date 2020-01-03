@@ -12,31 +12,16 @@ public enum HTTPMethod: String {
     case connect = "CONNECT"
 }
 
-public enum Encoder {
-    case url
-    case json
-    case property
-}
-
 public protocol RequestProvider {
 
     var method: HTTPMethod { get }
     var url: String { get }
     var path: String? { get }
+    var queryItems: [String: String?]? { get }
     var headers: [String: String]? { get }
-    var parameters: [String: Any]? { get }
-    var encoder: Encoder { get }
+    var body: [String: Any]? { get }
     
-    func urlPath() -> String
-}
-
-public extension RequestProvider {
+    func asURL() throws -> URL
     
-    func urlPath() -> String {
-        if let path = path {
-            return url + path
-        } else {
-            return url
-        }
-    }
+    func asURLRequest() throws -> URLRequest
 }

@@ -1,20 +1,18 @@
 import SwiftRepository
 
-class MainRequestBuilder: AlamofireRequestBuilder {
+class MainRequestBuilder: RequestBuilder {
     
-    init(path: String? = nil,
-         keyPath: String? = nil,
+    init(method: HTTPMethod = .get,
+         path: String? = nil,
+         queryItems: [String: String?]? = nil,
          headers: [String: String]? = nil,
-         method: HTTPMethod = .get,
-         parameters: [String: Any]? = nil,
-         encoder: Encoder = .url)
+         body: [String: Any]? = nil)
     {
         super.init( method: method,
                     url: "https://next.json-generator.com/api",
                     path: path,
+                    queryItems: queryItems,
                     headers: headers,
-                    parameters: parameters,
-                    encoder: encoder,
-                    keyPath: keyPath)
+                    body: body)
     }
 }

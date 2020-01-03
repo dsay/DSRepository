@@ -15,6 +15,24 @@ class ViewController: UIViewController {
     
     func updateData() {
         
+        
+        
+        let sd = RequestBuilder(method: .get,
+                                         url: "https://next.json-generator.com",
+                                         path: "/api",
+                                         queryItems: ["some" : nil, "some1": "sdf df", "some2": "іваіоа"],
+                                         headers: ["asdfadf": "adfsdf"],
+                                         body: ["df": ["dfdf":"2342"]])
+        
+        let request = try! sd.asURLRequest()
+        
+        print(request.httpMethod)
+        print(request.url)
+        print(request.allHTTPHeaderFields)
+        print(String(data: request.httpBody ?? Data(), encoding: .utf8))
+
+        
+        
         activityIndicator.startAnimating()        
         UserRepository.default().getAll()
             .done { data in

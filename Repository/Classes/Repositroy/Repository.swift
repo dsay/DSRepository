@@ -6,6 +6,9 @@ public enum RepositoryError: LocalizedError {
     case cantSaveObject
     case cantDeleteObject
     case unknown
+    
+    case invalidURL(url: String)
+    case jsonEncodingFailed(error: Error)
 }
 
 public protocol Repository {
