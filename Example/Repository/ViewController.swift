@@ -15,10 +15,7 @@ class ViewController: UIViewController {
     
     func updateData() {
         
-        
-        
-        let sd = RequestBuilder(method: .get,
-                                         url: "https://next.json-generator.com",
+        let sd = MainRequestBuilder(method: .get,
                                          path: "/api",
                                          queryItems: ["some" : nil, "some1": "sdf df", "some2": "іваіоа"],
                                          headers: ["asdfadf": "adfsdf"],

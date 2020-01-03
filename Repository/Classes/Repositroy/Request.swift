@@ -13,7 +13,7 @@ public enum HTTPMethod: String {
 }
 
 public protocol RequestProvider {
-
+    
     var method: HTTPMethod { get }
     var url: String { get }
     var path: String? { get }
@@ -24,4 +24,49 @@ public protocol RequestProvider {
     func asURL() throws -> URL
     
     func asURLRequest() throws -> URLRequest
+}
+
+public extension RequestProvider {
+    
+    public func urlQueryAllowed() -> CharacterSet {
+        return CharacterSet.urlQueryAllowed
+    }
+    
+    public func asURL() throws -> URL {
+        guard var components = URLComponents(string: self.url) else { throw RepositoryError.invalidURL(url: self.url) }
+        
+        self.path.flatMap { components.path = $0 }
+        
+        components.queryItems = self.queryItems?.compactMap { key, value in
+            URLQueryItem(name: key, value: value?.addingPercentEncoding(withAllowedCharacters: urlQueryAllowed()))
+        }
+        
+        guard let url = components.url else { throw RepositoryError.invalidURL(url: self.url) }
+        
+        return url
+    }
+    
+    public func asURLRequest() throws -> URLRequest {
+        var url = try self.asURL()
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = method.rawValue
+        urlRequest.allHTTPHeaderFields = headers
+        
+        guard let bodyParameters = body else { return urlRequest }
+        
+        do {
+            let data = try JSONSerialization.data(withJSONObject: bodyParameters, options: [])
+            
+            if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
+                urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            }
+            
+            urlRequest.httpBody = data
+        } catch {
+            throw RepositoryError.jsonEncodingFailed(error: error)
+        }
+        
+        return urlRequest
+    }
 }
