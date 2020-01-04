@@ -12,6 +12,18 @@ public enum HTTPMethod: String {
     case connect = "CONNECT"
 }
 
+// MARK: - RequestProvider
+
+   /// Creates a `RequestProvider` to retrieve the contents of the specified `url`, `method`, `path`, `queryItems`
+   /// , `body` and `headers`.
+   ///
+   /// - parameter url:        The URL.
+   /// - parameter method:     The HTTPMethod enum.
+   /// - parameter path:       The path adds in the end of URL. Use next format "/user"
+   /// - parameter queryItems: The queryItems adds in the URL after `?` all items separate by `&` `?name=Artur&age=27`.
+   /// - parameter headers:    The HTTP headers.
+   /// - parameter body:       The HTTP body. By default encode to `json`.
+
 public protocol RequestProvider {
     
     var method: HTTPMethod { get }
