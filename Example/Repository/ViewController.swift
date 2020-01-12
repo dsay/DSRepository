@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     }
     
     func updateData() {
-        
+        let userID = "/1"
         let sd = MainRequestBuilder(method: .get,
-                                         path: "/api",
+                                         path: ["/api", userID],
                                          queryItems: ["some" : nil, "some1": "sdf df", "some2": "іваіоа"],
                                          headers: ["asdfadf": "adfsdf"],
                                          body: ["df": ["dfdf":"2342"]])

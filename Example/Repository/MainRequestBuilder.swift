@@ -6,7 +6,7 @@ class MainRequestBuilder: RequestProvider {
     
     var url: String
     
-    var path: String?
+    var path: RequestPathConvertible?
     
     var queryItems: [String : String?]?
     
@@ -15,7 +15,7 @@ class MainRequestBuilder: RequestProvider {
     var body: [String : Any]?
     
     init(method: HTTPMethod = .get,
-         path: String? = nil,
+         path: RequestPathConvertible? = nil,
          queryItems: [String: String?]? = nil,
          headers: [String: String]? = nil,
          body: [String: Any]? = nil)

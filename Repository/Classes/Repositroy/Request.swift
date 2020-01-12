@@ -28,7 +28,7 @@ public protocol RequestProvider {
     
     var method: HTTPMethod { get }
     var url: String { get }
-    var path: String? { get }
+    var path: RequestPathConvertible? { get }
     var queryItems: [String: String?]? { get }
     var headers: [String: String]? { get }
     var body: [String: Any]? { get }
@@ -40,17 +40,17 @@ public protocol RequestProvider {
 
 public extension RequestProvider {
     
-    public func urlQueryAllowed() -> CharacterSet {
+    public func allowed() -> CharacterSet {
         return CharacterSet.urlQueryAllowed
     }
     
     public func asURL() throws -> URL {
         guard var components = URLComponents(string: self.url) else { throw RepositoryError.invalidURL(url: self.url) }
         
-        self.path.flatMap { components.path = $0 }
+        self.path.flatMap { components.path = $0.toPath() }
         
         components.queryItems = self.queryItems?.compactMap { key, value in
-            URLQueryItem(name: key, value: value?.addingPercentEncoding(withAllowedCharacters: urlQueryAllowed()))
+            URLQueryItem(name: key, value: value?.addingPercentEncoding(withAllowedCharacters: allowed()))
         }
         
         guard let url = components.url else { throw RepositoryError.invalidURL(url: self.url) }
