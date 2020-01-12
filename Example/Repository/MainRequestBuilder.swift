@@ -8,23 +8,23 @@ class MainRequestBuilder: RequestProvider {
     
     var path: RequestPathConvertible?
     
-    var queryItems: [String : String?]?
+    var query: [String: String?]?
     
-    var headers: [String : String]?
+    var headers: [String: String]?
     
-    var body: [String : Any]?
-    
+    var body: RequestBodyConvertible?
+
     init(method: HTTPMethod = .get,
          path: RequestPathConvertible? = nil,
-         queryItems: [String: String?]? = nil,
+         query: [String: String?]? = nil,
          headers: [String: String]? = nil,
          body: [String: Any]? = nil)
     {
         self.url = "https://next.json-generator.com"
         self.method = method
         self.path = path
-        self.queryItems = queryItems
+        self.query = query
         self.headers = headers
-        self.body = body
+        self.body = JSONRequestBody(json: body)
     }
 }

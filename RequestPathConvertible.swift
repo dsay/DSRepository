@@ -19,8 +19,13 @@ extension Array: RequestPathConvertible where Element == String {
     }
     
     public func toPath() -> String {
-        compactMap {
-            $0.addingPercentEncoding(withAllowedCharacters: allowed()) ?? ""
+        compactMap { element in
+            let value = element.addingPercentEncoding(withAllowedCharacters: allowed()) ?? ""
+            if element.hasPrefix("/") {
+                return value
+            } else {
+                return "/" + value
+            }
         }.reduce("") {
             $0 + $1
         }

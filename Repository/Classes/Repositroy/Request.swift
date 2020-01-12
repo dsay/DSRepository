@@ -14,24 +14,24 @@ public enum HTTPMethod: String {
 
 // MARK: - RequestProvider
 
-   /// Creates a `RequestProvider` to retrieve the contents of the specified `url`, `method`, `path`, `queryItems`
+   /// Creates a `RequestProvider` to retrieve the contents of the specified `url`, `method`, `path`, `query`
    /// , `body` and `headers`.
    ///
    /// - parameter url:        The URL.
    /// - parameter method:     The HTTPMethod enum.
-   /// - parameter path:       The path adds in the end of URL. Use next format "/user"
-   /// - parameter queryItems: The queryItems adds in the URL after `?` all items separate by `&` `?name=Artur&age=27`.
+   /// - parameter path:       The RequestPathConvertible adds in the end of URL. Use next format `/user/1` or `[/user, /1]`
+   /// - parameter query: The queryItems adds in the URL after `?` all items separate by `&` `?name=Artur&age=27`.
    /// - parameter headers:    The HTTP headers.
-   /// - parameter body:       The HTTP body. By default encode to `json`.
+   /// - parameter body:       The RequestBodyConvertible. By encode parameters to `httpBody`.
 
 public protocol RequestProvider {
     
     var method: HTTPMethod { get }
     var url: String { get }
     var path: RequestPathConvertible? { get }
-    var queryItems: [String: String?]? { get }
+    var query: [String: String?]? { get }
     var headers: [String: String]? { get }
-    var body: [String: Any]? { get }
+    var body: RequestBodyConvertible? { get }
     
     func asURL() throws -> URL
     
@@ -49,7 +49,7 @@ public extension RequestProvider {
         
         self.path.flatMap { components.path = $0.toPath() }
         
-        components.queryItems = self.queryItems?.compactMap { key, value in
+        components.queryItems = self.query?.compactMap { key, value in
             URLQueryItem(name: key, value: value?.addingPercentEncoding(withAllowedCharacters: allowed()))
         }
         
@@ -65,19 +65,8 @@ public extension RequestProvider {
         urlRequest.httpMethod = method.rawValue
         urlRequest.allHTTPHeaderFields = headers
         
-        guard let bodyParameters = body else { return urlRequest }
-        
-        do {
-            let data = try JSONSerialization.data(withJSONObject: bodyParameters, options: [])
-            
-            if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
-                urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            }
-            
-            urlRequest.httpBody = data
-        } catch {
-            throw RepositoryError.jsonEncodingFailed(error: error)
-        }
+        var httpBody = try body?.toHTTPBody()
+        urlRequest.httpBody = httpBody
         
         return urlRequest
     }

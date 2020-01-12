@@ -94,18 +94,18 @@ open class ObjectsStore<Item: BaseMappable>: AlamofireStore, RemoteObjectsStore 
 open class UploadObjectsStore<Item: BaseMappable>: AlamofireStore {
     
     public func upload(request: RequestProvider, keyPath: String? = nil, responseObject: @escaping (Response<Item>) -> Void) {
-        upload(request: request,completion: { uploadRequest in
+        upload(request: request) { uploadRequest in
             uploadRequest.responseObject(keyPath: keyPath) { (response: DataResponse<Item>) -> Void in
                 responseObject(self.handler.handle(response))
             }
-        })
+        }
     }
     
     public func upload(request: RequestProvider, keyPath: String? = nil, responseArray: @escaping (Response<[Item]>) -> Void) {
-         upload(request: request,completion: { uploadRequest in
+         upload(request: request) { uploadRequest in
              uploadRequest.responseArray(keyPath: keyPath) { (response: DataResponse<[Item]>) -> Void in
                  responseArray(self.handler.handle(response))
              }
-         })
+         }
      }
 }
