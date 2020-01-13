@@ -18,7 +18,6 @@ public struct JSONRequestBody: RequestBodyConvertible {
         
         do {
             let data = try JSONSerialization.data(withJSONObject: bodyParameters, options: [])
-            
             return data
         } catch {
             throw RepositoryError.jsonEncodingFailed(error: error)

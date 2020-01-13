@@ -19,8 +19,8 @@ public enum HTTPMethod: String {
    ///
    /// - parameter url:        The URL.
    /// - parameter method:     The HTTPMethod enum.
-   /// - parameter path:       The RequestPathConvertible adds in the end of URL. Use next format `/user/1` or `[/user, /1]`
-   /// - parameter query: The queryItems adds in the URL after `?` all items separate by `&` `?name=Artur&age=27`.
+   /// - parameter path:       The RequestPathConvertible adds in the end of URL. Use next format `/user/1` or `[/user, 1]`
+   /// - parameter query: The queryItems adds in the URL after `?` all items separate by `&` `?search&name=Artur&age=27`.
    /// - parameter headers:    The HTTP headers.
    /// - parameter body:       The RequestBodyConvertible. By encode parameters to `httpBody`.
 

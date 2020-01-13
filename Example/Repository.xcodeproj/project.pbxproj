@@ -25,6 +25,8 @@
 		CE32C0F6225B2DDA00771C93 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0F4225B2DDA00771C93 /* ServiceLocator.swift */; };
 		CE32C0FB225B2E2D00771C93 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0FA225B2E2D00771C93 /* UserRepository.swift */; };
 		CE32C0FC225B2E2D00771C93 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C0FA225B2E2D00771C93 /* UserRepository.swift */; };
+		CEE4563523CC66A600C55556 /* MainSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4563323CC66A600C55556 /* MainSessionManager.swift */; };
+		CEE4563623CC66A600C55556 /* DefaultSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4563423CC66A600C55556 /* DefaultSessionManager.swift */; };
 		CEF8D20322671206005FF0C3 /* SwiftRepository.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CEF8D20222671206005FF0C3 /* SwiftRepository.podspec */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		CE32C0F1225B2D3700771C93 /* MainRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRequestBuilder.swift; sourceTree = "<group>"; };
 		CE32C0F4225B2DDA00771C93 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		CE32C0FA225B2E2D00771C93 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		CEE4563323CC66A600C55556 /* MainSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSessionManager.swift; sourceTree = "<group>"; };
+		CEE4563423CC66A600C55556 /* DefaultSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultSessionManager.swift; sourceTree = "<group>"; };
 		CEF8D20222671206005FF0C3 /* SwiftRepository.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SwiftRepository.podspec; path = ../SwiftRepository.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D656C755FA24150895250225 /* Pods-Repository_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository_Tests.release.xcconfig"; path = "Target Support Files/Pods-Repository_Tests/Pods-Repository_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DFBCF955F948302FF074A379 /* Pods-Repository_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository_Example.release.xcconfig"; path = "Target Support Files/Pods-Repository_Example/Pods-Repository_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 				CE32C0F1225B2D3700771C93 /* MainRequestBuilder.swift */,
 				CE32C0F4225B2DDA00771C93 /* ServiceLocator.swift */,
 				CE32C0FA225B2E2D00771C93 /* UserRepository.swift */,
+				CEE4563223CC66A600C55556 /* SessionManager */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -178,6 +183,15 @@
 				4E0B765CBD09112B7655CA1B /* Pods_Repository_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEE4563223CC66A600C55556 /* SessionManager */ = {
+			isa = PBXGroup;
+			children = (
+				CEE4563323CC66A600C55556 /* MainSessionManager.swift */,
+				CEE4563423CC66A600C55556 /* DefaultSessionManager.swift */,
+			);
+			path = SessionManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +392,8 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				CE32C0EC225B2CFD00771C93 /* User.swift in Sources */,
+				CEE4563523CC66A600C55556 /* MainSessionManager.swift in Sources */,
+				CEE4563623CC66A600C55556 /* DefaultSessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

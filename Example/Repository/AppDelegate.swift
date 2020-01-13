@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError()
         }
         
-        let session: SessionManager = MainSessionManager.default(user: "test", password: "password")
+        let session: SessionManager = MainSessionManager.default()
         ServiceLocator.shared.registerService(service: session)
         
         return true 
