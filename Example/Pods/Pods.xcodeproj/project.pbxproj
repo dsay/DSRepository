@@ -297,6 +297,8 @@
 		CEAB78055139A08A35D19A096A4405A9 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB1B5D44C813AC7B0BDE0164E57437D3 /* ObjectMapper.framework */; };
 		CEE4562823CB365200C55556 /* RequestPathConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4562623CB364D00C55556 /* RequestPathConvertible.swift */; };
 		CEE4562B23CB3F6100C55556 /* RequestBodyConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4562923CB3F6100C55556 /* RequestBodyConvertible.swift */; };
+		CEE4563B23CC8E6400C55556 /* RequestBodyConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4563923CC8E6400C55556 /* RequestBodyConvertible.swift */; };
+		CEE4563C23CC8E6400C55556 /* RequestPathConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4563A23CC8E6400C55556 /* RequestPathConvertible.swift */; };
 		CF65567C5D9F47F59D8651C0219877E8 /* RLMObjectBase.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = F3ACB9D240075C18691017BFE402B2E3 /* RLMObjectBase.h */; };
 		CFD70C4512BE496D2CFA66C1F07D0743 /* ObjectMapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DB250D589466E129DD54322F3DE1D4 /* ObjectMapper-dummy.m */; };
 		CFF3D81D1CA7C3A6B0A66C5523CA9C87 /* RLMMigration.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = BF7896885AAD0619D3DF074BE27F83E7 /* RLMMigration.h */; };
@@ -900,6 +902,8 @@
 		CE9E2CE023853C4D00C4BAA6 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		CEE4562623CB364D00C55556 /* RequestPathConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPathConvertible.swift; sourceTree = "<group>"; };
 		CEE4562923CB3F6100C55556 /* RequestBodyConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBodyConvertible.swift; sourceTree = "<group>"; };
+		CEE4563923CC8E6400C55556 /* RequestBodyConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestBodyConvertible.swift; path = Repository/Classes/Repositroy/RequestBodyConvertible.swift; sourceTree = "<group>"; };
+		CEE4563A23CC8E6400C55556 /* RequestPathConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestPathConvertible.swift; path = Repository/Classes/Repositroy/RequestPathConvertible.swift; sourceTree = "<group>"; };
 		CF738733DC03BD6B5DB31AC2BB86FAF3 /* placeholder.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = placeholder.cpp; path = Realm/ObjectStore/src/placeholder.cpp; sourceTree = "<group>"; };
 		D0C7DE5D63EC0585E4261279552340CD /* RLMResults.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMResults.mm; path = Realm/RLMResults.mm; sourceTree = "<group>"; };
 		D122032647029C1D86DCCB16CE6A38FF /* SwiftRepository.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftRepository.modulemap; sourceTree = "<group>"; };
@@ -1167,6 +1171,8 @@
 				C7C89A82EE00EA468C7B278F502DF103 /* Request.swift */,
 				CEE4562623CB364D00C55556 /* RequestPathConvertible.swift */,
 				CEE4562923CB3F6100C55556 /* RequestBodyConvertible.swift */,
+				CEE4563923CC8E6400C55556 /* RequestBodyConvertible.swift */,
+				CEE4563A23CC8E6400C55556 /* RequestPathConvertible.swift */,
 				C358722807DD34ABDE004E9DC8384373 /* Response.swift */,
 				6537F0F224C5E041BCE2002B4220D724 /* Storable.swift */,
 				C8E663296E667E48EA7A02750D969EBE /* Syncable.swift */,
@@ -2390,6 +2396,8 @@
 				59C5B45708E576CA6ADA299EF01D9F08 /* DiskStore+Promise.swift in Sources */,
 				CE326C47239102B400F3CC90 /* KeycheinStore.swift in Sources */,
 				A225FF7AABE4AA24BADE37F343D5B1C6 /* RealmStore.swift in Sources */,
+				CEE4563C23CC8E6400C55556 /* RequestPathConvertible.swift in Sources */,
+				CEE4563B23CC8E6400C55556 /* RequestBodyConvertible.swift in Sources */,
 				CEE4562B23CB3F6100C55556 /* RequestBodyConvertible.swift in Sources */,
 				CE326C48239102B400F3CC90 /* PrivateStore.swift in Sources */,
 				CEE4562823CB365200C55556 /* RequestPathConvertible.swift in Sources */,
