@@ -49,8 +49,9 @@ public extension RequestProvider {
         
         self.path.flatMap { components.path = $0.toPath() }
         
-        components.queryItems = self.query?.compactMap { key, value in
-            URLQueryItem(name: key, value: value?.addingPercentEncoding(withAllowedCharacters: allowed()))
+        self.query.flatMap { components.queryItems = $0.compactMap { key, value in
+                URLQueryItem(name: key, value: value?.addingPercentEncoding(withAllowedCharacters: allowed()))
+            }
         }
         
         guard let url = components.url else { throw RepositoryError.invalidURL(url: self.url) }

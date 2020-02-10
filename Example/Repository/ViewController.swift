@@ -24,10 +24,17 @@ class ViewController: UIViewController {
         
         let request = try! sd.asURLRequest()
         
+        
         print(request.httpMethod ?? "")
         print(request.url  ?? "")
         print(request.allHTTPHeaderFields ?? "")
         print(String(data: request.httpBody ?? Data(), encoding: .utf8) ?? "")
+        
+        
+        let image = ImageRequestBuilder(url: "https://next.json-generator.com/sdfsdf/sdfsd/sdf?dfs=df")
+        
+        let imagerequest = try! image.asURLRequest()
+        
         
         activityIndicator.startAnimating()        
         UserRepository.default().getAll()
