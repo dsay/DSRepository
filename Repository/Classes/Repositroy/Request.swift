@@ -47,12 +47,11 @@ public extension RequestProvider {
     public func asURL() throws -> URL {
         guard var components = URLComponents(string: self.url) else { throw RepositoryError.invalidURL(url: self.url) }
         
-        self.path.flatMap { components.path = $0.toPath() }
+        self.path.flatMap { components.path += $0.toPath() }
         
-        self.query.flatMap { components.queryItems = $0.compactMap { key, value in
-                URLQueryItem(name: key, value: value?.addingPercentEncoding(withAllowedCharacters: allowed()))
-            }
-        }
+        var items = queryItems() ?? []
+        items += components.queryItems ?? []
+        components.queryItems = items
         
         guard let url = components.url else { throw RepositoryError.invalidURL(url: self.url) }
         
@@ -70,5 +69,11 @@ public extension RequestProvider {
         urlRequest.httpBody = httpBody
         
         return urlRequest
+    }
+
+    private func queryItems() -> [URLQueryItem]? {
+        self.query?.compactMap { key, value in
+            URLQueryItem(name: key, value: value?.addingPercentEncoding(withAllowedCharacters: allowed()))
+        }
     }
 }
