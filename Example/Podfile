@@ -10,8 +10,8 @@ target 'Repository_Example' do
   pod 'RealmSwift'
   pod 'PromiseKit/CorePromise'
   pod 'AlamofireImage'
-  pod 'ObjectMapper'
-  pod 'AlamofireObjectMapper'
+  pod 'ObjectMapper', '3.5.1'
+  pod 'AlamofireObjectMapper', '5.2.1'
   pod 'ObjectMapperAdditions/Realm'
   
   target 'Repository_Tests' do
