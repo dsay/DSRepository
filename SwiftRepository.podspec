@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
     s.dependency 'RealmSwift'
     s.dependency 'PromiseKit/CorePromise'
     s.dependency 'AlamofireImage'
-    s.dependency 'ObjectMapper'
-    s.dependency 'AlamofireObjectMapper'
+    s.dependency 'ObjectMapper', '3.5.1'
+    s.dependency 'AlamofireObjectMapper', '5.2.1'
     s.dependency 'ObjectMapperAdditions/Realm'
 end
