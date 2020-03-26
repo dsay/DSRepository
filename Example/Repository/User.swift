@@ -1,7 +1,6 @@
 import ObjectMapper
 import RealmSwift
 import ObjectMapperAdditions
-import ObjectMapper_Realm
 import SwiftRepository
 
 class User: Object, BaseMappable {

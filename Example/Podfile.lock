@@ -6,35 +6,30 @@ PODS:
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
   - ObjectMapper (3.5.1)
-  - "ObjectMapper+Realm (1.0)":
-    - ObjectMapper
-    - RealmSwift
   - ObjectMapperAdditions/Core (6.0.2):
     - ObjectMapper
   - ObjectMapperAdditions/Realm (6.0.2):
     - ObjectMapper
     - ObjectMapperAdditions/Core
     - RealmSwift
-  - PromiseKit/CorePromise (6.12.0)
-  - Realm (4.0.0):
-    - Realm/Headers (= 4.0.0)
-  - Realm/Headers (4.0.0)
-  - RealmSwift (4.0.0):
-    - Realm (= 4.0.0)
-  - SwiftRepository (0.1.5):
+  - PromiseKit/CorePromise (6.13.1)
+  - Realm (4.3.2):
+    - Realm/Headers (= 4.3.2)
+  - Realm/Headers (4.3.2)
+  - RealmSwift (4.3.2):
+    - Realm (= 4.3.2)
+  - SwiftRepository (0.3.3):
     - AlamofireImage
     - AlamofireObjectMapper
     - ObjectMapper
-    - "ObjectMapper+Realm"
     - ObjectMapperAdditions/Realm
     - PromiseKit/CorePromise
     - RealmSwift
 
 DEPENDENCIES:
   - AlamofireImage
-  - AlamofireObjectMapper
-  - ObjectMapper
-  - "ObjectMapper+Realm"
+  - AlamofireObjectMapper (= 5.2.1)
+  - ObjectMapper (= 3.5.1)
   - ObjectMapperAdditions/Realm
   - PromiseKit/CorePromise
   - RealmSwift
@@ -46,7 +41,6 @@ SPEC REPOS:
     - AlamofireImage
     - AlamofireObjectMapper
     - ObjectMapper
-    - "ObjectMapper+Realm"
     - ObjectMapperAdditions
     - PromiseKit
     - Realm
@@ -61,13 +55,12 @@ SPEC CHECKSUMS:
   AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
-  "ObjectMapper+Realm": bd713d57132bf05880a656695137764692f7d2bb
   ObjectMapperAdditions: 923fa7cdc45a7937e08fea8c715d18fc3604b122
-  PromiseKit: c06835ba442ce5454ce3cdde470232804a6e4ff8
-  Realm: 0c5b8f398daeec5b29824e41c453ff9e126e31d8
-  RealmSwift: 02e1f604f7091ec535145055764ca53efa8cdc92
-  SwiftRepository: dda8b343c467fdd512d8a1a7ce8fb14451ea9d8f
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
+  RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
+  SwiftRepository: ced9efb451e017110d4ae56258115fc81c9a59d8
 
-PODFILE CHECKSUM: c40187071cc3b20ee0f3194f3b3ddc1a8114e5ea
+PODFILE CHECKSUM: 6c8c04c2b461e4eb05054337f57f3cf28cf4994d
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

@@ -35,7 +35,6 @@ class ViewController: UIViewController {
         
         let imagerequest = try! image.asURLRequest()
         
-        
         activityIndicator.startAnimating()        
         UserRepository.default().getAll()
             .done { data in

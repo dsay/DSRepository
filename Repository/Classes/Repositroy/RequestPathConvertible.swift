@@ -7,8 +7,12 @@ public protocol RequestPathConvertible {
 
 extension String: RequestPathConvertible {
     
+    public func allowed() -> CharacterSet {
+        return CharacterSet.urlPathAllowed
+    }
+    
     public func toPath() -> String {
-        return self
+        addingPercentEncoding(withAllowedCharacters: allowed()) ?? ""
     }
 }
 
