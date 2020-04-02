@@ -1,6 +1,6 @@
-import ObjectMapper
+import Foundation
 
-open class KeycheinStore<Item: BaseMappable>: DiskStore {
+open class KeycheinStore<Item: Decodable & Encodable>: DiskStore {
     
     public let store: PrivateStore
     
@@ -17,12 +17,18 @@ open class KeycheinStore<Item: BaseMappable>: DiskStore {
     }
     
     public func get(from URL: String) throws -> Item {
-        let mapper = Mapper<Item>(context: nil, shouldIncludeNilValues: false)
-        guard let object = store.get(URL),
-            let parsedObject = mapper.map(JSONString: object) else {
-                throw RepositoryError.objectNotFound
-        }
-        return parsedObject
+        
+        let encoded = store.getData(URL)
+        return try JSONDecoder().decode(Item.self, from: encoded)
+        
+        
+        
+//        let mapper = Mapper<Item>(context: nil, shouldIncludeNilValues: false)
+//        guard let object = store.get(URL),
+//            let parsedObject = mapper.map(JSONString: object) else {
+//                throw RepositoryError.objectNotFound
+//        }
+//        return parsedObject
     }
     
     public func remove(from URL: String) throws {
@@ -32,9 +38,7 @@ open class KeycheinStore<Item: BaseMappable>: DiskStore {
     }
     
     public func save(_ item: Item, at URL: String) throws {
-        guard let JSONString = item.toJSONString(),
-            store.set(JSONString, forKey: URL) else {
-                throw RepositoryError.cantSaveObject
-        }
+        let encoded = try JSONEncoder().encode(item)
+        store.set(encoded, forKey: URL)
     }
 }
