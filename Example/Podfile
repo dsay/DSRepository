@@ -7,10 +7,12 @@ inhibit_all_warnings!
 target 'Repository_Example' do
   pod 'SwiftRepository', :path => '../'
 
-  pod 'Alamofire'
+#  pod 'Alamofire'
   pod 'RealmSwift'
   pod 'PromiseKit/CorePromise'
-  pod 'AlamofireImage'
+  pod 'KeychainSwift'
+  pod 'ObjectMapper'
+  pod 'AlamofireObjectMapper'
   
   target 'Repository_Tests' do
     inherit! :search_paths

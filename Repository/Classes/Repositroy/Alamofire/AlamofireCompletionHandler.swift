@@ -8,7 +8,7 @@ open class BaseHandler {
         self.loger = loger
     }
     
-    public func handle<T, E>(_ response: DataResponse<T, E>) -> Response<T, E> {
+    public func handle<T>(_ response: DataResponse<T, AFError>) -> Result<T, Error> {
         loger.log(response)
         
         switch response.result {
@@ -22,11 +22,11 @@ open class BaseHandler {
         }
     }
     
-    open func responseSuccess<T, E>(_ response: DataResponse<T, E>, item: T) -> Response<T, E> {
+    open func responseSuccess<T>(_ response: DataResponse<T, AFError>, item: T) -> Result<T, Error> {
         .success(item)
     }
     
-    open func responseError<T, E>(_ response: DataResponse<T, E>, error: E) -> Response<T, E> {
-        .error(error)
+    open func responseError<T>(_ response: DataResponse<T, AFError>, error: Error) -> Result<T, Error> {
+        .failure(error)
     }
 }

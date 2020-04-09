@@ -1,22 +1,26 @@
 PODS:
-  - Alamofire (5.0.5)
-  - AlamofireImage (4.0.3):
-    - Alamofire (< 6.0.0, >= 5.0.2)
+  - Alamofire (5.0.0-rc.2)
+  - AlamofireObjectMapper (6.2.0):
+    - Alamofire (= 5.0.0-rc.2)
+    - ObjectMapper (~> 3.5.1)
+  - KeychainSwift (19.0.0)
+  - ObjectMapper (3.5.2)
   - PromiseKit/CorePromise (6.13.1)
-  - Realm (4.3.2):
-    - Realm/Headers (= 4.3.2)
-  - Realm/Headers (4.3.2)
-  - RealmSwift (4.3.2):
-    - Realm (= 4.3.2)
-  - SwiftRepository (0.3.4):
-    - Alamofire
-    - AlamofireImage
+  - Realm (4.4.0):
+    - Realm/Headers (= 4.4.0)
+  - Realm/Headers (4.4.0)
+  - RealmSwift (4.4.0):
+    - Realm (= 4.4.0)
+  - SwiftRepository (0.4.0):
+    - AlamofireObjectMapper
+    - ObjectMapper
     - PromiseKit/CorePromise
     - RealmSwift
 
 DEPENDENCIES:
-  - Alamofire
-  - AlamofireImage
+  - AlamofireObjectMapper
+  - KeychainSwift
+  - ObjectMapper
   - PromiseKit/CorePromise
   - RealmSwift
   - SwiftRepository (from `../`)
@@ -24,7 +28,9 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
-    - AlamofireImage
+    - AlamofireObjectMapper
+    - KeychainSwift
+    - ObjectMapper
     - PromiseKit
     - Realm
     - RealmSwift
@@ -34,13 +40,15 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
-  AlamofireImage: 3d1a2010519e58675318735580eb856e88840ff7
+  Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
+  AlamofireObjectMapper: 74d1440c92c42bbcc2b5f4dc81654ac095ec669f
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
-  Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
-  RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
-  SwiftRepository: 236aa946e96df778a44e081c10a96ce5a0a050c9
+  Realm: e125f464884cda953ebefe70c671b75b03b81b9b
+  RealmSwift: 33656a42bd300959a081fc13347376bc478071af
+  SwiftRepository: 347381478b406b6aad8d4f89bf605d9a306eb777
 
-PODFILE CHECKSUM: 13665060b0c52eb94564a06ae639004e348a5a23
+PODFILE CHECKSUM: 91dc69f1d46d9d3f5459672c879528bbad9cb127
 
 COCOAPODS: 1.9.1

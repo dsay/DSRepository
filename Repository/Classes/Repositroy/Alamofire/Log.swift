@@ -2,7 +2,7 @@ import Alamofire
 
 public protocol Log {
     
-    func log<T, E>(_ response: DataResponse<T, E>)
+    func log<T>(_ response: DataResponse<T, AFError>)
     func success<T>(_ value: T)
     func failure(_ error: Error)
 }
