@@ -25,10 +25,8 @@ Pod::Spec.new do |s|
     
     s.frameworks = 'UIKit'
     
-#    s.dependency 'Alamofire'
     s.dependency 'RealmSwift'
     s.dependency 'PromiseKit/CorePromise'
-    s.dependency 'ObjectMapper'
     s.dependency 'AlamofireObjectMapper'
     
 end

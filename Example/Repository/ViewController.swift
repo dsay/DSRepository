@@ -25,13 +25,11 @@ class ViewController: UIViewController {
         
         let request = try! sd.asURLRequest()
         
-        
         print(request.httpMethod ?? "")
         print(request.url  ?? "")
         print(request.allHTTPHeaderFields ?? "")
         print(String(data: request.httpBody ?? Data(), encoding: .utf8) ?? "")
         
-                    
         activityIndicator.startAnimating()        
         userRepository.getAll()
             .done { data in

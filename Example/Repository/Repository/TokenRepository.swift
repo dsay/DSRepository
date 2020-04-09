@@ -7,7 +7,7 @@ struct TokenRepository: Repository, Syncable, Storable {
         static let key = String(describing: Token.self)
     }
     
-    let remote: DecodableObjectsStore<Token>
+    let remote: ObjectsStoreDecodable<Token>
     let local: KeycheinStore<Token>
     
     func get()-> Token? {

@@ -25,14 +25,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let store: PrivateStore = KeychainSwift()
         ServiceLocator.shared.register(service: store)
 
-        let user = UserRepository(remote: DecodableObjectsStore(session: session, handler: handler),
+        let user = UserRepository(remote: ObjectsStoreDecodable(session: session, handler: handler),
                                   local: RealmStore(realm))
         ServiceLocator.shared.register(service: user)
 
-        let token = TokenRepository(remote: DecodableObjectsStore(session: session, handler: handler),
+        let token = TokenRepository(remote: ObjectsStoreDecodable(session: session, handler: handler),
                                     local: KeycheinStore(store))
         ServiceLocator.shared.register(service: token)
-
+        
+        let image = ImageRepository(remote: AlamofireStore(session: session, handler: handler),
+                                    local: DataStore())
+        ServiceLocator.shared.register(service: image)
+        
         return true 
     }
     

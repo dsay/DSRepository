@@ -3,7 +3,7 @@ import PromiseKit
 
 struct UserRepository: Repository, Syncable, Storable {    
     
-    let remote: DecodableObjectsStore<User>
+    let remote: ObjectsStoreDecodable<User>
     let local: RealmStore<User>
     
     func getAll() -> Promise<[User]> {

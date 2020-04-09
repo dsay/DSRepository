@@ -34,6 +34,10 @@
 		CE7D96FB243F05DC00597555 /* MainSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4563323CC66A600C55556 /* MainSessionManager.swift */; };
 		CE7D96FC243F05DC00597555 /* Keychaine+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE21B24243F0062001485E6 /* Keychaine+Store.swift */; };
 		CE7D9704243F098B00597555 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D9703243F098B00597555 /* UserDefault.swift */; };
+		CE90E190243F551900E4446F /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90E18F243F551900E4446F /* ImageRepository.swift */; };
+		CE90E192243F554D00E4446F /* Image+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90E191243F554D00E4446F /* Image+Request.swift */; };
+		CE90E193243F55D100E4446F /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90E18F243F551900E4446F /* ImageRepository.swift */; };
+		CE90E194243F55F000E4446F /* Image+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90E191243F554D00E4446F /* Image+Request.swift */; };
 		CEE21B25243F0062001485E6 /* Keychaine+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE21B24243F0062001485E6 /* Keychaine+Store.swift */; };
 		CEE21B28243F01AC001485E6 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE21B27243F01AC001485E6 /* Token.swift */; };
 		CEE21B2A243F01BB001485E6 /* Token+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE21B29243F01BB001485E6 /* Token+Request.swift */; };
@@ -75,6 +79,8 @@
 		CE32C0F4225B2DDA00771C93 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		CE32C0FA225B2E2D00771C93 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		CE7D9703243F098B00597555 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		CE90E18F243F551900E4446F /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		CE90E191243F554D00E4446F /* Image+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Request.swift"; sourceTree = "<group>"; };
 		CEE21B24243F0062001485E6 /* Keychaine+Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychaine+Store.swift"; sourceTree = "<group>"; };
 		CEE21B27243F01AC001485E6 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		CEE21B29243F01BB001485E6 /* Token+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Token+Request.swift"; sourceTree = "<group>"; };
@@ -203,8 +209,10 @@
 				CE32C0EE225B2D1A00771C93 /* User+Request.swift */,
 				CEE21B27243F01AC001485E6 /* Token.swift */,
 				CEE21B29243F01BB001485E6 /* Token+Request.swift */,
+				CE90E191243F554D00E4446F /* Image+Request.swift */,
 				CE32C0FA225B2E2D00771C93 /* UserRepository.swift */,
 				CE2EA5A1243D9A98005FE3FD /* TokenRepository.swift */,
+				CE90E18F243F551900E4446F /* ImageRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -285,10 +293,9 @@
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Repository" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -420,7 +427,9 @@
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				CE32C0EC225B2CFD00771C93 /* User.swift in Sources */,
 				CEE4563523CC66A600C55556 /* MainSessionManager.swift in Sources */,
+				CE90E192243F554D00E4446F /* Image+Request.swift in Sources */,
 				CEE21B2A243F01BB001485E6 /* Token+Request.swift in Sources */,
+				CE90E190243F551900E4446F /* ImageRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +449,9 @@
 				CE7D96F9243F05DC00597555 /* MainRequestBuilder.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 				CE7D96F3243F05D500597555 /* Token.swift in Sources */,
+				CE90E194243F55F000E4446F /* Image+Request.swift in Sources */,
 				CE7D96F5243F05D500597555 /* TokenRepository.swift in Sources */,
+				CE90E193243F55D100E4446F /* ImageRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
