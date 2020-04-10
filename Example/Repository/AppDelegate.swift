@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let store: PrivateStore = KeychainSwift()
         ServiceLocator.shared.register(service: store)
 
-        let user = UserRepository(remote: ObjectsStoreDecodable(session: session, handler: handler),
+        let user = UserRepository(remote: ObjectsStore(session: session, handler: handler),
                                   local: RealmStore(realm))
         ServiceLocator.shared.register(service: user)
 
