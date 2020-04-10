@@ -28,19 +28,7 @@
     "PromiseKit/CorePromise": [
 
     ],
-    "AlamofireImage": [
-
-    ],
-    "ObjectMapper": [
-      "3.5.1"
-    ],
     "AlamofireObjectMapper": [
-      "5.2.1"
-    ],
-    "ObjectMapperAdditions/Realm": [
-
-    ],
-    "ObjectMapper_Realm": [
 
     ]
   },
