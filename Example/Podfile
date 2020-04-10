@@ -9,10 +9,8 @@ target 'Repository_Example' do
 
   pod 'RealmSwift'
   pod 'PromiseKit/CorePromise'
-  pod 'AlamofireImage'
-  pod 'ObjectMapper', '3.5.1'
-  pod 'AlamofireObjectMapper', '5.2.1'
-  pod 'ObjectMapperAdditions/Realm'
+  pod 'KeychainSwift'
+  pod 'AlamofireObjectMapper'
   
   target 'Repository_Tests' do
     inherit! :search_paths

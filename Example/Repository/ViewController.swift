@@ -1,12 +1,13 @@
 import UIKit
 import SwiftRepository
-import AlamofireObjectMapper
-import ObjectMapper
 import Alamofire
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @Injection
+    var userRepository: UserRepository
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,19 +25,13 @@ class ViewController: UIViewController {
         
         let request = try! sd.asURLRequest()
         
-        
         print(request.httpMethod ?? "")
         print(request.url  ?? "")
         print(request.allHTTPHeaderFields ?? "")
         print(String(data: request.httpBody ?? Data(), encoding: .utf8) ?? "")
         
-        
-        let image = ImageRequestBuilder(url: "https://next.json-generator.com/sdfsdf/sdfsd/sdf?dfs=df")
-        
-        let imagerequest = try! image.asURLRequest()
-        
         activityIndicator.startAnimating()        
-        UserRepository.default().getAll()
+        userRepository.getAll()
             .done { data in
                 print(data)
         }.ensure {
@@ -44,41 +39,5 @@ class ViewController: UIViewController {
         }.catch { error in
             print(error)
         }
-    }
-}
-
-
-class SomePrivateStore: PrivateStore {
-
-    func getData(_ key: String) -> Data? {
-        fatalError()
-    }
-
-    @discardableResult
-    func set(_ value: Data, forKey key: String) -> Bool{
-        fatalError()
-    }
-
-    func get(_ key: String) -> String?{
-        fatalError()
-    }
-
-    @discardableResult
-    func set(_ value: String, forKey key: String) -> Bool{
-        fatalError()
-    }
-
-    func get(_ key: String) -> Bool{
-        fatalError()
-    }
-
-    @discardableResult
-    func set(_ value: Bool, forKey key: String) -> Bool{
-        fatalError()
-    }
-
-    @discardableResult
-    func delete(_ key: String) -> Bool{
-        fatalError()
     }
 }

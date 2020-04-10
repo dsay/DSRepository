@@ -3,25 +3,12 @@ import PromiseKit
 public extension RemoteStore {
     
     public func requestString(request: RequestProvider) -> Promise<String> {
-        return Promise { resolver in
-            send(request: request, responseString: { (response: Response<String>) -> Void  in
+        Promise { resolver in
+            send(request: request, responseString: { (response: Swift.Result<String, Error>) -> Void  in
                 switch response {
                 case .success(let value):
                     resolver.fulfill(value)
-                case .error(let error):
-                    resolver.reject(error)
-                }
-            })
-        }
-    }
-    
-    public func requestImage(request: RequestProvider) -> Promise<UIImage> {
-        return Promise { resolver in
-            send(request: request, responseImage: { (response: Response<UIImage>) -> Void  in
-                switch response {
-                case .success(let value):
-                    resolver.fulfill(value)
-                case .error(let error):
+                case .failure(let error):
                     resolver.reject(error)
                 }
             })
@@ -29,12 +16,25 @@ public extension RemoteStore {
     }
     
     public func requestData(request: RequestProvider) -> Promise<Data> {
-        return Promise { resolver in
-            send(request: request, responseData: { (response: Response<Data>) -> Void  in
+        Promise { resolver in
+            send(request: request, responseData: { (response: Swift.Result<Data, Error>) -> Void  in
                 switch response {
                 case .success(let value):
                     resolver.fulfill(value)
-                case .error(let error):
+                case .failure(let error):
+                    resolver.reject(error)
+                }
+            })
+        }
+    }
+    
+    public func requestImage(request: RequestProvider) -> Promise<UIImage> {
+        Promise { resolver in
+            send(request: request, responseImage: { (response: Swift.Result<UIImage, Error>) -> Void  in
+                switch response {
+                case .success(let value):
+                    resolver.fulfill(value)
+                case .failure(let error):
                     resolver.reject(error)
                 }
             })
@@ -42,12 +42,12 @@ public extension RemoteStore {
     }
     
     public func requestJSON(request: RequestProvider) -> Promise<Any> {
-        return Promise { resolver in
-            send(request: request, responseJSON: { (response: Response<Any>) -> Void  in
+        Promise { resolver in
+            send(request: request, responseJSON: { (response: Swift.Result<Any, Error>) -> Void  in
                 switch response {
                 case .success(let value):
                     resolver.fulfill(value)
-                case .error(let error):
+                case .failure(let error):
                     resolver.reject(error)
                 }
             })
@@ -56,14 +56,14 @@ public extension RemoteStore {
 }
 
 public extension RemoteObjectsStore {
-
+    
     public func requestArray(request: RequestProvider, keyPath: String? = nil) -> Promise<[Item]> {
-        return Promise { resolver in
-            send(request: request, keyPath: keyPath, responseArray: { (response: Response<[Item]>) -> Void  in
+        Promise { resolver in
+            send(request: request, keyPath: keyPath, responseArray: { (response: Swift.Result<[Item], Error>) -> Void  in
                 switch response {
                 case .success(let value):
                     resolver.fulfill(value)
-                case .error(let error):
+                case .failure(let error):
                     resolver.reject(error)
                 }
             })
@@ -71,41 +71,12 @@ public extension RemoteObjectsStore {
     }
     
     public func requestObject(request: RequestProvider, keyPath: String? = nil) -> Promise<Item> {
-        return Promise { resolver in
-            send(request: request, keyPath: keyPath, responseObject: { (response: Response<Item>) -> Void  in
+        Promise { resolver in
+            send(request: request, keyPath: keyPath, responseObject: { (response: Swift.Result<Item, Error>) -> Void  in
                 switch response {
                 case .success(let value):
                     resolver.fulfill(value)
-                case .error(let error):
-                    resolver.reject(error)
-                }
-            })
-        }
-    }
-}
-
-public extension UploadObjectsStore {
-    
-    public func uploadRequest(request: RequestProvider, keyPath: String? = nil) -> Promise<[Item]> {
-        return Promise { resolver in
-            upload(request: request, keyPath: keyPath, responseArray: { (response: Response<[Item]>) -> Void  in
-                switch response {
-                case .success(let value):
-                    resolver.fulfill(value)
-                case .error(let error):
-                    resolver.reject(error)
-                }
-            })
-        }
-    }
-    
-    public func uploadRequest(request: RequestProvider, keyPath: String? = nil) -> Promise<Item> {
-        return Promise { resolver in
-            upload(request: request, keyPath: keyPath, responseObject: { (response: Response<Item>) -> Void  in
-                switch response {
-                case .success(let value):
-                    resolver.fulfill(value)
-                case .error(let error):
+                case .failure(let error):
                     resolver.reject(error)
                 }
             })

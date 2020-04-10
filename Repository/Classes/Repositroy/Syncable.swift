@@ -9,15 +9,15 @@ public protocol Syncable {
 
 public protocol RemoteStore {
     
-    func send(request: RequestProvider, responseString: @escaping (Response<String>) -> Void)
-    func send(request: RequestProvider, responseImage: @escaping (Response<UIImage>) -> Void)
-    func send(request: RequestProvider, responseData: @escaping (Response<Data>) -> Void)
-    func send(request: RequestProvider, responseJSON: @escaping (Response<Any>) -> Void)
+    func send(request: RequestProvider, responseString: @escaping (Result<String, Error>) -> Void)
+    func send(request: RequestProvider, responseData: @escaping (Result<Data, Error>) -> Void)
+    func send(request: RequestProvider, responseImage: @escaping (Result<UIImage, Error>) -> Void)
+    func send(request: RequestProvider, responseJSON: @escaping (Result<Any, Error>) -> Void)
 }
 
 public protocol RemoteObjectsStore: RemoteStore {
     associatedtype Item
 
-    func send(request: RequestProvider, keyPath: String?, responseObject: @escaping (Response<Item>) -> Void)
-    func send(request: RequestProvider, keyPath: String?, responseArray: @escaping (Response<[Item]>) -> Void)
+    func send(request: RequestProvider, keyPath: String?, responseObject: @escaping (Result<Item, Error>) -> Void)
+    func send(request: RequestProvider, keyPath: String?, responseArray: @escaping (Result<[Item], Error>) -> Void)
 }

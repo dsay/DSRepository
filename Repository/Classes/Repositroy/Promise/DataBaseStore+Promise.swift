@@ -65,22 +65,22 @@ public extension DataBaseStore {
         }
     }
     
-    public func save(_ item: Item, policy: UpdatePolicy = .all) -> Promise<Item> {
+    public func save(_ item: Item, policy: UpdatePolicy = .all) -> Promise<Void> {
         return Promise { resolver in
             do {
                 try save(item, policy: policy)
-                resolver.fulfill(item)
+                resolver.fulfill(())
             } catch {
                 resolver.reject(error)
             }
         }
     }
     
-    public func save(_ items: [Item], policy: UpdatePolicy = .all) -> Promise<[Item]> {
+    public func save(_ items: [Item], policy: UpdatePolicy = .all) -> Promise<Void> {
         return Promise { resolver in
             do {
                 try save(items, policy: policy)
-                resolver.fulfill(items)
+                resolver.fulfill(())
             } catch {
                 resolver.reject(error)
             }

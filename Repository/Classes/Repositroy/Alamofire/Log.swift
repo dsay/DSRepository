@@ -2,7 +2,7 @@ import Alamofire
 
 public protocol Log {
     
-    func log<T>(_ response: DataResponse<T>)
+    func log<T>(_ response: DataResponse<T, AFError>)
     func success<T>(_ value: T)
     func failure(_ error: Error)
 }
@@ -15,15 +15,14 @@ public struct DEBUGLog: Log {
     public init(){
     }
     
-    public func log<T>(_ response: DataResponse<T>) {
+    public func log<T, E>(_ response: DataResponse<T, E>) {
         divader()
         methodName(response.request?.httpMethod)
         urlPath(response.request?.url?.absoluteString)
         header(response.request?.allHTTPHeaderFields)
         parameters(response.request?.httpBody)
         statusCode(response.response?.statusCode)
-        startTime( response.timeline.requestStartTime)
-        duration(response.timeline.requestDuration)
+        metrics(response.metrics)
         jsonResponse(response.data)
     }
     
@@ -63,12 +62,8 @@ public struct DEBUGLog: Log {
         print("StatusCode:", code ?? empty, separator: separator)
     }
     
-    fileprivate func startTime(_ time: CFAbsoluteTime) {
-        print("StartTime:", Date(timeIntervalSinceReferenceDate: time), separator: separator)
-    }
-    
-    fileprivate func duration(_ duration: TimeInterval) {
-        print("RequestDuration:", duration, separator: separator)
+    fileprivate func metrics(_ duration: URLSessionTaskMetrics?) {
+        print("Duration:", duration?.taskInterval ?? 0.0, separator: separator)
     }
     
     fileprivate func jsonResponse(_ data: Data?) {
@@ -81,7 +76,7 @@ public struct RELEASELog: Log {
     public init(){
     }
     
-    public func log<T>(_ response: DataResponse<T>) {
+    public func log<T, E>(_ response: DataResponse<T, E>) {
     }
     
     public func success<T>(_ value: T) {
