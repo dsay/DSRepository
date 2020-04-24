@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "Repository_Example.app"
-               BlueprintName = "Repository_Example"
+               BuildableName = "RepositoryExample.app"
+               BlueprintName = "RepositoryExample"
                ReferencedContainer = "container:Repository.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Repository_Tests.xctest"
-               BlueprintName = "Repository_Tests"
+               BuildableName = "RepositoryTests.xctest"
+               BlueprintName = "RepositoryTests"
                ReferencedContainer = "container:Repository.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Repository_Example.app"
-            BlueprintName = "Repository_Example"
+            BuildableName = "RepositoryExample.app"
+            BlueprintName = "RepositoryExample"
             ReferencedContainer = "container:Repository.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,18 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Repository_Tests.xctest"
-               BlueprintName = "Repository_Tests"
+               BuildableName = "RepositoryTests.xctest"
+               BlueprintName = "RepositoryTests"
+               ReferencedContainer = "container:Repository.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C07416E72452E677007F0759"
+               BuildableName = "RepositoryExampleTests.xctest"
+               BlueprintName = "RepositoryExampleTests"
                ReferencedContainer = "container:Repository.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -78,8 +88,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Repository_Example.app"
-            BlueprintName = "Repository_Example"
+            BuildableName = "RepositoryExample.app"
+            BlueprintName = "RepositoryExample"
             ReferencedContainer = "container:Repository.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -95,8 +105,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Repository_Example.app"
-            BlueprintName = "Repository_Example"
+            BuildableName = "RepositoryExample.app"
+            BlueprintName = "RepositoryExample"
             ReferencedContainer = "container:Repository.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

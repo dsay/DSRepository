@@ -3,7 +3,6 @@ import SwiftRepository
 
 extension KeychainSwift: PrivateStore {
     
-    
     public func getData(_ key: String) -> Data? {
         return self.getData(key, asReference: false)
     }
