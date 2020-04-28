@@ -12,6 +12,14 @@ extension CardToken {
 }
 
 class MockActionSessionRepository: ActionSessionRepository {
+
+    static func shared() -> ActionSessionRepository {
+        
+        let clientID: String = Bundle.main.object(forInfoDictionaryKey: "ActionClientID") as? String ?? ""
+        let clientSecret = Bundle.main.object(forInfoDictionaryKey: "ActionClientSecret") as? String ?? ""
+        let session: CardSessionManager = CardSessionManager.default(clientID: clientID, clientSecret: clientSecret)
+        return MockActionSessionRepository(remote: ObjectsStore(session: session, handler: BaseHandler(DEBUGLog())))
+    }
     
     override func get() -> Promise<CardToken> {
         return Promise<CardToken>.value(CardToken.mockCardToken())

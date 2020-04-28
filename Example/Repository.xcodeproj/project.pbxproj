@@ -17,6 +17,7 @@
 		C053215A24518A9B00C64B46 /* ActionSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053215924518A9B00C64B46 /* ActionSessionRepository.swift */; };
 		C053215D24518AEB00C64B46 /* CardToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053215C24518AEB00C64B46 /* CardToken.swift */; };
 		C053215F24518B3B00C64B46 /* CardSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053215E24518B3B00C64B46 /* CardSessionManager.swift */; };
+		C05E60BF2456C9A90050CA88 /* MockThemeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E60BD2456C75A0050CA88 /* MockThemeRepository.swift */; };
 		C07416D52452BEE5007F0759 /* CampaignRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07416D42452BEE5007F0759 /* CampaignRepository.swift */; };
 		C07416D72452BF07007F0759 /* Cmapaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07416D62452BF07007F0759 /* Cmapaign.swift */; };
 		C07416D92452C6A3007F0759 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07416D82452C6A3007F0759 /* Connectivity.swift */; };
@@ -71,6 +72,7 @@
 		C053215924518A9B00C64B46 /* ActionSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSessionRepository.swift; sourceTree = "<group>"; };
 		C053215C24518AEB00C64B46 /* CardToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardToken.swift; sourceTree = "<group>"; };
 		C053215E24518B3B00C64B46 /* CardSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSessionManager.swift; sourceTree = "<group>"; };
+		C05E60BD2456C75A0050CA88 /* MockThemeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockThemeRepository.swift; sourceTree = "<group>"; };
 		C07416D42452BEE5007F0759 /* CampaignRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignRepository.swift; sourceTree = "<group>"; };
 		C07416D62452BF07007F0759 /* Cmapaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cmapaign.swift; sourceTree = "<group>"; };
 		C07416D82452C6A3007F0759 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				C07416E12452CF95007F0759 /* MockActionSessionRepository.swift */,
 				C07416F42452E89B007F0759 /* MockCampaignRepository.swift */,
+				C05E60BD2456C75A0050CA88 /* MockThemeRepository.swift */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C07416F22452E696007F0759 /* CampaignInteractorTests.swift in Sources */,
+				C05E60BF2456C9A90050CA88 /* MockThemeRepository.swift in Sources */,
 				C07416F62452EDC3007F0759 /* MockCampaignRepository.swift in Sources */,
 				C07416EB2452E677007F0759 /* RepositoryExampleTests.swift in Sources */,
 				C07416F32452E699007F0759 /* MockActionSessionRepository.swift in Sources */,
