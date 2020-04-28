@@ -1,10 +1,15 @@
 import SwiftRepository
 import PromiseKit
 
-struct UserRepository: Repository, Syncable, Storable {    
+class UserRepository: Repository, Syncable, Storable {
     
     let remote: ObjectsStore<User>
     let local: RealmStore<User>
+    
+    init(remote: ObjectsStore<User>, local: RealmStore<User>) {
+        self.remote = remote
+        self.local = local
+    }
     
     func getAll() -> Promise<[User]> {
         firstly {
