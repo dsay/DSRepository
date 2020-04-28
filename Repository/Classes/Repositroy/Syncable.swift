@@ -15,7 +15,7 @@ public protocol RemoteStore {
     func send(request: RequestProvider, responseJSON: @escaping (Result<Any, Error>) -> Void)
 }
 
-public protocol RemoteObjectsStore, RemoteStore {
+public protocol RemoteObjectsStore: RemoteStore {
     associatedtype Item
 
     func send(request: RequestProvider, keyPath: String?, responseObject: @escaping (Result<Item, Error>) -> Void)
