@@ -11,7 +11,7 @@ open class DataStore: DiskStore {
 
     public func isExists(at URL: String) -> Bool {
         let fileURL = documentsDirectory.appendingPathComponent(URL)
-        return FileManager.default.fileExists(atPath: fileURL.absoluteString)
+        return FileManager.default.fileExists(atPath: fileURL.path)
     }
     
     public func get(from URL: String) throws -> Data {
