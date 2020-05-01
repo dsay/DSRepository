@@ -55,7 +55,7 @@ public struct DEBUGLog: Log {
     }
     
     fileprivate func parameters(_ data: Data?) {
-        print("Parameters:", String(data: data ?? Data(), encoding: .utf8) ?? empty)
+        print("Parameters:", data.flatMap { $0.prettyPrintedJSONString } ?? empty)
     }
     
     fileprivate func statusCode(_ code: NSInteger?) {
@@ -67,7 +67,7 @@ public struct DEBUGLog: Log {
     }
     
     fileprivate func jsonResponse(_ data: Data?) {
-        print("JSON:", String(data: data ?? Data(), encoding: .utf8) ?? empty)
+        print("JSON:", data.flatMap { $0.prettyPrintedJSONString } ?? empty)
     }
 }
 
@@ -83,5 +83,16 @@ public struct RELEASELog: Log {
     }
     
     public func failure(_ error: Error) {
+    }
+}
+
+extension Data {
+    
+    var prettyPrintedJSONString: NSString? {
+        guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
+              let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
+              let prettyPrintedString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else { return nil }
+
+        return prettyPrintedString
     }
 }
