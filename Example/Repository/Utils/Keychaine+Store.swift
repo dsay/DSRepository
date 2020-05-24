@@ -1,8 +1,7 @@
 import KeychainSwift
 import SwiftRepository
 
-extension KeychainSwift: PrivateStore {
-    
+extension KeychainSwift: Storage {
     
     public func getData(_ key: String) -> Data? {
         return self.getData(key, asReference: false)

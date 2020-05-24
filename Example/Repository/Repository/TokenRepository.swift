@@ -8,7 +8,7 @@ struct TokenRepository: Repository, Syncable, Storable {
     }
     
     let remote: ObjectsStoreDecodable<Token>
-    let local: KeycheinStore<Token>
+    let local: CodableStore<Token>
     
     func get()-> Token? {
         try? local.get(from: Constants.key)

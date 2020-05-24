@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol PrivateStore {
+public protocol Storage {
 
     func getData(_ key: String) -> Data?
 

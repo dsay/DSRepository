@@ -4,7 +4,7 @@ import SwiftRepository
 struct ImageRepository: Repository, Syncable, Storable {
 
     let remote: AlamofireStore
-    let local: DataStore
+    let local: FileManagerStore
 
     func getImage(for url: String) -> Promise<UIImage> {
         let theFileName = (url as NSString).lastPathComponent

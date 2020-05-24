@@ -1,6 +1,6 @@
 import Foundation
 
-open class DataStore: DiskStore {
+open class FileManagerStore: DiskStore {
         
     private lazy var documentsDirectory: URL = {
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!

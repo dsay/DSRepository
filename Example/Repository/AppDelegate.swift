@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let handler = BaseHandler(log)
         ServiceLocator.shared.register(service: handler)
 
-        let store: PrivateStore = KeychainSwift()
+        let store: Storage = KeychainSwift()
         ServiceLocator.shared.register(service: store)
 
         let user = UserRepository(remote: ObjectsStore(session: session, handler: handler),
@@ -30,11 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ServiceLocator.shared.register(service: user)
 
         let token = TokenRepository(remote: ObjectsStoreDecodable(session: session, handler: handler),
-                                    local: KeycheinStore(store))
+                                    local: CodableStore(store))
         ServiceLocator.shared.register(service: token)
         
         let image = ImageRepository(remote: AlamofireStore(session: session, handler: handler),
-                                    local: DataStore())
+                                    local: FileManagerStore())
         ServiceLocator.shared.register(service: image)
         
         return true 

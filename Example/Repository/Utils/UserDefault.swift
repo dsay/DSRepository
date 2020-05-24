@@ -19,3 +19,21 @@ struct UserDefault<T> {
         }
     }
 }
+
+@propertyWrapper
+struct NullableUserDefault<T> {
+    let key: String
+
+    init(_ key: String) {
+        self.key = key
+    }
+
+    var wrappedValue: T? {
+        get {
+            return UserDefaults.standard.object(forKey: key) as? T
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: key)
+        }
+    }
+}

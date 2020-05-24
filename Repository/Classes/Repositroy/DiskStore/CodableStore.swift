@@ -1,10 +1,10 @@
 import Foundation
 
-open class KeycheinStore<Item: Codable>: DiskStore {
+open class CodableStore<Item: Codable>: DiskStore {
     
-    public let store: PrivateStore
+    public let store: Storage
     
-    public init(_ store: PrivateStore) {
+    public init(_ store: Storage) {
         self.store = store
     }
     
