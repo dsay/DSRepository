@@ -9,16 +9,12 @@ open class MappableStore<Item: BaseMappable>: DiskStore {
     }
     
     public func isExists(at URL: String) -> Bool {
-        if store.get(URL) {
-            return true
-        } else {
-            return false
-        }
+        store.getString(URL) != nil
     }
     
     public func get(from URL: String) throws -> Item {
         let mapper = Mapper<Item>(context: nil, shouldIncludeNilValues: false)
-        guard let object = store.get(URL),
+        guard let object = store.getString(URL),
             let parsedObject = mapper.map(JSONString: object) else {
                 throw RepositoryError.objectNotFound
         }
@@ -26,15 +22,13 @@ open class MappableStore<Item: BaseMappable>: DiskStore {
     }
     
     public func remove(from URL: String) throws {
-        if store.delete(URL) == false {
-            throw RepositoryError.cantDeleteObject
-        }
+        store.deleteValue(URL)
     }
     
     public func save(_ item: Item, at URL: String) throws {
-        guard let JSONString = item.toJSONString(),
-            store.set(JSONString, forKey: URL) else {
-                throw RepositoryError.cantSaveObject
+        guard let JSONString = item.toJSONString() else {
+            throw RepositoryError.cantSaveObject
         }
+        store.setString(JSONString, forKey: URL)
     }
 }

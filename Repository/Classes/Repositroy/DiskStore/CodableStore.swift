@@ -9,11 +9,7 @@ open class CodableStore<Item: Codable>: DiskStore {
     }
     
     public func isExists(at URL: String) -> Bool {
-        if store.get(URL) {
-            return true
-        } else {
-            return false
-        }
+        store.getData(URL) != nil
     }
     
     public func get(from URL: String) throws -> Item {
@@ -24,13 +20,11 @@ open class CodableStore<Item: Codable>: DiskStore {
     }
     
     public func remove(from URL: String) throws {
-        if store.delete(URL) == false {
-            throw RepositoryError.cantDeleteObject
-        }
+        store.deleteValue(URL)
     }
     
     public func save(_ item: Item, at URL: String) throws {
         let encoded = try JSONEncoder().encode(item)
-        store.set(encoded, forKey: URL)
+        store.setData(encoded, forKey: URL)
     }
 }

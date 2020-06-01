@@ -2,30 +2,32 @@ import KeychainSwift
 import SwiftRepository
 
 extension KeychainSwift: Storage {
+  
+    public func deleteValue(_ key: String) {
+        delete(key)
+    }
+    
+    public func setString(_ string: String, forKey key: String) {
+        set(string, forKey: key)
+    }
+    
+    public func setData(_ data: Data, forKey key: String) {
+        set(data, forKey: key)
+    }
+    
+    public func setBool(_ bool: Bool, forKey key: String) {
+        set(bool, forKey: key)
+    }
     
     public func getData(_ key: String) -> Data? {
-        return self.getData(key, asReference: false)
+        getData(key, asReference: false)
     }
     
-    @discardableResult
-    public func set(_ value: String, forKey key: String) -> Bool {
-        return self.set(value, forKey: key, withAccess: nil)
+    public func getString(_ key: String) -> String? {
+        get(key)
     }
     
-    @discardableResult
-    public func set(_ value: Data, forKey key: String) -> Bool {
-        return self.set(value, forKey: key, withAccess: nil)
-    }
-    
-    public func get(_ key: String) -> Bool {
-        if let value = getBool(key) {
-            return value
-        }
-        return false
-    }
-    
-    @discardableResult
-    public func set(_ value: Bool, forKey key: String) -> Bool {
-        return set(value, forKey: key, withAccess: nil)
+    public func getBool(_ key: String, defaultValue: Bool) -> Bool {
+        getBool(key) ?? defaultValue
     }
 }

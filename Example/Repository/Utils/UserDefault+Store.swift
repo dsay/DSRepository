@@ -2,39 +2,31 @@ import SwiftRepository
 
 extension UserDefaults: Storage {
 
+    public func setString(_ string: String, forKey key: String) {
+        set(string, forKey: key)
+    }
+    
+    public func setData(_ data: Data, forKey key: String) {
+        set(data, forKey: key)
+    }
+    
+    public func setBool(_ bool: Bool, forKey key: String) {
+        set(bool, forKey: key)
+    }
+    
     public func getData(_ key: String) -> Data? {
-        return value(forKey: key) as? Data
+        value(forKey: key) as? Data
     }
-
-    @discardableResult
-    public func set(_ value: Data, forKey key: String) -> Bool {
-        setValue(value, forKey: key)
-        return synchronize()
+    
+    public func getString(_ key: String) -> String? {
+        value(forKey: key) as? String
     }
-
-    public func get(_ key: String) -> String? {
-        return string(forKey: key)
+    
+    public func getBool(_ key: String, defaultValue: Bool) -> Bool {
+        value(forKey: key) as? Bool ?? defaultValue
     }
-
-    @discardableResult
-    public func set(_ value: String, forKey key: String) -> Bool {
-        setValue(value, forKey: key)
-        return synchronize()
-    }
-
-    public func get(_ key: String) -> Bool {
-        return (value(forKey: key) as? Bool) ?? false
-    }
-
-    @discardableResult
-    public func set(_ value: Bool, forKey key: String) -> Bool {
-        setValue(value, forKey: key)
-        return synchronize()
-    }
-
-    @discardableResult
-    public func delete(_ key: String) -> Bool {
+    
+    public func deleteValue(_ key: String) {
         removeObject(forKey: key)
-        return synchronize()
     }
 }
