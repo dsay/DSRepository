@@ -3,15 +3,15 @@ import SwiftRepository
 extension UserDefaults: Storage {
 
     public func setString(_ string: String, forKey key: String) {
-        set(string, forKey: key)
+        setValue(string, forKey: key)
     }
     
     public func setData(_ data: Data, forKey key: String) {
-        set(data, forKey: key)
+        setValue(data, forKey: key)
     }
     
     public func setBool(_ bool: Bool, forKey key: String) {
-        set(bool, forKey: key)
+        setValue(bool, forKey: key)
     }
     
     public func getData(_ key: String) -> Data? {

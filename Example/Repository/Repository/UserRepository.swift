@@ -23,3 +23,26 @@ class UserRepository: Repository, Syncable, Storable {
         }
     }
 }
+
+class UserMapableRepository: Repository, Syncable, Storable {
+    
+    let remote: ObjectsStore<User>
+    let local: MappableStore<User>
+    
+    init(remote: ObjectsStore<User>, local: MappableStore<User>) {
+        self.remote = remote
+        self.local = local
+    }
+    
+    func getAll() -> Promise<User> {
+        firstly {
+            self.remote.requestArray(request: User.getAll())
+        }.then { newItems in
+            self.local.saveItem(newItems[0], at: "User")
+        }.then { _ in
+            self.local.getItem(from: "User")
+        }.recover { _ in
+            self.local.getItem(from: "User")
+        }
+    }
+}

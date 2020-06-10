@@ -55,9 +55,10 @@ public extension RequestProvider {
         
         self.path.flatMap { components.path += $0.toPath() }
         
-        var items = queryItems() ?? []
-        items += components.queryItems ?? []
-        components.queryItems = items
+        if var items = queryItems() {
+            items += components.queryItems ?? []
+            components.queryItems = items
+        }
         
         guard let url = components.url else { throw RepositoryError.invalidURL(url: self.url) }
         

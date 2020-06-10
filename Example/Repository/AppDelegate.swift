@@ -22,12 +22,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let handler = BaseHandler(log)
         ServiceLocator.shared.register(service: handler)
 
-        let store: Storage = KeychainSwift()
+        let store: Storage = InMemoryStorage()
         ServiceLocator.shared.register(service: store)
 
         let user = UserRepository(remote: ObjectsStore(session: session, handler: handler),
                                   local: RealmStore(realm))
         ServiceLocator.shared.register(service: user)
+        
+        let userMappable = UserMapableRepository(remote: ObjectsStore(session: session, handler: handler),
+                                    local: MappableStore(store))
+          ServiceLocator.shared.register(service: userMappable)
 
         let token = TokenRepository(remote: ObjectsStoreDecodable(session: session, handler: handler),
                                     local: CodableStore(store))
