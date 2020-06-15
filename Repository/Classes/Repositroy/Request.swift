@@ -41,13 +41,7 @@ public protocol RequestProvider {
 public extension RequestProvider {
     
     public func allowed() -> CharacterSet {
-        let generalDelimitersToEncode = ":#[]@"
-        let subDelimitersToEncode = "!$&'()*+,;="
-        
-        var allowedCharacterSet = CharacterSet.urlQueryAllowed
-        allowedCharacterSet.remove(charactersIn: "\(generalDelimitersToEncode)\(subDelimitersToEncode)")
-        
-        return allowedCharacterSet
+        CharacterSet.urlQueryAllowed
     }
     
     public func asURL() throws -> URL {
