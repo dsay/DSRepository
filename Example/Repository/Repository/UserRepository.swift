@@ -3,10 +3,10 @@ import PromiseKit
 
 class UserRepository: Repository, Syncable, Storable {
     
-    let remote: ObjectsStore<User>
+    let remote: ObjectsStoreMappable<User>
     let local: RealmStore<User>
     
-    init(remote: ObjectsStore<User>, local: RealmStore<User>) {
+    init(remote: ObjectsStoreMappable<User>, local: RealmStore<User>) {
         self.remote = remote
         self.local = local
     }
@@ -26,10 +26,10 @@ class UserRepository: Repository, Syncable, Storable {
 
 class UserMapableRepository: Repository, Syncable, Storable {
     
-    let remote: ObjectsStore<User>
+    let remote: ObjectsStoreMappable<User>
     let local: MappableStore<User>
     
-    init(remote: ObjectsStore<User>, local: MappableStore<User>) {
+    init(remote: ObjectsStoreMappable<User>, local: MappableStore<User>) {
         self.remote = remote
         self.local = local
     }
@@ -44,5 +44,9 @@ class UserMapableRepository: Repository, Syncable, Storable {
         }.recover { _ in
             self.local.getItem(from: "User")
         }
+    }
+    
+    func getIndex() -> Promise<String> {
+        remote.requestItem(request: User.get(), keyPath: "id")
     }
 }

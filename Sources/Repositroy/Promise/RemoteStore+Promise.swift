@@ -28,19 +28,6 @@ public extension RemoteStore {
         }
     }
     
-    public func requestImage(request: RequestProvider) -> Promise<UIImage> {
-        Promise { resolver in
-            send(request: request, responseImage: { (response: Swift.Result<UIImage, Error>) -> Void  in
-                switch response {
-                case .success(let value):
-                    resolver.fulfill(value)
-                case .failure(let error):
-                    resolver.reject(error)
-                }
-            })
-        }
-    }
-    
     public func requestJSON(request: RequestProvider) -> Promise<Any> {
         Promise { resolver in
             send(request: request, responseJSON: { (response: Swift.Result<Any, Error>) -> Void  in
@@ -51,6 +38,19 @@ public extension RemoteStore {
                     resolver.reject(error)
                 }
             })
+        }
+    }
+    
+    public func requestItem<Item>(request: RequestProvider, keyPath: String? = nil) -> Promise<Item> {
+        Promise { resolver in
+            send(request: request, keyPath: keyPath) { (response: Swift.Result<Item, Error>) -> Void in
+                switch response {
+                case .success(let value):
+                    resolver.fulfill(value)
+                case .failure(let error):
+                    resolver.reject(error)
+                }
+            }
         }
     }
 }

@@ -29,15 +29,15 @@ open class AlamofireStore: RemoteStore {
         }
     }
     
-    public func send(request: RequestProvider, responseImage: @escaping (Result<UIImage, Error>) -> Void) {
-//         send(request: request).responseImage { (response: AFDataResponse<UIImage>) -> Void in
-//             responseImage(self.handler.handle(response))
-//         }
-     }
-    
     public func send(request: RequestProvider, responseJSON: @escaping (Result<Any, Error>) -> Void) {
         send(request: request).responseJSON { (response: AFDataResponse<Any>) -> Void in
             responseJSON(self.handler.handle(response))
+        }
+    }
+    
+    public func send<Item>(request: RequestProvider, keyPath: String?, responseItem: @escaping (Result<Item, Error>) -> Void) {
+        send(request: request).responseItem(keyPath: keyPath) { (response: AFDataResponse<Item>) -> Void  in
+            responseItem(self.handler.handle(response))
         }
     }
 }

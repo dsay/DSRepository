@@ -72,6 +72,7 @@ public class SessionRequestRetrier: RequestRetrier {
     public func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         if isUnauthorized(request: request) && isAttendMaxCountOfRetries(request: request) {
             attendedMaxCountOfRetries()
+            completion(.doNotRetry)
         } else if isUnauthorized(request: request) {
             refreshTokenAndRetry(completion)
         } else {

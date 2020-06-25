@@ -14,7 +14,7 @@ open class CodableStore<Item: Codable>: DiskStore {
     
     public func get(from URL: String) throws -> Item {
         guard let encoded = store.getData(URL) else{
-            throw RepositoryError.objectNotFound
+            throw RepositoryError.notFound
         }
         return try JSONDecoder().decode(Item.self, from: encoded)
     }

@@ -23,7 +23,7 @@ open class ObjectsStoreDecodable<Item: Decodable>: AlamofireStore, RemoteObjects
     }
 }
 
-open class ObjectsStore<Item: BaseMappable>: AlamofireStore, RemoteObjectsStore {
+open class ObjectsStoreMappable<Item: BaseMappable>: AlamofireStore, RemoteObjectsStore {
 
     public func send(request: RequestProvider,
                         keyPath: String? = nil,

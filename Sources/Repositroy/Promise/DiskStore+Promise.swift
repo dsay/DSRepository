@@ -7,7 +7,7 @@ public extension DiskStore {
             if isExists(at: URL) {
                 resolver.fulfill(())
             } else {
-                resolver.reject(RepositoryError.fileNotExists)
+                resolver.reject(RepositoryError.notExists)
             }
         }
     }

@@ -51,6 +51,17 @@ class ViewController: UIViewController {
         }.catch { error in
             print(error)
         }
+        
+        
+        activityIndicator.startAnimating()
+        userMRepository.getIndex()
+            .done { data in
+                print(data)
+        }.ensure {
+            self.activityIndicator.stopAnimating()
+        }.catch { error in
+            print(error)
+        }
     }
 }
 

@@ -16,7 +16,7 @@ open class MappableStore<Item: BaseMappable>: DiskStore {
         let mapper = Mapper<Item>(context: nil, shouldIncludeNilValues: false)
         guard let object = store.getString(URL),
             let parsedObject = mapper.map(JSONString: object) else {
-                throw RepositoryError.objectNotFound
+                throw RepositoryError.notFound
         }
         return parsedObject
     }
@@ -27,7 +27,7 @@ open class MappableStore<Item: BaseMappable>: DiskStore {
     
     public func save(_ item: Item, at URL: String) throws {
         guard let JSONString = item.toJSONString() else {
-            throw RepositoryError.cantSaveObject
+            throw RepositoryError.notSave
         }
         store.setString(JSONString, forKey: URL)
     }

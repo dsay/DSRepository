@@ -8,7 +8,7 @@ open class FileManagerStore: DiskStore {
     
     public init() {
     }
-
+    
     public func isExists(at URL: String) -> Bool {
         let fileURL = documentsDirectory.appendingPathComponent(URL)
         return FileManager.default.fileExists(atPath: fileURL.path)

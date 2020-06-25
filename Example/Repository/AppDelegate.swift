@@ -20,16 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let log = DEBUGLog()
         let handler = BaseHandler(log)
+        
         ServiceLocator.shared.register(service: handler)
 
         let store: Storage = InMemoryStorage()
         ServiceLocator.shared.register(service: store)
 
-        let user = UserRepository(remote: ObjectsStore(session: session, handler: handler),
+        let user = UserRepository(remote: ObjectsStoreMappable(session: session, handler: handler),
                                   local: RealmStore(realm))
         ServiceLocator.shared.register(service: user)
         
-        let userMappable = UserMapableRepository(remote: ObjectsStore(session: session, handler: handler),
+        let userMappable = UserMapableRepository(remote: ObjectsStoreMappable(session: session, handler: handler),
                                     local: MappableStore(store))
           ServiceLocator.shared.register(service: userMappable)
 
