@@ -21,7 +21,7 @@ let package = Package(
     targets: [
         .target(name: "Repository",
                 dependencies: ["Alamofire", "Realm", "ObjectMapper", "PromiseKit"],
-                path: "Sources"),
+                path: "Sources/Repositroy"),
         .testTarget(name: "RepositoryTests", dependencies: ["Repository"]),
     ],
     swiftLanguageVersions: [.v5]
