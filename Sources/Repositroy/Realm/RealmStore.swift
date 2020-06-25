@@ -1,4 +1,5 @@
 import RealmSwift
+import Foundation
 
 private extension UpdatePolicy {
     

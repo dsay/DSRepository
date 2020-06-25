@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 public protocol Syncable {
     

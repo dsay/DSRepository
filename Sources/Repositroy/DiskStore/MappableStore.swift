@@ -1,4 +1,5 @@
 import ObjectMapper
+import Foundation
 
 open class MappableStore<Item: BaseMappable>: DiskStore {
     

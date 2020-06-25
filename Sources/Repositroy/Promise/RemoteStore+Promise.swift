@@ -1,4 +1,5 @@
 import PromiseKit
+import Foundation
 
 public extension RemoteStore {
     

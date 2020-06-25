@@ -1,4 +1,5 @@
 import Alamofire
+import Foundation
 
 public protocol Log {
     

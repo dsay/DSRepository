@@ -1,5 +1,6 @@
 import Alamofire
 import ObjectMapper
+import Foundation
 
 open class ObjectsStoreDecodable<Item: Decodable>: AlamofireStore, RemoteObjectsStore {
 
