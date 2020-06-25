@@ -41,6 +41,18 @@ $ pod install
 - [Example](https://github.com/dsay/Repository/tree/master/Example)
 
 
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but Repository does support its use on supported platforms.
+
+Once you have your Swift package set up, adding Repository as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/dsay/POPDataSources.git")
+]
+```
+
 ## Author
 
 Dima Sai , dmitriy.sai2013@gmail.com
