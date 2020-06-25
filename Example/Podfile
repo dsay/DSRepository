@@ -10,7 +10,7 @@ target 'Repository_Example' do
   pod 'RealmSwift'
   pod 'PromiseKit/CorePromise'
   pod 'KeychainSwift'
-  pod 'AlamofireObjectMapper'
+#  pod 'AlamofireObjectMapper'
   
   target 'Repository_Tests' do
     inherit! :search_paths

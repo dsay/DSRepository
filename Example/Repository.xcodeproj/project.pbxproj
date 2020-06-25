@@ -82,6 +82,7 @@
 		CE7D9703243F098B00597555 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		CE90E18F243F551900E4446F /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		CE90E191243F554D00E4446F /* Image+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Request.swift"; sourceTree = "<group>"; };
+		CEB3267424A4B20A00B654B6 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		CEB5B931247A899000721855 /* UserDefault+Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Store.swift"; sourceTree = "<group>"; };
 		CEE21B24243F0062001485E6 /* Keychaine+Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychaine+Store.swift"; sourceTree = "<group>"; };
 		CEE21B27243F01AC001485E6 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -177,6 +178,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				CEB3267424A4B20A00B654B6 /* Package.swift */,
 				CEF8D20222671206005FF0C3 /* SwiftRepository.podspec */,
 				8FB6C3308C7D297119B8214C /* README.md */,
 				C5B47578E681944CA0A9496C /* LICENSE */,

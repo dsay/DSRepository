@@ -27,6 +27,6 @@ Pod::Spec.new do |s|
     
     s.dependency 'RealmSwift'
     s.dependency 'PromiseKit/CorePromise'
-    s.dependency 'AlamofireObjectMapper'
+    s.dependency 'Alamofire'
     
 end
