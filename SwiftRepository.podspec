@@ -19,8 +19,8 @@ Pod::Spec.new do |s|
     
     s.ios.deployment_target = '11.0'
     
-    s.source_files = 'Repository/**/*'
-    
+    s.source_files = "Sources/**/*.{swift}"
+
     s.swift_version = '5.0'
     
     s.frameworks = 'UIKit'
@@ -28,5 +28,6 @@ Pod::Spec.new do |s|
     s.dependency 'RealmSwift'
     s.dependency 'PromiseKit/CorePromise'
     s.dependency 'Alamofire'
+    s.dependency 'ObjectMapper'
     
 end
