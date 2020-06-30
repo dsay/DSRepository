@@ -6,10 +6,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-//    @Injection
-//    var userRepository: UserRepository
-//    @Injection
-//    var userMRepository: UserMapableRepository
+    @Injection
+    var userRepository: UserRepository
+    @Injection
+    var userMRepository: UserMapableRepository
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,35 +33,35 @@ class ViewController: UIViewController {
         print(String(data: request.httpBody ?? Data(), encoding: .utf8) ?? "")
         
         activityIndicator.startAnimating()        
-//        userRepository.getAll()
-//            .done { data in
-//                print(data)
-//        }.ensure {
-//            self.activityIndicator.stopAnimating()
-//        }.catch { error in
-//            print(error)
-//        }
-//        
-//        activityIndicator.startAnimating()
-//        userMRepository.getAll()
-//            .done { data in
-//                print(data)
-//        }.ensure {
-//            self.activityIndicator.stopAnimating()
-//        }.catch { error in
-//            print(error)
-//        }
-//        
-//        
-//        activityIndicator.startAnimating()
-//        userMRepository.getIndex()
-//            .done { data in
-//                print(data)
-//        }.ensure {
-//            self.activityIndicator.stopAnimating()
-//        }.catch { error in
-//            print(error)
-//        }
+        userRepository.getAll()
+            .done { data in
+                print(data)
+        }.ensure {
+            self.activityIndicator.stopAnimating()
+        }.catch { error in
+            print(error)
+        }
+        
+        activityIndicator.startAnimating()
+        userMRepository.getAll()
+            .done { data in
+                print(data)
+        }.ensure {
+            self.activityIndicator.stopAnimating()
+        }.catch { error in
+            print(error)
+        }
+        
+        
+        activityIndicator.startAnimating()
+        userMRepository.getIndex()
+            .done { data in
+                print(data)
+        }.ensure {
+            self.activityIndicator.stopAnimating()
+        }.catch { error in
+            print(error)
+        }
     }
 }
 

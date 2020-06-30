@@ -49,7 +49,7 @@ Once you have your Swift package set up, adding Repository as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/dsay/POPDataSources.git")
+    .package(url: "https://github.com/dsay/Repository.git")
 ]
 ```
 

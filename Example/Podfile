@@ -5,9 +5,10 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'Repository_Example' do
+  
   pod 'SwiftRepository', :path => '../'
-
   pod 'KeychainSwift'
+  pod 'RealmSwift'
   
   target 'Repository_Tests' do
     inherit! :search_paths
