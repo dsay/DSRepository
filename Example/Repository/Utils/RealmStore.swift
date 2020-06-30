@@ -60,9 +60,10 @@ open class RealmStore<Item: Object>: DataBaseStore {
         }
     }
 
-    public func update(response: @escaping (Result<Void, RepositoryError>) -> Void) {
+   public func update(_ write: @escaping () -> Void, response: @escaping (Result<Void, RepositoryError>) -> Void) {
         do {
             try context.write {
+                write()
                 response(.success(()))
             }
         } catch {

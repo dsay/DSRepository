@@ -16,7 +16,7 @@ public protocol DataBaseStore: LocalStore {
     func get(with id: String, response: @escaping (Result<Item, RepositoryError>) -> Void)
     func get(with predicate: NSPredicate, response: @escaping (Result<[Item], RepositoryError>) -> Void)
 
-    func update(response: @escaping (Result<Void, RepositoryError>) -> Void)
+    func update(_ write: @escaping () -> Void, response: @escaping (Result<Void, RepositoryError>) -> Void)
 
     func save(_ item: Item, policy: UpdatePolicy, response: @escaping (Result<Void, RepositoryError>) -> Void)
     func save(_ items: [Item], policy: UpdatePolicy, response: @escaping (Result<Void, RepositoryError>) -> Void)

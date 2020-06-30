@@ -68,9 +68,9 @@ public extension DataBaseStore {
         }
     }
     
-    public func update() -> Promise<Void> {
+    public func update(_ write: @escaping () -> Void) -> Promise<Void> {
         Promise { resolver in
-            update { result in
+            update(write) { result in
                 switch result {
                 case .success(let item):
                     resolver.fulfill(item)
