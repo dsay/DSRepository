@@ -2,7 +2,7 @@ import Alamofire
 import ObjectMapper
 import Foundation
 
-open class ObjectsStoreDecodable<Item: Decodable>: AlamofireStore, RemoteObjectsStore {
+open class RemoteStoreCodable<Item: Decodable>: RemoteStoreAlamofire, RemoteStoreObjects {
 
     public func send(request: RequestProvider,
                      keyPath: String? = nil,
@@ -23,7 +23,7 @@ open class ObjectsStoreDecodable<Item: Decodable>: AlamofireStore, RemoteObjects
     }
 }
 
-open class ObjectsStoreMappable<Item: BaseMappable>: AlamofireStore, RemoteObjectsStore {
+open class RemoteStoreMappable<Item: BaseMappable>: RemoteStoreAlamofire, RemoteStoreObjects {
 
     public func send(request: RequestProvider,
                         keyPath: String? = nil,

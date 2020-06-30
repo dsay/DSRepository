@@ -56,7 +56,7 @@ public extension RemoteStore {
     }
 }
 
-public extension RemoteObjectsStore {
+public extension RemoteStoreObjects {
     
     public func requestArray(request: RequestProvider, keyPath: String? = nil) -> Promise<[Item]> {
         Promise { resolver in

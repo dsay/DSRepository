@@ -8,7 +8,7 @@ private extension UpdatePolicy {
     }
 }
 
-open class RealmStore<Item: Object>: DataBaseStore {
+open class LocalStoreRealm<Item: Object>: LocalStoreDataBase {
 
     public let context: Realm
 

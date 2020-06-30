@@ -6,7 +6,7 @@ public enum UpdatePolicy: Int {
     case all = 2
 }
 
-public protocol DataBaseStore: LocalStore {
+public protocol LocalStoreDataBase: LocalStore {
     
     associatedtype Item
     

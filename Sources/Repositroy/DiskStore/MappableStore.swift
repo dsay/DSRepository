@@ -1,7 +1,7 @@
 import ObjectMapper
 import Foundation
 
-open class MappableStore<Item: BaseMappable>: DiskStore {
+open class LocalStoreMappable<Item: BaseMappable>: LocalStoreDisk {
     
     public let store: Storage
     

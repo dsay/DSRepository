@@ -3,10 +3,10 @@ import PromiseKit
 
 class UserRepository: Repository, Syncable, Storable {
     
-    let remote: ObjectsStoreMappable<User>
-    let local: RealmStore<User>
+    let remote: RemoteStoreMappable<User>
+    let local: LocalStoreRealm<User>
     
-    init(remote: ObjectsStoreMappable<User>, local: RealmStore<User>) {
+    init(remote: RemoteStoreMappable<User>, local: LocalStoreRealm<User>) {
         self.remote = remote
         self.local = local
     }
@@ -26,10 +26,10 @@ class UserRepository: Repository, Syncable, Storable {
 
 class UserMapableRepository: Repository, Syncable, Storable {
     
-    let remote: ObjectsStoreMappable<User>
-    let local: MappableStore<User>
+    let remote: RemoteStoreMappable<User>
+    let local: LocalStoreMappable<User>
     
-    init(remote: ObjectsStoreMappable<User>, local: MappableStore<User>) {
+    init(remote: RemoteStoreMappable<User>, local: LocalStoreMappable<User>) {
         self.remote = remote
         self.local = local
     }

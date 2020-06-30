@@ -1,7 +1,7 @@
 import PromiseKit
 import Foundation
 
-public extension DiskStore {
+public extension LocalStoreDisk {
     
     func isExistsItem(at URL: String) -> Promise<Void> {
         return Promise { resolver in

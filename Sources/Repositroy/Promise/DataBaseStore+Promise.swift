@@ -1,7 +1,7 @@
 import PromiseKit
 import Foundation
 
-public extension DataBaseStore {
+public extension LocalStoreDataBase {
     
     func getItems() -> Promise<[Item]> {
         Promise { resolver in

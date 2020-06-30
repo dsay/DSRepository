@@ -167,7 +167,7 @@
 		78BB4BFABCB498A10A06C02661795CDB /* ObjectMapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8971C8B6321B503B4306BE0B8176E20 /* ObjectMapper-dummy.m */; };
 		7908F4065CB1E8A38293CE28F4936941 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A748B6F7012E4A8B649DA43E8F8EA1 /* Mapper.swift */; };
 		7D3DD4A8BB36733BA15868F7FB8C56CE /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D452081AC5CAA809952E01D95057C5B6 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E41D6B1E6BAD4277E6829035414E16A /* DiskStore+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087E194EF0315905E33D346055534B1 /* DiskStore+Promise.swift */; };
+		7E41D6B1E6BAD4277E6829035414E16A /* LocalStoreDisk+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087E194EF0315905E33D346055534B1 /* LocalStoreDisk+Promise.swift */; };
 		7E7114C90CA1D4D70BB0291F91B212C6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23037B5F287766E1C87F02186446C5D9 /* Request.swift */; };
 		7F706BAD57226F216A0FAAD0301FF5BC /* RLMSyncPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = DA3EA1AB9C558EF357A0ACC8003AD177 /* RLMSyncPermission.h */; };
 		8094D9A61580520AD76B43B39BD840A6 /* RLMObjectBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B086308723CAF7FC6586565686DFB /* RLMObjectBase.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"5.1.0\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC -w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -545,7 +545,7 @@
 		1B0F70BFCC7C7D5DFB27AF7284C06F10 /* when.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = when.m; path = Sources/when.m; sourceTree = "<group>"; };
 		1CB95A721E4B8AE90D177D728BC0FDA1 /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
 		1CFDA735BBA708BACE3CC1D2A4A62370 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwiftAccessOptions.swift; path = Sources/KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
-		2087E194EF0315905E33D346055534B1 /* DiskStore+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "DiskStore+Promise.swift"; sourceTree = "<group>"; };
+		2087E194EF0315905E33D346055534B1 /* LocalStoreDisk+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "LocalStoreDisk+Promise.swift"; sourceTree = "<group>"; };
 		213721F5DBFA2E95D5D0B104309C424B /* schema.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = schema.cpp; path = Realm/ObjectStore/src/schema.cpp; sourceTree = "<group>"; };
 		23037B5F287766E1C87F02186446C5D9 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Sources/Repositroy/Request.swift; sourceTree = "<group>"; };
 		2324C1128992F0304C1780317233F7BF /* async_open_task.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = async_open_task.cpp; path = Realm/ObjectStore/src/sync/async_open_task.cpp; sourceTree = "<group>"; };
@@ -1135,7 +1135,7 @@
 			isa = PBXGroup;
 			children = (
 				FE299D3201006BF741ABA7AA5F416BF6 /* DataBaseStore+Promise.swift */,
-				2087E194EF0315905E33D346055534B1 /* DiskStore+Promise.swift */,
+				2087E194EF0315905E33D346055534B1 /* LocalStoreDisk+Promise.swift */,
 				A473153F6C3FBAB8F177A6E8AAE9084C /* RemoteStore+Promise.swift */,
 			);
 			name = Promise;
@@ -2157,7 +2157,7 @@
 				05930C2CBE0E07529AACC8458D33927A /* CodableStore.swift in Sources */,
 				82E25897BBB5936E372861AAF6F37AD3 /* DataBaseStore+Promise.swift in Sources */,
 				48DFD786A3B737DB38257C5475F3A68F /* DataBaseStore.swift in Sources */,
-				7E41D6B1E6BAD4277E6829035414E16A /* DiskStore+Promise.swift in Sources */,
+				7E41D6B1E6BAD4277E6829035414E16A /* LocalStoreDisk+Promise.swift in Sources */,
 				904D04A1C18824F01B5BA4B8B8D3042A /* DiskStore.swift in Sources */,
 				F69C117142504C67EB4A4B2916A8A6D5 /* FileManagerStore.swift in Sources */,
 				44AA48855E161D26D4E0F7DAD790E9CB /* JSONDecodable+KeyPath.swift in Sources */,

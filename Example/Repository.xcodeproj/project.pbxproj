@@ -38,10 +38,10 @@
 		CE90E192243F554D00E4446F /* Image+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90E191243F554D00E4446F /* Image+Request.swift */; };
 		CE90E193243F55D100E4446F /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90E18F243F551900E4446F /* ImageRepository.swift */; };
 		CE90E194243F55F000E4446F /* Image+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90E191243F554D00E4446F /* Image+Request.swift */; };
-		CEB3269B24AB388700B654B6 /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3269924AB388700B654B6 /* RealmStore.swift */; };
+		CEB3269B24AB388700B654B6 /* LocalStoreRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3269924AB388700B654B6 /* LocalStoreRealm.swift */; };
 		CEB3269C24AB388700B654B6 /* ObjectMapper+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3269A24AB388700B654B6 /* ObjectMapper+Realm.swift */; };
 		CEB3269D24AB39C700B654B6 /* ObjectMapper+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3269A24AB388700B654B6 /* ObjectMapper+Realm.swift */; };
-		CEB3269E24AB39C700B654B6 /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3269924AB388700B654B6 /* RealmStore.swift */; };
+		CEB3269E24AB39C700B654B6 /* LocalStoreRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3269924AB388700B654B6 /* LocalStoreRealm.swift */; };
 		CEB5B932247A899000721855 /* UserDefault+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5B931247A899000721855 /* UserDefault+Store.swift */; };
 		CEE21B25243F0062001485E6 /* Keychaine+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE21B24243F0062001485E6 /* Keychaine+Store.swift */; };
 		CEE21B28243F01AC001485E6 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE21B27243F01AC001485E6 /* Token.swift */; };
@@ -87,7 +87,7 @@
 		CE90E18F243F551900E4446F /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		CE90E191243F554D00E4446F /* Image+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Request.swift"; sourceTree = "<group>"; };
 		CEB3267424A4B20A00B654B6 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
-		CEB3269924AB388700B654B6 /* RealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
+		CEB3269924AB388700B654B6 /* LocalStoreRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStoreRealm.swift; sourceTree = "<group>"; };
 		CEB3269A24AB388700B654B6 /* ObjectMapper+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObjectMapper+Realm.swift"; sourceTree = "<group>"; };
 		CEB5B931247A899000721855 /* UserDefault+Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Store.swift"; sourceTree = "<group>"; };
 		CEE21B24243F0062001485E6 /* Keychaine+Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychaine+Store.swift"; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB3269A24AB388700B654B6 /* ObjectMapper+Realm.swift */,
-				CEB3269924AB388700B654B6 /* RealmStore.swift */,
+				CEB3269924AB388700B654B6 /* LocalStoreRealm.swift */,
 				CE32C0F1225B2D3700771C93 /* MainRequestBuilder.swift */,
 				CE32C0F4225B2DDA00771C93 /* ServiceLocator.swift */,
 				CEE4563323CC66A600C55556 /* MainSessionManager.swift */,
@@ -430,7 +430,7 @@
 				CEE21B25243F0062001485E6 /* Keychaine+Store.swift in Sources */,
 				CEB5B932247A899000721855 /* UserDefault+Store.swift in Sources */,
 				CE32C0F5225B2DDA00771C93 /* ServiceLocator.swift in Sources */,
-				CEB3269B24AB388700B654B6 /* RealmStore.swift in Sources */,
+				CEB3269B24AB388700B654B6 /* LocalStoreRealm.swift in Sources */,
 				CE32C0EF225B2D1A00771C93 /* User+Request.swift in Sources */,
 				CE2EA5A2243D9A98005FE3FD /* TokenRepository.swift in Sources */,
 				CE32C0F2225B2D3700771C93 /* MainRequestBuilder.swift in Sources */,
@@ -455,7 +455,7 @@
 				CE7D96F1243F05CF00597555 /* AppDelegate.swift in Sources */,
 				CE32C0FC225B2E2D00771C93 /* UserRepository.swift in Sources */,
 				CE7D96F4243F05D500597555 /* Token+Request.swift in Sources */,
-				CEB3269E24AB39C700B654B6 /* RealmStore.swift in Sources */,
+				CEB3269E24AB39C700B654B6 /* LocalStoreRealm.swift in Sources */,
 				CE7D96FB243F05DC00597555 /* MainSessionManager.swift in Sources */,
 				CE7D96FA243F05DC00597555 /* ServiceLocator.swift in Sources */,
 				CE32C0F0225B2D1A00771C93 /* User+Request.swift in Sources */,

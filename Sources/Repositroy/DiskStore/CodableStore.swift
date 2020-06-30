@@ -1,6 +1,6 @@
 import Foundation
 
-open class CodableStore<Item: Codable>: DiskStore {
+open class LocalStoreCodable<Item: Codable>: LocalStoreDisk {
     
     public let store: Storage
     

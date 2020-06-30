@@ -8,6 +8,7 @@ public protocol Syncable {
     var remote: Remote { get }
 }
 
+
 public protocol RemoteStore {
     
     func send(request: RequestProvider, responseString: @escaping (Result<String, Error>) -> Void)
@@ -16,9 +17,9 @@ public protocol RemoteStore {
     func send<Item>(request: RequestProvider, keyPath: String?, responseItem: @escaping (Result<Item, Error>) -> Void)
 }
 
-public protocol RemoteObjectsStore: RemoteStore {
+public protocol RemoteStoreObjects: RemoteStore {
     associatedtype Item
-
+    
     func send(request: RequestProvider, keyPath: String?, responseObject: @escaping (Result<Item, Error>) -> Void)
     func send(request: RequestProvider, keyPath: String?, responseArray: @escaping (Result<[Item], Error>) -> Void)
 }

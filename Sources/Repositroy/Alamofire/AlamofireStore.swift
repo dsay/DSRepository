@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-open class AlamofireStore: RemoteStore {
+open class RemoteStoreAlamofire: RemoteStore {
  
     public var handler: BaseHandler
     public var session: Alamofire.Session

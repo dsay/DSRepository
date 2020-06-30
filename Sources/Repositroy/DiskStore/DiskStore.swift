@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol DiskStore: LocalStore {
+public protocol LocalStoreDisk: LocalStore {
     
     associatedtype Item
 

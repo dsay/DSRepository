@@ -26,20 +26,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let store: Storage = InMemoryStorage()
         ServiceLocator.shared.register(service: store)
 
-        let user = UserRepository(remote: ObjectsStoreMappable(session: session, handler: handler),
-                                  local: RealmStore(realm))
+        let user = UserRepository(remote: RemoteStoreMappable(session: session, handler: handler),
+                                  local: LocalStoreRealm(realm))
         ServiceLocator.shared.register(service: user)
 
-        let userMappable = UserMapableRepository(remote: ObjectsStoreMappable(session: session, handler: handler),
-                                    local: MappableStore(store))
+        let userMappable = UserMapableRepository(remote: RemoteStoreMappable(session: session, handler: handler),
+                                    local: LocalStoreMappable(store))
           ServiceLocator.shared.register(service: userMappable)
 
-        let token = TokenRepository(remote: ObjectsStoreDecodable(session: session, handler: handler),
-                                    local: CodableStore(store))
+        let token = TokenRepository(remote: RemoteStoreCodable(session: session, handler: handler),
+                                    local: LocalStoreCodable(store))
         ServiceLocator.shared.register(service: token)
         
-        let image = ImageRepository(remote: AlamofireStore(session: session, handler: handler),
-                                    local: FileManagerStore())
+        let image = ImageRepository(remote: RemoteStoreAlamofire(session: session, handler: handler),
+                                    local: LocalStoreFileManager())
         ServiceLocator.shared.register(service: image)
         
         return true 
