@@ -11,13 +11,13 @@ public protocol Log {
 public struct DEBUGLog: Log {
     
     let separator = " "
-    let empty = "____"
+    let empty = "----"
     
     public init(){
     }
     
     public func log<T, E>(_ response: DataResponse<T, E>) {
-        divader()
+        divider()
         methodName(response.request?.httpMethod)
         urlPath(response.request?.url?.absoluteString)
         header(response.request?.allHTTPHeaderFields)
@@ -28,47 +28,75 @@ public struct DEBUGLog: Log {
     }
     
     public func success<T>(_ value: T) {
-        print("Success:", value, separator: separator, terminator: "\n\n")
-        divader()
+        print("📗 Success:", value, separator: separator, terminator: "\n\n")
+        divider()
     }
     
     public func failure(_ error: Error) {
-        print("Failure:", error, separator: separator, terminator: "\n\n")
-        divader()
+        print("📕 Failure:", error, separator: separator, terminator: "\n\n")
+        divider()
     }
     
-    private func divader(_ symols: Int = 60) {
+    private func divider(_ symols: Int = 60) {
         print((0 ... symols).compactMap { _ in return "-" }.reduce("", { divider, add -> String in
             return divider + add
         }))
     }
     
     fileprivate func methodName(_ name: String?) {
-        print("Method:", name ?? empty, separator: separator)
+        if let name = name {
+            print("📘 Method:", name, separator: separator)
+        } else {
+            print("📙 Method:", empty, separator: separator)
+        }
     }
     
     fileprivate func urlPath(_ path: String?) {
-        print("URL:", path ?? empty, separator: separator)
+        if let path = path {
+            print("📘 URL:", path, separator: separator)
+        } else {
+            print("📙 URL:", empty, separator: separator)
+        }
     }
     
     fileprivate func header(_ header: [String: String]?) {
-        print("Header:", header ?? empty)
+        if let header = header, header.isEmpty == false {
+            print("📘 Header:", header, separator: separator)
+        } else {
+            print("📙 Header:", empty, separator: separator)
+        }
     }
     
     fileprivate func parameters(_ data: Data?) {
-        print("Parameters:", data.flatMap { $0.prettyPrintedJSONString } ?? empty)
+        if let parameters = data.flatMap { $0.prettyPrintedJSONString } {
+            print("📘 Parameters:", parameters, separator: separator)
+        } else {
+            print("📙 Parameters:", empty, separator: separator)
+        }
     }
     
     fileprivate func statusCode(_ code: NSInteger?) {
-        print("StatusCode:", code ?? empty, separator: separator)
+        if let code = code {
+            print("📘 StatusCode:", code, separator: separator)
+        } else {
+            print("📙 StatusCode:", empty, separator: separator)
+        }
     }
     
     fileprivate func metrics(_ duration: URLSessionTaskMetrics?) {
-        print("Duration:", duration?.taskInterval ?? 0.0, separator: separator)
+        if let duration = duration {
+            print("📘 Duration:", duration.taskInterval.duration, separator: separator)
+        } else {
+            print("📙 Duration:", empty, separator: separator)
+        }
     }
     
     fileprivate func jsonResponse(_ data: Data?) {
-        print("JSON:", data.flatMap { $0.prettyPrintedJSONString } ?? empty)
+        if let json = data.flatMap { $0.prettyPrintedJSONString } {
+            print("📓 JSON:", json)
+        } else {
+            print("📙 JSON:", empty)
+        }
     }
 }
 
