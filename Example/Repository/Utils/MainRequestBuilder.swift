@@ -6,26 +6,26 @@ class MainRequestBuilder: RequestProvider {
     
     var url: String
     
-    var path: RequestPathConvertible?
+    var path: URLComposer
     
-    var query: [String: String?]?
+    var query: URLComposer
     
-    var headers: [String: String]?
+    var headers: RequestComposer
     
-    var body: RequestBodyConvertible?
+    var body: RequestComposer
 
     init(method: HTTPMethod = .get,
-         path: RequestPathConvertible? = nil,
-         query: [String: String?]? = nil,
-         headers: [String: String]? = nil,
+         path: URLComposer = "",
+         query: URLComposer = [:],
+         headers: RequestComposer = [:],
          body: [String: Any]? = nil)
     {
-        self.url = "https://next.json-generator.com"
+        self.url = "https://next.json-generator.com/api"
         self.method = method
         self.path = path
         self.query = query
         self.headers = headers
-        self.body = JSONRequestBody(json: body)
+        self.body = JSONBodyConverter(json: body)
     }
 }
 
@@ -35,19 +35,19 @@ class ImageRequestBuilder: RequestProvider {
     
     var url: String
     
-    var path: RequestPathConvertible?
+    var path: URLComposer
     
-    var query: [String: String?]?
+    var query: URLComposer
     
-    var headers: [String: String]?
+    var headers: RequestComposer
     
-    var body: RequestBodyConvertible?
+    var body: RequestComposer
 
     init(method: HTTPMethod = .get,
          url: String,
-         path: RequestPathConvertible? = nil,
-         query: [String: String?]? = nil,
-         headers: [String: String]? = nil,
+         path: URLComposer = "",
+         query: URLComposer = [:],
+         headers: RequestComposer = [:],
          body: [String: Any]? = nil)
     {
         self.url = url
@@ -55,6 +55,6 @@ class ImageRequestBuilder: RequestProvider {
         self.path = path
         self.query = query
         self.headers = headers
-        self.body = JSONRequestBody(json: body)
+        self.body = URLBodyConverter(parameters: body)
     }
 }

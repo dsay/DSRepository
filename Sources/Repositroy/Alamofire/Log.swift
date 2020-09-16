@@ -47,7 +47,7 @@ public struct DEBUGLog: Log {
         if let name = name {
             print("📘 Method:", name, separator: separator)
         } else {
-            print("📙 Method:", empty, separator: separator)
+            print("📓 Method:", empty, separator: separator)
         }
     }
     
@@ -55,15 +55,20 @@ public struct DEBUGLog: Log {
         if let path = path {
             print("📘 URL:", path, separator: separator)
         } else {
-            print("📙 URL:", empty, separator: separator)
+            print("📓 URL:", empty, separator: separator)
         }
     }
     
     fileprivate func header(_ header: [String: String]?) {
         if let header = header, header.isEmpty == false {
-            print("📘 Header:", header, separator: separator)
+            
+            let string = header.compactMap {
+                "\($0): \($1)"
+            }.joined(separator: "\n           ")
+            
+            print("📘 Header:", string, separator: separator)
         } else {
-            print("📙 Header:", empty, separator: separator)
+            print("📓 Header:", empty, separator: separator)
         }
     }
     
@@ -71,21 +76,37 @@ public struct DEBUGLog: Log {
         if let parameters = data.flatMap { $0.prettyPrintedJSONString } {
             print("📘 Parameters:", parameters, separator: separator)
         } else {
-            print("📙 Parameters:", empty, separator: separator)
+            print("📓 Parameters:", empty, separator: separator)
         }
     }
     
     fileprivate func statusCode(_ code: NSInteger?) {
         if let code = code {
-            print("📘 StatusCode:", code, separator: separator)
+            switch code {
+            case 200..<300:
+                print("📗 StatusCode:", code, separator: separator)
+                
+            case 300..<500:
+                print("📕 StatusCode:", code, separator: separator)
+                
+            default:
+                print("📙 StatusCode:", code, separator: separator)
+            }
         } else {
             print("📙 StatusCode:", empty, separator: separator)
         }
     }
     
-    fileprivate func metrics(_ duration: URLSessionTaskMetrics?) {
-        if let duration = duration {
-            print("📘 Duration:", duration.taskInterval.duration, separator: separator)
+    fileprivate func metrics(_ metrics: URLSessionTaskMetrics?) {
+        if let duration = metrics?.taskInterval.duration {
+            switch duration {
+            case 0..<1:
+                print("📗 Duration:", duration, separator: separator)
+            case 1..<3:
+                print("📙 Duration:", duration, separator: separator)
+            default:
+                print("📕 Duration:", duration, separator: separator)
+            }
         } else {
             print("📙 Duration:", empty, separator: separator)
         }
@@ -95,7 +116,7 @@ public struct DEBUGLog: Log {
         if let json = data.flatMap { $0.prettyPrintedJSONString } {
             print("📓 JSON:", json)
         } else {
-            print("📙 JSON:", empty)
+            print("📓 JSON:", empty)
         }
     }
 }

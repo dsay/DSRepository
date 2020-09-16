@@ -11,7 +11,8 @@ public enum RepositoryError: LocalizedError {
     
     case serialize
 
-    case invalidURL(url: String)
+    case invalidStringURL(string: String)
+    case invalidURL(url: URL)
     case jsonEncodingFailed(error: Error)
 }
 

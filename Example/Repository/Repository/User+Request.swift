@@ -3,11 +3,11 @@ import SwiftRepository
 extension User {
     
     static func getAll() -> RequestProvider {
-        MainRequestBuilder(path: ["api", "json", "get", "EJJKGpww_"])
+        MainRequestBuilder(path: [ "json", "get", "EJJKGpww_"], query: ["dff": "df"])
     }
     
     
     static func get() -> RequestProvider {
-         MainRequestBuilder(path: ["api", "json", "get", "EJMmfvppO"])
+         MainRequestBuilder(path: [ "json", "get", "EJMmfvppO"])
      }
 }

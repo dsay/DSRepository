@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
         let userID = "1"
         let sd = MainRequestBuilder(method: .get,
-                                    path: ["api", "user", userID],
+                                    path: [ "user", userID],
                                     query: ["some" : nil, "some1": "sdf df", "some2": "іваіоа"],
                                     headers: ["asdfadf": "adfsdf"],
                                     body: ["df": ["dfdf":"2342"]])
@@ -31,6 +31,14 @@ class ViewController: UIViewController {
         print(request.url  ?? "")
         print(request.allHTTPHeaderFields ?? "")
         print(String(data: request.httpBody ?? Data(), encoding: .utf8) ?? "")
+        
+        userRepository.remote.requestData(request: sd).done { data in
+                print(data)
+        }.ensure {
+
+        }.catch { error in
+            print(error)
+        }
         
         activityIndicator.startAnimating()        
         userRepository.getAll()
