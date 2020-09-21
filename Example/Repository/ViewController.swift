@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     func updateData() {
         
         let userID = "1"
-        let sd = MainRequestBuilder(method: .get,
+        let sd = Request(method: .get,
                                     path: [ "user", userID],
                                     query: ["some" : nil, "some1": "sdf df", "some2": "іваіоа"],
                                     headers: ["asdfadf": "adfsdf"],

@@ -69,7 +69,7 @@ public class SessionRequestRetrier: RequestRetrier {
     private var isRefreshing = false
     private var requestsToRetry: [(RetryResult) -> Void] = []
 
-    public func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
+    public func retry(_ request: Alamofire.Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         if isUnauthorized(request: request) && isAttendMaxCountOfRetries(request: request) {
             attendedMaxCountOfRetries()
             completion(.doNotRetry)
@@ -117,7 +117,7 @@ public class SessionRequestRetrier: RequestRetrier {
         postAttendedMaxCountOfRetriesNotificaiton()
     }
 
-    private func isUnauthorized(request: Request) -> Bool {
+    private func isUnauthorized(request: Alamofire.Request) -> Bool {
         if let response = request.task?.response as? HTTPURLResponse, response.statusCode == 401 {
             return true
         } else {
@@ -125,7 +125,7 @@ public class SessionRequestRetrier: RequestRetrier {
         }
     }
 
-    private func isAttendMaxCountOfRetries(request: Request) -> Bool {
+    private func isAttendMaxCountOfRetries(request: Alamofire.Request) -> Bool {
         request.retryCount >= maxRetryCount
     }
 

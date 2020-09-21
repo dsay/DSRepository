@@ -8,14 +8,14 @@ PODS:
   - Realm/Headers (5.1.0)
   - RealmSwift (5.1.0):
     - Realm (= 5.1.0)
-  - SwiftRepository (0.4.10):
+  - SwiftRepository (0.5.2):
     - Alamofire
     - ObjectMapper
     - PromiseKit/CorePromise
-    - RealmSwift
 
 DEPENDENCIES:
   - KeychainSwift
+  - RealmSwift
   - SwiftRepository (from `../`)
 
 SPEC REPOS:
@@ -38,8 +38,8 @@ SPEC CHECKSUMS:
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   Realm: bdea546851e37b4cf0a2400cef115c7c26fda488
   RealmSwift: 70945aa168db93b215c460e9c8ef680261aa28af
-  SwiftRepository: b12a02e26ace360dd4e9c12dea084802cc9e14b0
+  SwiftRepository: 7bb455f85298e1df24289f82aedef21574f12450
 
-PODFILE CHECKSUM: d7da0021fb7aa7fa68fabac54d075377b9958f53
+PODFILE CHECKSUM: 097a05dc6ac25623e3048f61b3eb2ebd4f15ef16
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

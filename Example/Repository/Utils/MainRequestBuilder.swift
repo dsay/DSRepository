@@ -1,6 +1,6 @@
 import SwiftRepository
 
-class MainRequestBuilder: RequestProvider {
+class Request: RequestProvider {
     
     var method: HTTPMethod
     
@@ -14,12 +14,12 @@ class MainRequestBuilder: RequestProvider {
     
     var body: RequestComposer
 
-    init(method: HTTPMethod = .get,
-         path: URLComposer = "",
-         query: URLComposer = [:],
-         headers: RequestComposer = [:],
-         body: [String: Any]? = nil)
-    {
+   init(method: HTTPMethod = .get,
+            path: URLComposer = "",
+            query: [String: String?] = [:],
+            headers: [String: String] = [:],
+            body: [String: Any]? = nil)
+       {
         self.url = "https://next.json-generator.com/api"
         self.method = method
         self.path = path
