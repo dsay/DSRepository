@@ -3,6 +3,7 @@ import SwiftRepository
 import RealmSwift
 import Alamofire
 import KeychainSwift
+import ServiceLocator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -11,9 +12,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
-    {
+    {       
         let realm: Realm = store()
-        ServiceLocator.shared.register(service: realm)
+       ServiceLocator.shared.register(service: realm)
+
+        let db = Database(name: "RepositryModel")
+        ServiceLocator.shared.register(service: db)
 
         let session: Alamofire.Session = MainSessionManager.default()
         ServiceLocator.shared.register(service: session)
@@ -32,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let userMappable = UserMapableRepository(remote: RemoteStoreMappable(session: session, handler: handler),
                                     local: LocalStoreMappable(store))
-          ServiceLocator.shared.register(service: userMappable)
+        ServiceLocator.shared.register(service: userMappable)
 
         let token = TokenRepository(remote: RemoteStoreCodable(session: session, handler: handler),
                                     local: LocalStoreCodable(store))
@@ -72,3 +76,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    }
 //    return nil
 //})
+

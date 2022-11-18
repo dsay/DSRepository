@@ -1,6 +1,13 @@
 import RealmSwift
 import SwiftRepository
 import ObjectMapper
+import UserDefault
+
+struct UserProperty {
+    
+    @UserDefault("kGoogleAnalyticsState", defaultValue: false)
+    static var googleAnalyticsState: Bool
+}
 
 //class User: Object, Codable {
 class User: Object, Mappable {

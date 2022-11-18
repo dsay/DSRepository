@@ -8,7 +8,7 @@ public class KeyPathDecoder: JSONDecoder {
         self.keyPath = keyPath
     }
     
-    public override func decode<T>(_ type: T.Type, from data: Data) throws -> T where T : Decodable {
+    open override func decode<T>(_ type: T.Type, from data: Data) throws -> T where T : Decodable {
         if let keyPath = keyPath {
             let toplevel = try JSONSerialization.jsonObject(with: data)
             if let nestedJson = (toplevel as AnyObject).value(forKeyPath: keyPath) {

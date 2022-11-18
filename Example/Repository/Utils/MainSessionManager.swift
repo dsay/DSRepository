@@ -1,5 +1,6 @@
 import Alamofire
 import PromiseKit
+import ServiceLocator
 
 public enum AppError: LocalizedError {
     

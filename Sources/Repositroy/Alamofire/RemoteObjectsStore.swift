@@ -4,7 +4,7 @@ import Foundation
 
 open class RemoteStoreCodable<Item: Decodable>: RemoteStoreAlamofire, RemoteStoreObjects {
 
-    public func send(request: RequestProvider,
+    open func send(request: RequestProvider,
                      keyPath: String? = nil,
                      responseObject: @escaping (Result<Item, Error>) -> Void)
     {
@@ -13,7 +13,7 @@ open class RemoteStoreCodable<Item: Decodable>: RemoteStoreAlamofire, RemoteStor
         }
     }
     
-    public func send(request: RequestProvider,
+    open func send(request: RequestProvider,
                      keyPath: String? = nil,
                      responseArray: @escaping (Result<[Item], Error>) -> Void)
     {
@@ -25,7 +25,7 @@ open class RemoteStoreCodable<Item: Decodable>: RemoteStoreAlamofire, RemoteStor
 
 open class RemoteStoreMappable<Item: BaseMappable>: RemoteStoreAlamofire, RemoteStoreObjects {
 
-    public func send(request: RequestProvider,
+    open func send(request: RequestProvider,
                         keyPath: String? = nil,
                         responseObject: @escaping (Result<Item, Error>) -> Void)
     {
@@ -34,7 +34,7 @@ open class RemoteStoreMappable<Item: BaseMappable>: RemoteStoreAlamofire, Remote
         }
     }
     
-    public func send(request: RequestProvider,
+    open func send(request: RequestProvider,
                      keyPath: String? = nil,
                      responseArray: @escaping (Result<[Item], Error>) -> Void)
     {

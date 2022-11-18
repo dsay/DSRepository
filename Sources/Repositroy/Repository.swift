@@ -9,6 +9,9 @@ public enum RepositoryError: LocalizedError {
     case notExists
     case unknown
     
+    case error(Error)
+    case message(String)
+
     case serialize
 
     case invalidStringURL(string: String)

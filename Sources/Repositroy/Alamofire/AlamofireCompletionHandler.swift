@@ -9,7 +9,7 @@ open class BaseHandler {
         self.loger = loger
     }
     
-    public func handle<T>(_ response: AFDataResponse<T>) -> Result<T, Error> {
+    open func handle<T>(_ response: AFDataResponse<T>) -> Result<T, Error> {
         loger.log(response)
         
         switch response.result {

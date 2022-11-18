@@ -1,6 +1,8 @@
 import UIKit
 import SwiftRepository
 import Alamofire
+import CoreData
+import ServiceLocator
 
 class ViewController: UIViewController {
     
@@ -10,7 +12,9 @@ class ViewController: UIViewController {
     var userRepository: UserRepository
     @Injection
     var userMRepository: UserMapableRepository
-    
+    @Injection
+    var db: Database
+
     override func viewDidLoad() {
         super.viewDidLoad()
         updateData()
@@ -18,12 +22,28 @@ class ViewController: UIViewController {
     
     func updateData() {
         
+//        let defaultStore = db.createStoreDescription()
+        
+        let publicStore = db.createStoreDescription(configuration: .public)
+        let privateStore = db.createStoreDescription("UserID", configuration: .private)
+        
+        db.addStores([publicStore, privateStore]) { result in
+            switch result {
+            case .success:
+                print("Stores was created!!!")
+            case .failure(let error):
+                print("Stores created errrr: %@ !!!", error)
+            }
+            
+            self.test()
+        }
+        
         let userID = "1"
         let sd = Request(method: .get,
-                                    path: [ "user", userID],
-                                    query: ["some" : nil, "some1": "sdf df", "some2": "іваіоа"],
-                                    headers: ["asdfadf": "adfsdf"],
-                                    body: ["df": ["dfdf":"2342"]])
+                         path: [ "user", userID],
+                         query: ["some" : nil, "some1": "sdf df", "some2": "іваіоа"],
+                         headers: ["asdfadf": "adfsdf"],
+                         body: ["df": ["dfdf":"2342"]])
         
         let request = try! sd.asURLRequest()
         
@@ -60,7 +80,6 @@ class ViewController: UIViewController {
             print(error)
         }
         
-        
         activityIndicator.startAnimating()
         userMRepository.getIndex()
             .done { data in
@@ -70,6 +89,29 @@ class ViewController: UIViewController {
         }.catch { error in
             print(error)
         }
+    }
+    
+    func test() {
+        
+//        let df: NSFetchRequest<CDUserPrivate> = CDUserPrivate.fetchRequest()
+//        
+//        let dfdf = try? db.container.viewContext.fetch(df)
+//        
+//        print(dfdf)
+        
+        //      let context = db.container.viewContext
+        //        context.perform {
+        //
+        //            let user = CDUserPrivate(context: context)
+        //            user.id = "11"
+        //            user.name = "Super"
+        //
+        //            let user1 = CDUserPrivate(context: context)
+        //            user1.id = "111"
+        //            user1.name = "Super1"
+        //
+        //           try? context.save()
+        //        }
     }
 }
 
@@ -104,4 +146,9 @@ class InMemoryStorage: Storage {
     func deleteValue(_ key: String) {
         store[key] = nil
     }
+}
+
+extension Result where Success == Void {
+    
+    public static func success() -> Self { .success(()) }
 }

@@ -12,7 +12,7 @@ extension Dictionary: URLComposer where Key == String, Value == String? {
             throw RepositoryError.invalidURL(url: url)
         }
             
-        var items = compactMap{ URLQueryItem(name: $0, value: $1?.escape()) }
+        var items = compactMap { URLQueryItem(name: $0, value: $1?.escape()) }
         components.queryItems.flatMap { items += $0 }
         components.queryItems = items
         

@@ -29,5 +29,3 @@ open class LocalStoreFileManager: LocalStoreDisk {
         try item.write(to: fileURL)
     }
 }
-
-
