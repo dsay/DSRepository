@@ -16,7 +16,7 @@ public extension LocalStoreDataBase {
         }
     }
     
-    public func getItem() -> Promise<Item> {
+    func getItem() -> Promise<Item> {
         Promise { resolver in
             getItem { result in
                 switch result {
@@ -29,7 +29,7 @@ public extension LocalStoreDataBase {
         }
     }
     
-    public func get(with id: Int) -> Promise<Item> {
+    func get(with id: Int) -> Promise<Item> {
         Promise { resolver in
             get(with: id) { result in
                 switch result {
@@ -42,7 +42,7 @@ public extension LocalStoreDataBase {
         }
     }
     
-    public func get(with id: String) -> Promise<Item> {
+    func get(with id: String) -> Promise<Item> {
         Promise { resolver in
             get(with: id) { result in
                 switch result {
@@ -55,7 +55,7 @@ public extension LocalStoreDataBase {
         }
     }
     
-    public func get(with predicate: NSPredicate) -> Promise<[Item]> {
+    func get(with predicate: NSPredicate) -> Promise<[Item]> {
         Promise { resolver in
             get(with: predicate) { result in
                 switch result {
@@ -68,7 +68,7 @@ public extension LocalStoreDataBase {
         }
     }
     
-    public func update(_ write: @escaping () -> Void) -> Promise<Void> {
+    func update(_ write: @escaping () -> Void) -> Promise<Void> {
         Promise { resolver in
             update(write) { result in
                 switch result {
@@ -81,7 +81,7 @@ public extension LocalStoreDataBase {
         }
     }
     
-    public func save(_ item: Item, policy: UpdatePolicy = .all) -> Promise<Void> {
+    func save(_ item: Item, policy: UpdatePolicy = .all) -> Promise<Void> {
         Promise { resolver in
             save(item, policy: policy) { result in
                 switch result {
@@ -94,7 +94,7 @@ public extension LocalStoreDataBase {
         }
     }
     
-    public func save(_ items: [Item], policy: UpdatePolicy = .all) -> Promise<Void> {
+    func save(_ items: [Item], policy: UpdatePolicy = .all) -> Promise<Void> {
         Promise { resolver in
             save(items, policy: policy) { result in
                 switch result {
@@ -107,7 +107,7 @@ public extension LocalStoreDataBase {
         }
     }
     
-    public func remove(_ item: Item) -> Promise<Void> {
+    func remove(_ item: Item) -> Promise<Void> {
         Promise { resolver in
             remove(item) { result in
                 switch result {
@@ -120,7 +120,7 @@ public extension LocalStoreDataBase {
         }
     }
     
-    public func remove(_ items: [Item]) -> Promise<Void> {
+    func remove(_ items: [Item]) -> Promise<Void> {
         Promise { resolver in
             remove(items) { result in
                 switch result {
@@ -136,7 +136,7 @@ public extension LocalStoreDataBase {
 
 public extension Thenable  {
     
-    public func update<S: LocalStoreDataBase>(on: DispatchQueue? = conf.Q.map, flags: DispatchWorkItemFlags? = nil, _ store: S, _ transform: @escaping(T) -> Void) -> Promise<T> {
+    func update<S: LocalStoreDataBase>(on: DispatchQueue? = conf.Q.map, flags: DispatchWorkItemFlags? = nil, _ store: S, _ transform: @escaping(T) -> Void) -> Promise<T> {
         let rg = Promise<T>.pending()
         
         pipe {
@@ -165,7 +165,7 @@ public extension Thenable  {
 }
 public extension Thenable where T: Sequence {
     
-    public func update<S: LocalStoreDataBase>(on: DispatchQueue? = conf.Q.map, flags: DispatchWorkItemFlags? = nil, _ store: S, _ transform: @escaping([T.Iterator.Element]) -> Void) -> Promise<[T.Iterator.Element]> {
+    func update<S: LocalStoreDataBase>(on: DispatchQueue? = conf.Q.map, flags: DispatchWorkItemFlags? = nil, _ store: S, _ transform: @escaping([T.Iterator.Element]) -> Void) -> Promise<[T.Iterator.Element]> {
         let rg = Promise<[T.Iterator.Element]>.pending()
         
         pipe {

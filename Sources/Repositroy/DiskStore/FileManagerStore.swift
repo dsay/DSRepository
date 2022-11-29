@@ -9,22 +9,22 @@ open class LocalStoreFileManager: LocalStoreDisk {
     public init() {
     }
     
-    public func isExists(at URL: String) -> Bool {
+    open func isExists(at URL: String) -> Bool {
         let fileURL = documentsDirectory.appendingPathComponent(URL)
         return FileManager.default.fileExists(atPath: fileURL.path)
     }
     
-    public func get(from URL: String) throws -> Data {
+    open func get(from URL: String) throws -> Data {
         let fileURL = documentsDirectory.appendingPathComponent(URL)
         return try Data(contentsOf: fileURL)
     }
     
-    public func remove(from URL: String) throws {
+    open func remove(from URL: String) throws {
         let fileURL = documentsDirectory.appendingPathComponent(URL)
         try FileManager.default.removeItem(at: fileURL)
     }
     
-    public func save(_ item: Data, at URL: String) throws {
+    open func save(_ item: Data, at URL: String) throws {
         let fileURL = documentsDirectory.appendingPathComponent(URL)
         try item.write(to: fileURL)
     }

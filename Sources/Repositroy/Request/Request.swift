@@ -53,7 +53,7 @@ public protocol RequestProvider {
 
 public extension RequestProvider {
     
-    public func asURL() throws -> URL {
+    func asURL() throws -> URL {
         guard var url = URL(string: self.url) else {
             throw RepositoryError.invalidStringURL(string: self.url)
         }
@@ -64,7 +64,7 @@ public extension RequestProvider {
         return url
     }
     
-    public func asURLRequest() throws -> URLRequest {
+    func asURLRequest() throws -> URLRequest {
         var url = try self.asURL()
         
         var urlRequest = URLRequest(url: url)
