@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "2777659076fda38bd4e487739ee331c7a65b5924",
-          "version": "5.2.1"
+          "revision": "f455c2975872ccd2d9c81594c658af65716e9b9a",
+          "version": "5.9.1"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/tristanhimmelman/ObjectMapper.git",
         "state": {
           "branch": null,
-          "revision": "0b96a734de3ea1c87374ae677064f86adb0716ec",
-          "version": "4.2.0"
+          "revision": "6021c6035e83a306047348666f6400dc61445d3b",
+          "version": "4.4.3"
         }
       },
       {

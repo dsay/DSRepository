@@ -1,4 +1,7 @@
+#if os(iOS) || os(watchOS) || os(tvOS)
 import UIKit
+#endif
+//import UIKit
 
 public struct HTTPHeader {
     
