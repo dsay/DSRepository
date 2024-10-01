@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,7 +34,7 @@
 		CEE21B28243F01AC001485E6 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE21B27243F01AC001485E6 /* Token.swift */; };
 		CEE21B2A243F01BB001485E6 /* Token+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE21B29243F01BB001485E6 /* Token+Request.swift */; };
 		CEE4563523CC66A600C55556 /* MainSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4563323CC66A600C55556 /* MainSessionManager.swift */; };
-		CEF8D20322671206005FF0C3 /* SwiftRepository.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CEF8D20222671206005FF0C3 /* SwiftRepository.podspec */; };
+		CEF8D20322671206005FF0C3 /* DSRepository.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CEF8D20222671206005FF0C3 /* DSRepository.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,7 +71,7 @@
 		CEE21B27243F01AC001485E6 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		CEE21B29243F01BB001485E6 /* Token+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Token+Request.swift"; sourceTree = "<group>"; };
 		CEE4563323CC66A600C55556 /* MainSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSessionManager.swift; sourceTree = "<group>"; };
-		CEF8D20222671206005FF0C3 /* SwiftRepository.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SwiftRepository.podspec; path = ../SwiftRepository.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CEF8D20222671206005FF0C3 /* DSRepository.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DSRepository.podspec; path = ../DSRepository.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D656C755FA24150895250225 /* Pods-Repository_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository_Tests.release.xcconfig"; path = "Target Support Files/Pods-Repository_Tests/Pods-Repository_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DFBCF955F948302FF074A379 /* Pods-Repository_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository_Example.release.xcconfig"; path = "Target Support Files/Pods-Repository_Example/Pods-Repository_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB3267424A4B20A00B654B6 /* Package.swift */,
-				CEF8D20222671206005FF0C3 /* SwiftRepository.podspec */,
+				CEF8D20222671206005FF0C3 /* DSRepository.podspec */,
 				8FB6C3308C7D297119B8214C /* README.md */,
 				C5B47578E681944CA0A9496C /* LICENSE */,
 			);
@@ -303,7 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEF8D20322671206005FF0C3 /* SwiftRepository.podspec in Resources */,
+				CEF8D20322671206005FF0C3 /* DSRepository.podspec in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,

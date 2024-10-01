@@ -6,12 +6,8 @@ inhibit_all_warnings!
 
 target 'Repository_Example' do
   
-  pod 'SwiftRepository', :path => '../'
+  pod 'DSRepository', :path => '../'
   pod 'KeychainSwift'
   pod 'RealmSwift'
-  
-  target 'Repository_Tests' do
-    inherit! :search_paths
 
-  end
 end
