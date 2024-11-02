@@ -3,6 +3,19 @@ import Foundation
 
 public extension RemoteStore {
     
+    func request(request: RequestProvider) -> Promise<Void> {
+        Promise { resolver in
+            send(request: request, response: { (response: Swift.Result<Data?, Error>) -> Void  in
+                switch response {
+                case .success:
+                    resolver.fulfill(())
+                case .failure(let error):
+                    resolver.reject(error)
+                }
+            })
+        }
+    }
+    
     func requestString(request: RequestProvider) -> Promise<String> {
         Promise { resolver in
             send(request: request, responseString: { (response: Swift.Result<String, Error>) -> Void  in
@@ -42,16 +55,29 @@ public extension RemoteStore {
         }
     }
     
-    func requestItem<Item>(request: RequestProvider, keyPath: String? = nil) -> Promise<Item> {
+    func requestArray<Item>(request: RequestProvider, keyPath: String? = nil) -> Promise<[Item]> {
         Promise { resolver in
-            send(request: request, keyPath: keyPath) { (response: Swift.Result<Item, Error>) -> Void in
+            send(request: request, keyPath: keyPath, responseArray: { (response: Swift.Result<[Item], Error>) -> Void  in
                 switch response {
                 case .success(let value):
                     resolver.fulfill(value)
                 case .failure(let error):
                     resolver.reject(error)
                 }
-            }
+            })
+        }
+    }
+    
+    func requestObject<Item>(request: RequestProvider, keyPath: String? = nil) -> Promise<Item> {
+        Promise { resolver in
+            send(request: request, keyPath: keyPath, responseItem: { (response: Swift.Result<Item, Error>) -> Void  in
+                switch response {
+                case .success(let value):
+                    resolver.fulfill(value)
+                case .failure(let error):
+                    resolver.reject(error)
+                }
+            })
         }
     }
 }

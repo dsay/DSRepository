@@ -1,5 +1,6 @@
 import Alamofire
 import Foundation
+import ObjectMapper
 
 open class RemoteStoreAlamofire: RemoteStore {
  
@@ -18,6 +19,12 @@ open class RemoteStoreAlamofire: RemoteStore {
         return session.request(urlRequest).validate()
     }
    
+    open func send(request: RequestProvider, response: @escaping (Result<Data?, Error>) -> Void) {
+        send(request: request).response { (responseData: AFDataResponse<Data?>) -> Void in
+            response(self.handler.handle(responseData))
+        }
+    }
+    
     open func send(request: RequestProvider, responseString: @escaping (Result<String, Error>) -> Void) {
         send(request: request).responseString { (response: AFDataResponse<String>) -> Void in
             responseString(self.handler.handle(response))
@@ -36,9 +43,45 @@ open class RemoteStoreAlamofire: RemoteStore {
         }
     }
     
-    open func send<Item>(request: RequestProvider, keyPath: String?, responseItem: @escaping (Result<Item, Error>) -> Void) {
-        send(request: request).responseItem(keyPath: keyPath) { (response: AFDataResponse<Item>) -> Void  in
+    public func send<Item>(request: any RequestProvider, keyPath: String?, responseItem: @escaping (Result<Item, any Error>) -> Void) {
+        send(request: request).responseItem(completionHandler: { (response: AFDataResponse<Item>) -> Void in
             responseItem(self.handler.handle(response))
+        })
+    }
+    
+    open func send<Item>(request: RequestProvider, keyPath: String?, responseArray: @escaping (Result<[Item], Error>) -> Void) {
+        send(request: request).responseItem(completionHandler: { (response: AFDataResponse<[Item]>) -> Void in
+            responseArray(self.handler.handle(response))
+        })
+    }
+}
+
+public extension RemoteStoreAlamofire {
+        
+    func send<Item>(request: RequestProvider, keyPath: String?, responseItem: @escaping (Result<Item, Error>) -> Void) where Item: Decodable {
+        send(request: request).responseDecodable(decoder: KeyPathDecoder(keyPath)) { (response: AFDataResponse<Item>) -> Void in
+            responseItem(self.handler.handle(response))
+        }
+    }
+    
+    func send<Item>(request: RequestProvider, keyPath: String?, responseArray: @escaping (Result<[Item], Error>) -> Void)  where Item: Decodable {
+        send(request: request).responseDecodable(decoder: KeyPathDecoder(keyPath)) { (response: AFDataResponse<[Item]>) -> Void in
+            responseArray(self.handler.handle(response))
+        }
+    }
+}
+
+public extension RemoteStoreAlamofire {
+        
+    func send<Item>(request: RequestProvider, keyPath: String?, responseItem: @escaping (Result<Item, Error>) -> Void) where Item: BaseMappable {
+        send(request: request).responseObject(keyPath: keyPath) { (response: AFDataResponse<Item>) -> Void in
+            responseItem(self.handler.handle(response))
+        }
+    }
+    
+    func send<Item>(request: RequestProvider, keyPath: String?, responseArray: @escaping (Result<[Item], Error>) -> Void)  where Item: BaseMappable {
+        send(request: request).responseArray(keyPath: keyPath) { (response: AFDataResponse<[Item]>) -> Void in
+            responseArray(self.handler.handle(response))
         }
     }
 }
