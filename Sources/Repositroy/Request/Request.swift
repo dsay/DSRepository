@@ -41,6 +41,7 @@ public protocol RequestProvider {
     var url: String { get }
     
     var path: URLComposer { get }
+    
     var query: URLComposer { get }
     
     var headers: RequestComposer { get }
@@ -80,7 +81,9 @@ public extension RequestProvider {
 public extension String {
     
     func escape() -> String {
-        addingPercentEncoding(withAllowedCharacters: .URLQueryAllowed) ?? ""
+        var allowedCharactersWithSpace = CharacterSet.URLQueryAllowed
+        allowedCharactersWithSpace.insert(charactersIn: " ")
+        return self.addingPercentEncoding(withAllowedCharacters: allowedCharactersWithSpace) ?? ""
     }
 }
 
